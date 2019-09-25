@@ -23,3 +23,7 @@ test('renders one LandingPage Component', () => {
  expect(wrapper.find(LandingPage)).to.have.lengthOf(1)
   })
 
+  test('teneray operator f or LandingPage', () => {
+    
+  })
+
