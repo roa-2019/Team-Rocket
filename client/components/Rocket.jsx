@@ -1,17 +1,19 @@
 import React, { Component, Fragment } from 'react'
 
 class Rocket extends Component {
-    render(){
-        return(
-            <Fragment>
-            <div className='rocket'>
+  render() {
+    return (
+      <Fragment>
+        <div className='rocket rocket-panel col'>
 
-            {/* start coding here */}
+          <div className="rocket-wrapper b">
+            Rocket
+          </div>
 
-            </div>
-            </Fragment>
-        )
-    }
+        </div>
+      </Fragment>
+    )
+  }
 }
 
 export default Rocket
