@@ -4,7 +4,7 @@ import LandingPage from './LandingPage'
 import Design from './Design'
 import Rocket from './Rocket'
 
-class App extends React.Component {
+class App extends Component {
   
   render () {
     return (
