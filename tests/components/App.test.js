@@ -8,7 +8,7 @@ App.prototype.componentDidMount = () => {}
 
 Enzyme.configure({adapter: new Adapter()})
 
-test('test runner is working', () => {
+test('App.test runner is working', () => {
   expect(true).toBeTruthy()
 })
 
@@ -18,14 +18,8 @@ test('<App> root has className of app', () => {
   expect(root.length).toBe(1)
 })
 
-test('page header includes fruit', () => {
-  const wrapper = render(<App />)
-  const h1 = wrapper.find('h1')
-  expect(h1.text()).toMatch(/Fruit/)
-})
+test('renders one LandingPage Component', () => {
+  const wrapper = shallow(<App />)
+ expect(wrapper.find(LandingPage)).to.have.lengthOf(1)
+  })
 
-test('renders an <li> for each fruit', () => {
-  const wrapper = mount(<App />)
-  wrapper.setState({fruits: ['orange', 'persimmons', 'kiwi fruit']})
-  expect(wrapper.find('li').length).toBe(3)
-})
