@@ -7,7 +7,7 @@ class Rocket extends Component {
         <div className='rocket rocket-panel col'>
 
           <div className="rocket-wrapper b">
-            Rocket Wrapper Bishh
+            Rocket
           </div>
 
         </div>

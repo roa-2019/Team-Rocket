@@ -85,14 +85,6 @@ class Design extends Component {
             </div>
 
           </div>
-          {/* <div className="rocket-panel col b">
-            <div className="rocket-wrapper">
-              <div className="rocket-nose third b"></div>
-              <div className="rocket-body third b"></div>
-              <div className="rocket-fins third b"></div>
-            </div>
-          </div> */}
-
         </div>
       </Fragment>
     )
