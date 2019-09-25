@@ -1,18 +1,16 @@
-import {NOSE_SHAPE, NOSE_COLOR} from '../actions'
+import { NOSE_SHAPE, NOSE_COLOR } from '../actions'
 
 const initialRocketState = {
-  rocket: {noseShape: '', noseColor: ''}
+  rocket: { noseShape: '', noseColor: '' }
 }
 
-const rocketReducer (state = initialRocketState, action) => {
+const rocketReducer = (state = initialRocketState, action) => {
   switch (action.type) {
     case NOSE_SHAPE:
-      return {
-        // rocket with rocket.noseShape set to state form action
-      }
+      return Object.assign({}, store, { rocket: Object.assign({}, store.rocket, action) });
 
     case NOSE_COLOR:
-      return action.noseColor
+      return Object.assign({}, store, { rocket: Object.assign({}, store.rocket, action) });
 
     default:
       return state
@@ -20,3 +18,11 @@ const rocketReducer (state = initialRocketState, action) => {
 }
 
 export default rocketReducer
+
+// let store = {
+//   rocket: { noseColor: '', noseShape: '' }
+// }
+
+// let action = { noseColor: 'red' }
+
+// let newStore = Object.assign({}, store, { rocket: Object.assign({}, store.rocket, action) });
