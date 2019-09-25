@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 // import LandingPage from './LandingPage'
 import Rocket from './Rocket'
+import Design from './Design'
 
 class App extends React.Component {
   
@@ -9,6 +10,8 @@ class App extends React.Component {
     return (
      <Fragment>
        {/* <LandingPage /> */}
+       <Design />
+
        <Rocket />
      </Fragment>
     )
