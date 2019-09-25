@@ -23,12 +23,13 @@
   },
   "jest": {
     "setupFiles": [
-      "./test/client/config/jsdom.js",
-      "./test/client/config/enzyme.js"
+      "./tests/client/config/jsdom.js",
+      "./tests/client/config/enzyme.js"
     ]
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "nock": "^11.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
