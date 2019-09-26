@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import { noseShape, noseColor } from '../actions/index'
 
 class Design extends Component {
   constructor(props) {
@@ -22,20 +23,18 @@ class Design extends Component {
     }
   }
 
-  onNoseShapeChanged = (e) => {
-    this.setState({
-      noseShape: e.currentTarget.value
-    });
+  onNoseShapeChanged =  (e) => {
+   this.props.dispatch(noseShape(e.currentTarget.value));
   }
 
-  onNoseColorChanged = (e) => {
-    this.setState({
-      noseShape: e.currentTarget.value
-    });
+  onNoseColorChanged =  (e) => {
+    this.props.dispatch(noseColor(e.currentTarget.value));
   }
+
+  
 
   render() {
-
+    console.log(this.props)
     return (
       <Fragment>
         <div className='design col b'>
