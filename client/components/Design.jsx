@@ -49,6 +49,7 @@ class Design extends Component {
                 <a>Colours</a>
                 <div className="info">
 
+                <div className="container__column">
                   <div className='container__input b'>
 
                     <label className='container__radio' htmlFor="r1">
@@ -65,17 +66,21 @@ class Design extends Component {
                     <label className='container__radio' htmlFor="r3">
                       <input type="radio" name="nose-colour" id="r3" value="#FF0000" onChange={this.onNoseColorChanged} />
                       <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
-
                     </label>
 
                     <label className='container__radio' htmlFor="r4">
                       <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged} />
                       <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
-
                     </label>
-
-
                   </div>
+                  <div className="container__input--text">
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                    </div>
+                    </div>
+
                   <div className="container__text--stateColour">
                     <p>Colour: {this.state.noseColor}</p>
                   </div>
@@ -86,17 +91,39 @@ class Design extends Component {
               <div className="accordion-item">
                 <a>Nose</a>
                 <div className="info">
-                  <div className='container__input'>
-                    <input type="radio" name="nose-shape" id="r5" value="Triangle" onChange={this.onNoseShapeChanged} />
-                    <label htmlFor="r6">Triangle</label>
 
-                    <input type="radio" name="nose-shape" id="r6" value="Square" onChange={this.onNoseShapeChanged} />
-                    <label htmlFor="r7">Square</label>
+                  <div className="container__column">
+                    <div className='container__input b'>
 
-                    <input type="radio" name="nose-shape" id="r7" value="Circle" onChange={this.onNoseShapeChanged} />
-                    <label htmlFor="r8">Circle</label>
+                      <label className='container__radio' htmlFor="r5">
+                        <input type="radio" name="nose-shape" id="r5" value="Triangle" onChange={this.onNoseShapeChanged} />
+                        <span id='radio__nose--square' className='checkmark checkmark__nose'></span>
+
+                      </label>
+
+                      <label className='container__radio' htmlFor="r6">
+                        <input type="radio" name="nose-shape" id="r6" value="Square" onChange={this.onNoseShapeChanged} />
+                        <span id='radio__nose--triangle' className='checkmark checkmark__nose'></span>
+
+                      </label>
+
+                      <label className='container__radio' htmlFor="r7">
+                        <input type="radio" name="nose-shape" id="r7" value="Circle" onChange={this.onNoseShapeChanged} />
+                        <span id='radio__nose--circle' className='checkmark checkmark__nose'></span>
+
+                      </label>
+                    </div>
+                    <div className="container__input--text">
+                      <p>Type Of Shape</p>
+                      <p>Type Of Shape</p>
+                      <p>Type Of Shape</p>
+                    </div>
                   </div>
-                  <p>{(this.state.noseShape)}</p>
+
+
+                  <div className="container__text--stateNose">
+                    <p>Nose Shape: {this.state.noseShape}</p>
+                  </div>
                 </div>
               </div>
 

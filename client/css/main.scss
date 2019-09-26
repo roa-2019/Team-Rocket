@@ -1,12 +1,10 @@
 @import 'accordion';
 @import 'buttons';
-// @import 'design';
 @import 'media-queries';
 @import 'mixins';
 @import 'rocket';
+@import 'variables';
 
-//bg
-$spaceGrey: #414a4c;
 
 
 * {
@@ -27,6 +25,11 @@ $spaceGrey: #414a4c;
 /* ---------------- 
 GLOBAL 
 ---------------- */
+
+.container__column {
+  display: flex;
+  flex-direction: column;
+}
 
 .col {
   width: 50%;

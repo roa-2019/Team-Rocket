@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Hind:300,400);
-.container__text--stateColour {
+.container__input--text {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem; }
+
+.container__text--stateColour,
+.container__text--stateNose {
   border: 1px solid grey;
   height: auto; }
 
@@ -108,6 +114,13 @@ h3 {
   height: 25px;
   border-radius: 5px; }
 
+.checkmark__nose {
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid lightblue;
+  margin-bottom: 1rem; }
+
 .container__radio input:checked ~ .checkmark {
   border: 2px solid #1976D2; }
 
@@ -159,6 +172,10 @@ h3 {
 /* ---------------- 
 GLOBAL 
 ---------------- */
+.container__column {
+  display: flex;
+  flex-direction: column; }
+
 .col {
   width: 50%; }
 

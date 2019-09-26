@@ -1,14 +1,17 @@
 // Radio Button Wrappers
 
+@import 'mixins.scss';
+@import 'variables.scss';
+
 .container__input {
-  display: flex;
-  justify-content: space-around;
+  @include space-around;
 }
 
 .container__radio {
   position: relative;
   padding-bottom: 2rem;
 }
+
 
 // 1. Hide the browsers default radio button
 .container__radio input {
@@ -26,6 +29,14 @@
   width: 25px;
   height: 25px;
   border-radius: 5px;
+}
+
+.checkmark__nose {
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid lightblue;
+  margin-bottom: 1rem;
 }
 
 // 3. Styled effect for when the radio is selected/checked
@@ -49,7 +60,7 @@
 }
 
 #radio__colour--chuckNorris {
-  background-color:#C00000;
+  background-color: $chuckNorris;
 }
 
 #radio__colour--yellow {

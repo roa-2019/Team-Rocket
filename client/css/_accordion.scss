@@ -1,10 +1,19 @@
 // ACCORDIAN BY raichung
 
-.container__text--stateColour {
+@import 'mixins.scss';
+
+.container__input--text {
+  @include space-around;
+  margin-bottom: 1.5rem;
+}
+.container__text--stateColour,
+.container__text--stateNose {
   border: 1px solid grey;
   height: auto;
-
 }
+
+
+
 
 
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400');
