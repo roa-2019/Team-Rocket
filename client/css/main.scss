@@ -1,0 +1,33 @@
+@import 'buttons';
+@import 'accordion';
+@import 'rocket';
+@import 'media-queries';
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#app {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: lightseagreen;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ---------------- 
+GLOBAL 
+---------------- */
+
+.col {
+  width: 50%;
+}
+
+.b {
+  border: 1px solid red;
+}
