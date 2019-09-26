@@ -1,6 +1,17 @@
 import React, { Component, Fragment } from 'react'
+import {connect} from 'react-redux'
 
 class Design extends Component {
+  constructor(props){
+    super(props)
+    console.log(props)
+    this.state = {
+      noseShape:'',
+      noseColor:''
+    }
+  }
+
+
   componentDidMount() {
     let items = document.querySelectorAll(".accordion a");
     items.forEach((item) => item.addEventListener('click', toggleAccordion));
@@ -11,6 +22,7 @@ class Design extends Component {
     }
   }
   render() {
+    
     return (
       <Fragment>
         <div className='design col b'>
@@ -91,4 +103,5 @@ class Design extends Component {
   }
 }
 
-export default Design
+
+export default connect()(Design)

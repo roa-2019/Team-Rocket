@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
 
 class Rocket extends Component {
   render() {
@@ -16,4 +17,4 @@ class Rocket extends Component {
   }
 }
 
-export default Rocket
+export default connect()(Rocket)

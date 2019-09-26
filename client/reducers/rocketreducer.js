@@ -11,7 +11,7 @@ const rocketReducer = (state = initialRocketState, action) => {
       return { ...state, noseShape: action.shape }
 
     case NOSE_COLOR:
-        return { ...state, noseShape: action.color }
+        return { ...state, noseColor: action.color }
 
     default:
       return state
