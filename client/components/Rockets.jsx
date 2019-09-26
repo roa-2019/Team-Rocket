@@ -15,7 +15,8 @@ class Rockets extends Component {
             <polygon points="140 170 140 310 50 480 50 340" fill='grey' stroke='black' strokeWidth='2' />
     
              {/* Rocket nose 1  */}
-            <ellipse cx="190" cy="110" rx="50" ry='100' stroke="black" strokeWidth="1.5" fill={this.props.noseColor} />
+             {this.props.noseShape == 'Circle' && <ellipse cx="190" cy="110" rx="50" ry='100' stroke="black" strokeWidth="1.5" fill={this.props.noseColor} />}
+            
     
             {/* Rocket body 1  */}
             <rect width='100' height='300' fill='grey' stroke='black' strokeWidth='1' ry='5' y='100' x='140' />

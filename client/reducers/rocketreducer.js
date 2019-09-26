@@ -1,5 +1,4 @@
 import { NOSE_SHAPE, NOSE_COLOR } from '../actions'
-import {getShape} rom
 
 
 const initialRocketState = {
