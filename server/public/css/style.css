@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Hind:300,400);
+.container__text--stateColour {
+  border: 1px solid grey;
+  height: auto; }
+
 h3 {
   font-size: 1.75rem;
   color: #373d51;
@@ -87,6 +91,10 @@ h3 {
   display: flex;
   justify-content: space-around; }
 
+.container__radio {
+  position: relative;
+  padding-bottom: 2rem; }
+
 .container__radio input {
   position: absolute;
   opacity: 0;
@@ -100,7 +108,7 @@ h3 {
   height: 25px;
   border-radius: 5px; }
 
-.container__radio input::checked ~ .checkmark {
+.container__radio input:checked ~ .checkmark {
   border: 2px solid #1976D2; }
 
 #radio__colour--blue {
@@ -155,7 +163,7 @@ GLOBAL
   width: 50%; }
 
 .b {
-  border: 1px solid red; }
+  border: 1px dashed lightcoral; }
 
 
 /*# sourceMappingURL=style.css.map*/

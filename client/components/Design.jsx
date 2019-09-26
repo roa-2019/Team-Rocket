@@ -52,14 +52,14 @@ class Design extends Component {
                   <div className='container__input b'>
 
                     <label className='container__radio' htmlFor="r1">
-                        <input className='custom purple' type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged} />
+                      <input className='custom purple' type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged} />
                       <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
                     </label>
 
                     <label className='container__radio' htmlFor="r2">
                       <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged} />
                       <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
-                      </label>
+                    </label>
 
 
                     <label className='container__radio' htmlFor="r3">
@@ -76,7 +76,9 @@ class Design extends Component {
 
 
                   </div>
-                  <p>{this.state.noseColor}</p>
+                  <div className="container__text--stateColour">
+                    <p>Colour: {this.state.noseColor}</p>
+                  </div>
                 </div>
               </div>
 
