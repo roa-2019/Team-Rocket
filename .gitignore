@@ -2,4 +2,3 @@ node_modules
 bundle.*
 *.log
 package-lock.json
-gi
