@@ -5,7 +5,6 @@ import { noseShape, noseColor } from '../actions/index'
 class Design extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       noseShape: '',
       noseColor: ''
@@ -33,7 +32,6 @@ class Design extends Component {
 
 
   render() {
-    console.log(this.props)
     return (
       <Fragment>
         <div className='design col b'>
@@ -55,7 +53,7 @@ class Design extends Component {
                     <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged}/>
                     <label htmlFor="r3">Blue</label>
 
-                    <input type="radio" name="nose-colour" id="r3" value="Chuck Norris" onChange={this.onNoseColorChanged}/>
+                    <input type="radio" name="nose-colour" id="r3" value="#FF0000" onChange={this.onNoseColorChanged}/>
                     <label htmlFor="r4">Chuck Norris</label>
 
                     <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged}/>
