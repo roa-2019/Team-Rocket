@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
 
 class Rocket extends Component {
+
   render() {
     return (
       <Fragment>
@@ -8,6 +10,7 @@ class Rocket extends Component {
 
           <div className="rocket-wrapper b">
             Rocket
+            <p>{this.props.noseShape}</p>
           </div>
 
         </div>
@@ -16,4 +19,11 @@ class Rocket extends Component {
   }
 }
 
-export default Rocket
+function mapStateToProps(state) {
+  return {
+    noseShape: state.noseShape,
+    noseColor: state.noseColor
+  }
+}
+
+export default connect(mapStateToProps)(Rocket)

@@ -21,7 +21,7 @@ test('App.test runner is working', () => {
 
 test('renders one LandingPage Component', () => {
   const wrapper = shallow(<App />)
- expect(wrapper.find(LandingPage)).to.have.lengthOf(1)
+ expect(wrapper.find(LandingPage).length).toBe(1)
   })
 
   test('teneray operator for LandingPage', () => {

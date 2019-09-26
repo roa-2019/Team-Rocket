@@ -1,6 +1,18 @@
 import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import { noseShape, noseColor } from '../actions/index'
 
 class Design extends Component {
+  constructor(props) {
+    super(props)
+    console.log(props)
+    this.state = {
+      noseShape: '',
+      noseColor: ''
+    }
+  }
+
+
   componentDidMount() {
     let items = document.querySelectorAll(".accordion a");
     items.forEach((item) => item.addEventListener('click', toggleAccordion));
@@ -10,7 +22,18 @@ class Design extends Component {
       this.nextElementSibling.classList.toggle('active');
     }
   }
+
+  onNoseShapeChanged =  (e) => {
+   this.props.dispatch(noseShape(e.currentTarget.value));
+  }
+
+  onNoseColorChanged =  (e) => {
+    this.props.dispatch(noseColor(e.currentTarget.value));
+  }
+
+
   render() {
+    console.log(this.props)
     return (
       <Fragment>
         <div className='design col b'>
@@ -25,15 +48,17 @@ class Design extends Component {
                 <div className="info">
 
                   <div className='rb-colour-wrapper'>
-                    <input type="radio" name="nose-colour" id="r1" />
-                    <label htmlFor="r1">Red</label>
-                    <input type="radio" name="nose-colour" id="r2" />
+
+                    <input type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged}/>
                     <label htmlFor="r2">Green</label>
-                    <input type="radio" name="nose-colour" id="r3" />
+
+                    <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged}/>
                     <label htmlFor="r3">Blue</label>
-                    <input type="radio" name="nose-colour" id="r4" checked />
-                    <label htmlFor="r4"  >Chuck Norris</label>
-                    <input type="radio" name="nose-colour" id="r5" />
+
+                    <input type="radio" name="nose-colour" id="r3" value="Chuck Norris" onChange={this.onNoseColorChanged}/>
+                    <label htmlFor="r4">Chuck Norris</label>
+
+                    <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged}/>
                     <label htmlFor="r5">Yellow</label>
                   </div>
                 </div>
@@ -44,11 +69,13 @@ class Design extends Component {
                 <a>Nose</a>
                 <div className="info">
                   <div className='rb-nose-wrapper'>
-                    <input type="radio" name="nose-shape" id="r6" checked />
+                    <input type="radio" name="nose-shape" id="r5" value="Triangle" onChange={this.onNoseShapeChanged} />
                     <label htmlFor="r6">Triangle</label>
-                    <input type="radio" name="nose-shape" id="r7" />
+
+                    <input type="radio" name="nose-shape" id="r6" value="Square" onChange={this.onNoseShapeChanged} />
                     <label htmlFor="r7">Square</label>
-                    <input type="radio" name="nose-shape" id="r8" />
+
+                    <input type="radio" name="nose-shape" id="r7" value="Circle" onChange={this.onNoseShapeChanged} />
                     <label htmlFor="r8">Circle</label>
                   </div>
 
@@ -67,7 +94,7 @@ class Design extends Component {
               <div className="accordion-item">
                 <a>Fins</a>
                 <div className="info">
- 
+
 
                 </div>
               </div>
@@ -91,4 +118,5 @@ class Design extends Component {
   }
 }
 
-export default Design
+
+export default connect()(Design)

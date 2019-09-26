@@ -1,5 +1,5 @@
 import React from 'react'
-import Enzyme, {shallow, mount} from 'enzyme'
+import Enzyme, {shallow} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 // import './setup-env'
 
@@ -16,7 +16,7 @@ test('Design.test suite is working', () => {
 describe('Accordion (GUI) works as expected', () => {
     test('accordian length', () => {
      const wrapper = shallow(<Design />)
-     console.log(wrapper)
-    //  expect(wrapper.find('.accordion')).to.have.lengthOf(5)
+    //  console.log(wrapper.find('accordion'))
+     expect(wrapper.find('.accordion-item').length).toBe(5)
     })
 })
