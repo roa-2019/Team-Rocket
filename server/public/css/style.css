@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Hind:300,400);
-.rb-nose-wrapper,
-.rb-colour-wrapper {
-  display: flex;
-  justify-content: space-around; }
-
 h3 {
   font-size: 1.75rem;
   color: #373d51;
@@ -88,6 +83,43 @@ h3 {
   -o-transition: all 0.35s ease 0.15s;
   transition: all 0.35s ease 0.15s; }
 
+.container__input {
+  display: flex;
+  justify-content: space-around; }
+
+.container__radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+.checkmark {
+  position: absolute; }
+
+.checkmark__colours {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px; }
+
+.container__radio input::checked ~ .checkmark {
+  border: 2px solid #1976D2; }
+
+#radio__colour--blue {
+  background-color: lightskyblue; }
+
+#radio__colour--green {
+  background-color: lightgreen; }
+
+#radio__colour--chuckNorris {
+  background-color: #C00000; }
+
+#radio__colour--yellow {
+  background-color: yellow; }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .col {
+    width: 100%; } }
+
 .rocket-panel {
   display: flex;
   align-items: center;
@@ -96,12 +128,13 @@ h3 {
 .rocket-wrapper {
   height: 75%;
   width: 50%;
-  min-width: 200px; }
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .col {
-    width: 100%; } }
+.rocket {
+  background-color: #414a4c; }
 
 * {
   margin: 0;
@@ -111,9 +144,9 @@ h3 {
 #app {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: lightseagreen;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background-color: #949494; }
 
 /* ---------------- 
 GLOBAL 

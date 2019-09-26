@@ -1,8 +1,12 @@
-@import 'buttons';
 @import 'accordion';
-@import 'rocket';
+@import 'buttons';
+// @import 'design';
 @import 'media-queries';
+@import 'mixins';
+@import 'rocket';
 
+//bg
+$spaceGrey: #414a4c;
 
 
 * {
@@ -15,9 +19,9 @@
 #app {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: lightseagreen;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(148, 148, 148);
 }
 
 /* ---------------- 
