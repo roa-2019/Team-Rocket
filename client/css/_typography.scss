@@ -1,0 +1,21 @@
+// Headings
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+
+// Body
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
+
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1px;
+}
+
+a,
+p,
+label {
+  font-family: 'Play', sans-serif;
+}

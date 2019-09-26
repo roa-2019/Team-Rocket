@@ -13,6 +13,7 @@
 }
 
 
+
 // 1. Hide the browsers default radio button
 .container__radio input {
   position: absolute;
@@ -31,9 +32,10 @@
   border-radius: 5px;
 }
 
-.checkmark__nose {
-  width: 40px;
-  height: 20px;
+.checkmark__shape {
+  left: -35px;
+  width: 80px;
+  height: 35px;
   border-radius: 5px;
   border: 1px solid lightblue;
   margin-bottom: 1rem;
@@ -43,10 +45,6 @@
 .container__radio input:checked ~ .checkmark {
   border: 2px solid #1976D2;
 }
-
-
-
-
 
 
 // Colours for Radio Buttons

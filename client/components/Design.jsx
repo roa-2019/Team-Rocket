@@ -34,6 +34,11 @@ class Design extends Component {
     this.setState({ ...this.state, noseColor: e.currentTarget.value })
   }
 
+  onBodyShapeChanged = (e) => {
+    this.props.dispatch(bodyShape(e.currentTarget.value));
+    this.setState({ ...this.state, bodyShape: e.currentTarget.value })
+  }
+
   render() {
     return (
       <Fragment>
@@ -44,50 +49,50 @@ class Design extends Component {
 
             <div className="accordion">
 
-              {/* <!-- Menu 1 --> */}
+              {/* <!-- Colour --> */}
               <div className="accordion-item">
                 <a>Colours</a>
                 <div className="info">
 
-                <div className="container__column">
-                  <div className='container__input b'>
+                  <div className="container__column">
+                    <div className='container__input b'>
 
-                    <label className='container__radio' htmlFor="r1">
-                      <input className='custom purple' type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r1">
+                        <input className='custom purple' type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged} />
+                        <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
+                      </label>
 
-                    <label className='container__radio' htmlFor="r2">
-                      <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r2">
+                        <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged} />
+                        <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
+                      </label>
 
 
-                    <label className='container__radio' htmlFor="r3">
-                      <input type="radio" name="nose-colour" id="r3" value="#FF0000" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r3">
+                        <input type="radio" name="nose-colour" id="r3" value="#FF0000" onChange={this.onNoseColorChanged} />
+                        <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
+                      </label>
 
-                    <label className='container__radio' htmlFor="r4">
-                      <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r4">
+                        <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged} />
+                        <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
+                      </label>
+                    </div>
+                    <div className="container__input--text">
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                    </div>
                   </div>
-                  <div className="container__input--text">
-                      <p>Type Of Colour</p>
-                      <p>Type Of Colour</p>
-                      <p>Type Of Colour</p>
-                      <p>Type Of Colour</p>
-                    </div>
-                    </div>
 
-                  <div className="container__text--stateColour">
+                  <div className="container__text--code">
                     <p>Colour: {this.state.noseColor}</p>
                   </div>
                 </div>
               </div>
 
-              {/* <!-- Menu 2 --> */}
+              {/* <!-- Nose Shape --> */}
               <div className="accordion-item">
                 <a>Nose</a>
                 <div className="info">
@@ -97,21 +102,19 @@ class Design extends Component {
 
                       <label className='container__radio' htmlFor="r5">
                         <input type="radio" name="nose-shape" id="r5" value="Triangle" onChange={this.onNoseShapeChanged} />
-                        <span id='radio__nose--square' className='checkmark checkmark__nose'></span>
-
+                        <span id='radio__nose--square' className='checkmark checkmark__shape'></span>
                       </label>
 
                       <label className='container__radio' htmlFor="r6">
                         <input type="radio" name="nose-shape" id="r6" value="Square" onChange={this.onNoseShapeChanged} />
-                        <span id='radio__nose--triangle' className='checkmark checkmark__nose'></span>
-
+                        <span id='radio__nose--triangle' className='checkmark checkmark__shape'></span>
                       </label>
 
                       <label className='container__radio' htmlFor="r7">
                         <input type="radio" name="nose-shape" id="r7" value="Circle" onChange={this.onNoseShapeChanged} />
-                        <span id='radio__nose--circle' className='checkmark checkmark__nose'></span>
-
+                        <span id='radio__nose--circle' className='checkmark checkmark__shape'></span>
                       </label>
+
                     </div>
                     <div className="container__input--text">
                       <p>Type Of Shape</p>
@@ -120,31 +123,50 @@ class Design extends Component {
                     </div>
                   </div>
 
-
-                  <div className="container__text--stateNose">
+                  <div className="container__text--code">
                     <p>Nose Shape: {this.state.noseShape}</p>
                   </div>
                 </div>
               </div>
 
-              {/* <!-- Menu 3 --> */}
+              {/* <!-- Body Shape--> */}
               <div className="accordion-item">
                 <a>Body</a>
                 <div className="info">
-                  <div className='container__input'>
-                    <input type="radio" name="body-shape" id="r8" value="" onChange={this.onBodyShapeChanged} />
-                    <label htmlFor="r8">Shape 1</label>
+                  <div className="container__column">
 
-                    <input type="radio" name="body-shape" id="r9" value="" onChange={this.onBodyShapeChanged} />
-                    <label htmlFor="r9">Shape 2</label>
+                    <div className='container__input'>
 
-                    <input type="radio" name="body-shape" id="r10" value="" onChange={this.onBodyShapeChanged} />
-                    <label htmlFor="r10">Shape 3</label>
+                      <label className='container__radio' htmlFor="r8">
+                        <input type="radio" name="body-shape" id="r8" value="shape" onChange={this.onBodyShapeChanged} />
+                        <span id='radio__body--' className='checkmark checkmark__shape'></span>
+                      </label>
+
+                      <label className='container__radio' htmlFor="r9">
+                        <input type="radio" name="body-shape" id="r9" value="shape" onChange={this.onBodyShapeChanged} />
+                        <span id='radio__body--' className='checkmark checkmark__shape'></span>
+                      </label>
+
+                      <label className='container__radio' htmlFor="r10">
+                        <input type="radio" name="body-shape" id="r10" value="shape" onChange={this.onBodyShapeChanged} />
+                        <span id='radio__body--' className='checkmark checkmark__shape'></span>
+                      </label>
+                    </div>
+
+                    <div className="container__input--text">
+                      <p>Type Of Shape</p>
+                      <p>Type Of Shape</p>
+                      <p>Type Of Shape</p>
+                    </div>
+
+                  </div>
+                  <div className="container__text--code">
+                    <p>Body Shape: {this.state.bodyShape}</p>
                   </div>
                 </div>
               </div>
 
-              {/* <!-- Menu 4 --> */}
+              {/* <!-- Fins --> */}
               <div className="accordion-item">
                 <a>Fins</a>
                 <div className="info">
@@ -159,8 +181,6 @@ class Design extends Component {
                     <input type="radio" name="fin-shape" id="r13" value="" onChange={this.onFinsShapeChanged} />
                     <label htmlFor="r13">Fins 3</label>
                   </div>
-
-
                 </div>
               </div>
 

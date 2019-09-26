@@ -1,19 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Hind:300,400);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Play&display=swap);
 .container__input--text {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5em;
+  margin-top: 1em; }
 
-.container__text--stateColour,
-.container__text--stateNose {
+.container__text--code {
   border: 1px solid grey;
-  height: auto; }
-
-h3 {
-  font-size: 1.75rem;
-  color: #373d51;
-  padding: 1.3rem;
-  margin: 0; }
+  height: auto;
+  padding: 1em 0em 1em 0em; }
 
 .accordion a {
   position: relative;
@@ -34,7 +30,6 @@ h3 {
   border-bottom: 1px solid #e5e5e5; }
 
 .accordion a::after {
-  font-family: "Font Awesome 5 Free";
   font-weight: 600;
   content: "\f067";
   position: absolute;
@@ -64,8 +59,6 @@ h3 {
   border-bottom: 1px solid whitesmoke; }
 
 .accordion a.active::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
   content: "\f068";
   color: whitesmoke;
   border: 1px solid whitesmoke; }
@@ -114,9 +107,10 @@ h3 {
   height: 25px;
   border-radius: 5px; }
 
-.checkmark__nose {
-  width: 40px;
-  height: 20px;
+.checkmark__shape {
+  left: -35px;
+  width: 80px;
+  height: 35px;
   border-radius: 5px;
   border: 1px solid lightblue;
   margin-bottom: 1rem; }
@@ -135,6 +129,16 @@ h3 {
 
 #radio__colour--yellow {
   background-color: yellow; }
+
+.container__column {
+  display: flex;
+  flex-direction: column; }
+
+.col {
+  width: 50%; }
+
+.b {
+  border: 1px dashed lightcoral; }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -157,6 +161,19 @@ h3 {
 .rocket {
   background-color: #414a4c; }
 
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1px; }
+
+a,
+p,
+label {
+  font-family: 'Play', sans-serif; }
+
 * {
   margin: 0;
   padding: 0;
@@ -168,19 +185,6 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   background-color: #949494; }
-
-/* ---------------- 
-GLOBAL 
----------------- */
-.container__column {
-  display: flex;
-  flex-direction: column; }
-
-.col {
-  width: 50%; }
-
-.b {
-  border: 1px dashed lightcoral; }
 
 
 /*# sourceMappingURL=style.css.map*/
