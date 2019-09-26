@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 class Window extends Component {
     return(
-        <!-- Window set 1 long, squares and circles (top to bottom) (clockwise) -->
+        {/*<!-- Window set 1 long, squares and circles (top to bottom) (clockwise) --> */}
         <circle cx='290' cy='260' r='10' fill='aqua' stroke='black' stroke-width='1' fill='grey' />
         <circle cx='290' cy='440' r='10' fill='aqua' stroke='black' stroke-width='1' fill='grey' />
         <polygon points='300 260 300 280 280 280 280 260' fill='aqua' stroke='black' stroke-width='1' />
