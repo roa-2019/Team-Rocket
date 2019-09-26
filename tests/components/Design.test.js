@@ -27,7 +27,8 @@ describe('Accordion (GUI) works as expected', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<Design dispatch={dispatch} />)
         const choice = wrapper.find('input[value="Green"]')
-        choice.simulate('change', {target: {name: "nose-colour", value:"Green"}})
+        const currentTarget = {name: "nose-colour", value:"Green"}
+        choice.simulate('change', {currentTarget})
         expect(dispatch).toHaveBeenCalled()
         
     })

@@ -29,8 +29,6 @@ class Rockets extends Component {
               <rect width='80' height='20' fill='grey' x='150' y='400' stroke='black' strokeWidth='1' ry='1' />
             </svg>
           </div>
-
-
         </div>
       </Fragment>
     )
