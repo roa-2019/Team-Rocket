@@ -5,6 +5,7 @@ const initialRocketState = {
    noseColor: ''
 }
 
+
 const rocketReducer = (state = initialRocketState, action) => {
   switch (action.type) {
     case NOSE_SHAPE:

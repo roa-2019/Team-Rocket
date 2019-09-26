@@ -17,7 +17,7 @@ test('Rocket.test suite is working', () => {
     expect(false).toBeFalsy()
 })
 
-describe('Roksts componet renders correctly', () => {
+describe('Roksts component renders correctly', () => {
     test('renders one svg tag', () => {
         const wrapper = shallow(<Rockets />)
         expect(wrapper.find('svg').length).toBe(1)
