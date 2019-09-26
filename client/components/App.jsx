@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import Rocket from './Rocket'
 import Design from './Design'
 
-class App extends React.Component {
+class App extends Component {
   
   render () {
     return (
