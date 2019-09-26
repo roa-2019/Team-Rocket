@@ -19,7 +19,7 @@ test('App.test runner is working', () => {
 //   expect(root.length).toBe(1)
 // })
 
-test('renders one LandingPage Component', () => {
+test.skip('renders one LandingPage Component', () => {
   const wrapper = shallow(<App />)
  expect(wrapper.find(LandingPage).length).toBe(1)
   })
