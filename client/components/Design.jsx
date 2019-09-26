@@ -31,7 +31,6 @@ class Design extends Component {
     this.props.dispatch(noseColor(e.currentTarget.value));
   }
 
-  
 
   render() {
     console.log(this.props)
