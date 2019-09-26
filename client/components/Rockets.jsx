@@ -1,27 +1,22 @@
-import React, { Component, Fragment} from 'react'
 class Rockets extends Component {
     render() {
         return(
-            // Rocket 1
-            <svg height='800' width='800' id="rocket-1">
-             {/* Wings */}
-            <polygon points="240 170 330 340 330 480 240 310" fill='grey' stroke='black' stroke-width='2' />
-            <polygon points="140 170 140 310 50 480 50 340" fill='grey' stroke='black' stroke-width='2' />
-    
-             {/* Rocket nose 1  */}
-            <ellipse cx="190" cy="110" rx="50" ry='100' stroke="black" stroke-width="1.5" fill="grey" />
-    
-            {/* Rocket body 1  */}
-            <rect width='100' height='300' fill='grey' stroke='black' stroke-width='1' ry='5' y='100' x='140' />
-            <rect width='20' height='30' fill='aqua' y='170' x='180' stroke='black' stroke-width='1' ry='2' />
-            <rect width='20' height='30' fill='aqua' y='240' x='180' stroke='black' stroke-width='1' ry='2' />
-            <rect width='20' height='30' fill='aqua' y='310' x='180' stroke='black' stroke-width='1' ry='2' />
-    
-            {/*Rocket bottom 1 */}
-            <rect width='80' height='20' fill='grey' x='150' y='400' stroke='black' stroke-width='1' ry='1' />
-        </svg>
+            <svg width="100%" height="100%">
+                {/* Ellipse */}}
+                <ellipse cx="190" cy="110" rx="50" ry='100' stroke="black" stroke-width="1" fill="grey" />
+                {/* Body (clockwise) */}
+                <polygon points="140 100 240 100 240 400 140 400" fill='grey' stroke='black' stroke-width='1' />
+                {/* Windows (top to bottom) (clockwise) */}
+                <polygon points='200 170 200 200 180 200 180 170' fill='aqua' stroke='black' stroke-width='1' />
+                <polygon points='200 240 200 270 180 270 180 240' fill='aqua' stroke='black' stroke-width='1' />
+                <polygon points='200 310 200 340 180 340 180 310' fill='aqua' stroke='black' stroke-width='1' />
+                {/* Thruster (clockwise) */}
+                <polygon points='230 400 230 420 150 420 150 400' fill='gray' stroke='black' stroke-width='1' />
+                {/* Right Wing (clockwise)*/}
+                <polygon points="240 170 330 340 330 480 240 310" fill='grey' stroke='black' stroke-width='1' />
+                {/* Left Wing (mirror right wing) */}
+                <polygon points="140 170  50 340 50 480 140 310" fill='grey' stroke='black' stroke-width='1' ry='1' />
+            </svg>
         )
     }
 }
-
-export default Rockets
