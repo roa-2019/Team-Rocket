@@ -24,10 +24,12 @@ class Design extends Component {
 
   onNoseShapeChanged =  (e) => {
    this.props.dispatch(noseShape(e.currentTarget.value));
+   this.setState({...this.state, noseShape: e.currentTarget.value})
   }
 
   onNoseColorChanged =  (e) => {
     this.props.dispatch(noseColor(e.currentTarget.value));
+    this.setState({...this.state, noseColor: e.currentTarget.value})
   }
 
 
@@ -59,6 +61,7 @@ class Design extends Component {
                     <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged}/>
                     <label htmlFor="r5">Yellow</label>
                   </div>
+                  <p>{this.state.noseColor}</p>
                 </div>
               </div>
 
@@ -76,7 +79,7 @@ class Design extends Component {
                     <input type="radio" name="nose-shape" id="r7" value="Circle" onChange={this.onNoseShapeChanged} />
                     <label htmlFor="r8">Circle</label>
                   </div>
-
+                  <p>{this.state.noseShape}</p>
                 </div>
               </div>
 
