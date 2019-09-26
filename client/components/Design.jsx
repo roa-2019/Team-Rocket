@@ -32,7 +32,6 @@ class Design extends Component {
     this.setState({...this.state, noseColor: e.currentTarget.value})
   }
 
-
   render() {
     return (
       <Fragment>
@@ -79,7 +78,7 @@ class Design extends Component {
                     <input type="radio" name="nose-shape" id="r7" value="Circle" onChange={this.onNoseShapeChanged} />
                     <label htmlFor="r8">Circle</label>
                   </div>
-                  <p>{this.state.noseShape}</p>
+                  <p>{(this.state.noseShape)}</p>
                 </div>
               </div>
 
