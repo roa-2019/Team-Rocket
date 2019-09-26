@@ -20,6 +20,10 @@ class Wing extends Component {
                 <polygon points="340 460 380 500 340 500" fill='grey' stroke='black' stroke-width='1' />
                 {/* Left wing 4 small triangle */}
                 <polygon points="240 460 200 500 240 500" fill='grey' stroke='black' stroke-width='1' />
+                {/* Right wing 5 large big shapes */}
+                <polygon points="340 260 440 300 450 560 400 360 340 350" fill='grey' stroke='black' stroke-width='1' />
+                {/* Left wing 5 large big shapes */}
+                <polygon points='240 260 140 300 150 560 180 360 240 350' fill='grey' stroke='black' stroke-width='1' />
             </div>
 
         )
