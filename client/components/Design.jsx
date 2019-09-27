@@ -63,6 +63,8 @@ class Design extends Component {
             <h3>Build Your Rocket</h3>
             <Accordion>
 
+
+              {/* COLOR INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -107,6 +109,7 @@ class Design extends Component {
                 </AccordionItemPanel>
               </AccordionItem>
 
+              {/* NOSE INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -144,6 +147,7 @@ class Design extends Component {
                 </AccordionItemPanel>
               </AccordionItem>
 
+              {/* BODY INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -181,6 +185,40 @@ class Design extends Component {
                 </AccordionItemPanel>
               </AccordionItem>
 
+               {/* WINDOW INPUT */}
+               <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Windows
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+
+                <AccordionItemPanel>
+                  <div className='container__input'>
+                    <input type="radio" name="thruster-shape" id="r11" value="wing" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r11">Window 1</label>
+
+                    <input type="radio" name="thruster-shape" id="r12" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r12">Window 2</label>
+
+                    <input type="radio" name="thruster-shape" id="r13" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r13">Window 3</label>
+                  </div>
+
+
+                  <div className="container__input--text">
+                    <p>Type Of Window</p>
+                    <p>Type Of Window</p>
+                    <p>Type Of Window</p>
+                  </div>
+
+                  <div className="container__text--code">
+                    <p>Wing Shape: {this.state.finShape}</p>
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+
+              {/* WINGS INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -190,16 +228,15 @@ class Design extends Component {
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <input type="radio" name="fin-shape" id="r11" value="wing" onChange={this.onFinShapeChanged} />
-                    <label htmlFor="r11">Fins 1</label>
+                    <input type="radio" name="thruster-shape" id="r14" value="wing" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r14">Thruster 1</label>
 
-                    <input type="radio" name="fin-shape" id="r12" value="" onChange={this.onFinShapeChanged} />
-                    <label htmlFor="r12">Fins 2</label>
+                    <input type="radio" name="thruster-shape" id="r15" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r15">Thruster 2</label>
 
-                    <input type="radio" name="fin-shape" id="r13" value="" onChange={this.onFinShapeChanged} />
-                    <label htmlFor="r13">Fins 3</label>
+                    <input type="radio" name="thruster-shape" id="r16" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r16">Thruster 3</label>
                   </div>
-
 
                   <div className="container__input--text">
                     <p>Type Of Wing</p>
@@ -209,6 +246,38 @@ class Design extends Component {
 
                   <div className="container__text--code">
                     <p>Wing Shape: {this.state.finShape}</p>
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+
+               {/* THRUSTER INPUT */}
+               <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Thruster
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+
+                <AccordionItemPanel>
+                  <div className='container__input'>
+                    <input type="radio" name="thruster-shape" id="r17" value="wing" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r17">Thruster 1</label>
+
+                    <input type="radio" name="thruster-shape" id="r18" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r18">Thruster 2</label>
+
+                    <input type="radio" name="thruster-shape" id="r19" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r19">Thruster 3</label>
+                  </div>
+
+                  <div className="container__input--text">
+                    <p>Type Of Thruster</p>
+                    <p>Type Of Thruster</p>
+                    <p>Type Of Thruster</p>
+                  </div>
+
+                  <div className="container__text--code">
+                    <p>Thruster Shape: {this.state.finShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
