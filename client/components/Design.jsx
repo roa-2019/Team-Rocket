@@ -269,7 +269,7 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>{this.state.wingShape}</p>
+                    <p className="margin__left">{this.state.wingShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -309,7 +309,7 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>{this.state.thrusterShape}</p>
+                    <p className="margin__left">{this.state.thrusterShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
