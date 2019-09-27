@@ -3,6 +3,11 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import Nose1 from './rocket-parts/nose-parts/Nose1';
 import Nose2 from './rocket-parts/nose-parts/Nose2';
+import Nose3 from './rocket-parts/nose-parts/Nose3';
+import Body1 from './rocket-parts/body-parts/Body1';
+import Body2 from './rocket-parts/body-parts/Body2';
+import Body3 from './rocket-parts/body-parts/Body3';
+import Body4 from './rocket-parts/body-parts/Body4';
 
 class Rockets extends Component {
 
@@ -25,17 +30,15 @@ class Rockets extends Component {
 
               {/* Rocket nose 1  */}
               {this.props.noseShape == 'Circle' && <Nose1 />}
-
-              {/* nose2 */}
-              {/* {this.props.noseShape == 'Triangle' && <polygon points="240 200 290 120 340 200" stroke='black' stroke-width='1' fill={this.props.changeColor}/>}  */}
-
               {this.props.noseShape == 'Triangle' && <Nose2 />}
+              {this.props.noseShape == 'LongTriangle' && <Nose3 />}
               
               {/* Rocket body 1  */}
-              <polygon points="240 200 340 200 340 500 240 500" fill='grey' stroke='black' strokeWidth='1' />
-              <circle cx='290' cy='300' r='20' fill='aqua' stroke='black' strokeWidth='4' strokeOpacity='.4' />
-              <circle cx='290' cy='370' r='20' fill='aqua' stroke='black' strokeWidth='4' strokeOpacity='.4' />
-              <circle cx='290' cy='440' r='20' fill='aqua' stroke='black' strokeWidth='4' strokeOpacity='.4' />
+              {this.props.bodyShape == 'Rectangle' && <Body1 />}
+              {this.props.bodyShape == 'Trapazoid' && <Body2 />}
+              {this.props.bodyShape == 'Pillar' && <Body3 />}
+              {this.props.bodyShape == 'Body4' && <Body4 />}
+              
 
               {/*Rocket thruster 1 */}
               <polygon points='320 500 300 540 280 540 260 500' fill='grey' stroke='black' strokeWidth='1' />
