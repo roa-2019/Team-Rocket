@@ -7,8 +7,9 @@ class Rockets extends Component {
   render() {
     return (
       <Fragment>
-        <div className='rocket rocket-panel col b'>
+        <div className='rocket rocket-panel col b '>
 
+          
           <div className="rocket-wrapper b">
 
             <svg height='800' width='800' id="rocket-1">
