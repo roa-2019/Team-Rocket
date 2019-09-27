@@ -66,8 +66,6 @@ class Design extends Component {
     this.setState({ ...this.state, thrusterShape: e.currentTarget.value})
   }
 
-
-
   render() {
     return (
       <Fragment>
@@ -304,6 +302,5 @@ class Design extends Component {
     )
   }
 }
-
 
 export default connect()(Design)
