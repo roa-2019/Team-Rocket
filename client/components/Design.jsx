@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { noseShape, noseColor, bodyShape, finShape } from '../actions/index'
+import { noseShape, changeColor, bodyShape, wingShape } from '../actions/index'
 
 class Design extends Component {
   constructor(props) {
     super(props)
     this.state = {
       noseShape: '',
-      noseColor: '',
+      changeColor: '',
       bodyShape: '',
-      finShape: ''
+      wingShape: ''
     }
   }
 
@@ -29,9 +29,9 @@ class Design extends Component {
     this.setState({ ...this.state, noseShape: e.currentTarget.value })
   }
 
-  onNoseColorChanged = (e) => {
-    this.props.dispatch(noseColor(e.currentTarget.value));
-    this.setState({ ...this.state, noseColor: e.currentTarget.value })
+  onColorChanged = (e) => {
+    this.props.dispatch(changeColor(e.currentTarget.value));
+    this.setState({ ...this.state, changeColor: e.currentTarget.value })
   }
 
   onBodyShapeChanged = (e) => {
@@ -58,23 +58,23 @@ class Design extends Component {
                     <div className='container__input b'>
 
                       <label className='container__radio' htmlFor="r1">
-                        <input className='custom purple' type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged} />
+                        <input className='custom purple' type="radio" name="change-colour" id="r1" value="Green" onChange={this.onColorChanged} />
                         <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
                       </label>
 
                       <label className='container__radio' htmlFor="r2">
-                        <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged} />
+                        <input type="radio" name="change-colour" id="r2" value="Blue" onChange={this.onColorChanged} />
                         <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
                       </label>
 
 
                       <label className='container__radio' htmlFor="r3">
-                        <input type="radio" name="nose-colour" id="r3" value="#FF0000" onChange={this.onNoseColorChanged} />
+                        <input type="radio" name="change-colour" id="r3" value="#FF0000" onChange={this.onColorChanged} />
                         <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
                       </label>
 
                       <label className='container__radio' htmlFor="r4">
-                        <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged} />
+                        <input type="radio" name="change-colour" id="r4" value="Yellow" onChange={this.onColorChanged} />
                         <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
                       </label>
                     </div>
@@ -87,7 +87,7 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>Colour: {this.state.noseColor}</p>
+                    <p>Colour: {this.state.changeColor}</p>
                   </div>
                 </div>
               </div>
@@ -166,20 +166,20 @@ class Design extends Component {
                 </div>
               </div>
 
-              {/* <!-- Fins --> */}
+              {/* <!-- wings --> */}
               <div className="accordion-item">
-                <a>Fins</a>
+                <a>Wings</a>
                 <div className="info">
 
                   <div className='container__input'>
-                    <input type="radio" name="fin-shape" id="r11" value="" onChange={this.onFinsShapeChanged} />
-                    <label htmlFor="r11">Fins 1</label>
+                    <input type="radio" name="wing-shape" id="r11" value="" onChange={this.onWingShapeChanged} />
+                    <label htmlFor="r11">Wing 1</label>
 
-                    <input type="radio" name="fin-shape" id="r12" value="" onChange={this.onFinsShapeChanged} />
-                    <label htmlFor="r12">Fins 2</label>
+                    <input type="radio" name="wing-shape" id="r12" value="" onChange={this.onWingShapeChanged} />
+                    <label htmlFor="r12">Wing 2</label>
 
-                    <input type="radio" name="fin-shape" id="r13" value="" onChange={this.onFinsShapeChanged} />
-                    <label htmlFor="r13">Fins 3</label>
+                    <input type="radio" name="wing-shape" id="r13" value="" onChange={this.onWingShapeChanged} />
+                    <label htmlFor="r13">Wing 3</label>
                   </div>
                 </div>
               </div>

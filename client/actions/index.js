@@ -1,8 +1,9 @@
 export const NOSE_SHAPE = 'NOSE_SHAPE'
-export const NOSE_COLOR = 'NOSE_COLOR'
+export const CHANGE_COLOR = 'CHANGE_COLOR'
 export const BODY_SHAPE = 'BODY_SHAPE'
-export const FIN_SHAPE = 'FIN_SHAPE'
-
+export const WING_SHAPE = 'WING_SHAPE'
+export const WINDOW_SHAPE = 'WINDOW_SHAPE'
+export const THRUSTER_SHAPE = 'THRUSTER_SHAPE'
 
 
 export function noseShape (shape) {
@@ -12,9 +13,9 @@ export function noseShape (shape) {
   }
 }
 
-export function Color (color) {
+export function changeColor (color) {
   return {
-    type: COLOR,
+    type: CHANGE_COLOR,
     color
   }
 }
@@ -26,9 +27,9 @@ export function bodyShape (shape) {
   }
 }
 
-export function finShape (shape) {
+export function wingShape (shape) {
   return {
-    type: FIN_SHAPE,
+    type: WING_SHAPE,
     shape
   }
 }
@@ -40,6 +41,9 @@ export function windowShape (shape) {
   }
 }
 
-export function thrusterShape () {
-
+export function thrusterShape (shape) {
+  return {
+    type: THRUSTER_SHAPE,
+    shape
+  }
 }
