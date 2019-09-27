@@ -5,7 +5,7 @@ class Thruster5 extends Component {
         return (
             <div>
                 {/* Thruster 5 big bottom */}
-                <polygon points="240 500 340 500 380 570 290 530 200 570" fill='grey' stroke='black' stroke-width='1'/>
+                <polygon points="240 500 340 500 380 570 290 530 200 570" fill='grey' stroke='black' strokeWidth='1'/>
             </div>
 
         )

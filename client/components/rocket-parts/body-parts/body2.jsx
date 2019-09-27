@@ -5,8 +5,8 @@ class Body2 extends Component {
         return (
             <div>
                 {/* Body 2 trapazoid */}
-                <polygon points="200 200 380 200 360 350 220 350 " fill='grey' stroke='black' stroke-width='1' />
-                <polygon points="240 500 340 500 360 350 220 350" fill='grey' stroke='black' stroke-width='1' />
+                <polygon points="200 200 380 200 360 350 220 350 " fill='grey' stroke='black' strokeWidth='1' />
+                <polygon points="240 500 340 500 360 350 220 350" fill='grey' stroke='black' strokeWidth='1' />
             </div>
 
         )

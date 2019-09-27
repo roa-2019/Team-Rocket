@@ -5,7 +5,7 @@ class Nose3 extends Component {
         return (
             <div>
                 {/* Nose long triangle 3 */}
-                <polygon points="240 200 290 80 340 200" fill="grey" stroke='black' stroke-width='1' />
+                <polygon points="240 200 290 80 340 200" fill="grey" stroke='black' strokeWidth='1' />
             </div>
 
         )

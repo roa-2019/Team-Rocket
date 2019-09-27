@@ -5,7 +5,7 @@ class Thruster2 extends Component {
         return (
             <div>
                 {/* Thruster 2 trapezoid */}
-                <polygon points='320 500 350 540 230 540 260 500' fill='grey' stroke='black' stroke-width='1' />
+                <polygon points='320 500 350 540 230 540 260 500' fill='grey' stroke='black' strokeWidth='1' />
             </div>
 
         )
