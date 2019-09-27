@@ -1,11 +1,13 @@
 import { NOSE_SHAPE, NOSE_COLOR, BODY_SHAPE, FIN_SHAPE } from '../actions'
 
+
 const initialRocketState = {
    noseShape: '',
    noseColor: '',
    bodyShape: '',
    finShape: ''
 }
+
 
 const rocketReducer = (state = initialRocketState, action) => {
   switch (action.type) {
