@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { noseShape, changeColor, bodyShape, wingShape } from '../actions/index'
+import { noseShape, changeColor, bodyShape, wingShape, windowShape, thrusterShape } from '../actions/index'
 
 import {
   Accordion,
@@ -19,7 +19,9 @@ class Design extends Component {
       noseShape: '',
       changeColor: '',
       bodyShape: '',
-      wingShape: ''
+      wingShape: '',
+      windowShape: '',
+      thrusterShape: ''
     }
   }
 
@@ -34,14 +36,14 @@ class Design extends Component {
     }
   }
 
-  onNoseShapeChanged = (e) => {
-    this.props.dispatch(noseShape(e.currentTarget.value));
-    this.setState({ ...this.state, noseShape: e.currentTarget.value })
-  }
-
   onColorChanged = (e) => {
     this.props.dispatch(changeColor(e.currentTarget.value));
     this.setState({ ...this.state, changeColor: e.currentTarget.value })
+  }
+
+  onNoseShapeChanged = (e) => {
+    this.props.dispatch(noseShape(e.currentTarget.value));
+    this.setState({ ...this.state, noseShape: e.currentTarget.value })
   }
 
   onBodyShapeChanged = (e) => {
@@ -49,9 +51,19 @@ class Design extends Component {
     this.setState({ ...this.state, bodyShape: e.currentTarget.value })
   }
 
-  onFinShapeChanged = (e) => {
-    this.props.dispatch(finShape(e.currentTarget.value));
-    this.setState({ ...this.state, finShape: e.currentTarget.value })
+  onWingShapeChanged = (e) => {
+    this.props.dispatch(wingShape(e.currentTarget.value));
+    this.setState({ ...this.state, wingShape: e.currentTarget.value })
+  }
+
+  onWindowShapeChanged = (e) => {
+    this.props.dispatch(windowShape(e.currentTarget.value));
+    this.setState({...this.state, windowShape: e.currentTarget.value})
+  }
+
+  onThrusterShapeChanged = (e) => {
+    this.props.dispatch(thrusterShape(e.currentTarget.value));
+    this.setState({ ...this.state, thrusterShape: e.currentTarget.value})
   }
 
   render() {
@@ -107,6 +119,7 @@ class Design extends Component {
                 </AccordionItemPanel>
               </AccordionItem>
 
+              {/* NOSE INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -144,6 +157,7 @@ class Design extends Component {
                 </AccordionItemPanel>
               </AccordionItem>
 
+              {/* BODY INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -169,8 +183,6 @@ class Design extends Component {
                     </label>
                   </div>
 
-              {/* <!-- wings --> */}
-
                   <div className="container__input--text">
                     <p>Type Of Shape</p>
                     <p>Type Of Shape</p>
@@ -183,6 +195,41 @@ class Design extends Component {
                 </AccordionItemPanel>
               </AccordionItem>
 
+               {/* WINDOWS INPUT */}
+               <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton>
+                        Windows
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+
+                <AccordionItemPanel>
+                  <div className='container__input'>
+                    <input type="radio" name="window-shape" id="r11" value="" onChange={this.onWindowShapeChanged} />
+                    <label htmlFor="r11">Wing 1</label>
+
+                    <input type="radio" name="window-shape" id="r12" value="" onChange={this.onWindowShapeChanged} />
+                    <label htmlFor="r12">Wing 2</label>
+
+                    <input type="radio" name="window-shape" id="r13" value="" onChange={this.onWindowShapeChanged} />
+                    <label htmlFor="r13">Wing 3</label>
+                  </div>
+
+                  <div className="container__input--text">
+                    <p>Type Of Window</p>
+                    <p>Type Of Window</p>
+                    <p>Type Of Window</p>
+                  </div>
+
+                  <div className="container__text--code">
+                    <p>Wing Shape: {this.state.windowShape}</p>
+                  </div>
+
+                  
+                </AccordionItemPanel>
+              </AccordionItem>
+
+              {/* WINGS INPUT */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -192,16 +239,15 @@ class Design extends Component {
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <input type="radio" name="fin-shape" id="r11" value="wing" onChange={this.onFinShapeChanged} />
-                    <label htmlFor="r11">Fins 1</label>
+                    <input type="radio" name="window-shape" id="r14" value="window" onChange={this.onWingShapeChanged} />
+                    <label htmlFor="r14">Thruster 1</label>
 
-                    <input type="radio" name="fin-shape" id="r12" value="" onChange={this.onFinShapeChanged} />
-                    <label htmlFor="r12">Fins 2</label>
+                    <input type="radio" name="window-shape" id="r15" value="" onChange={this.onWingShapeChanged} />
+                    <label htmlFor="r15">Thruster 2</label>
 
-                    <input type="radio" name="fin-shape" id="r13" value="" onChange={this.onFinShapeChanged} />
-                    <label htmlFor="r13">Fins 3</label>
+                    <input type="radio" name="window-shape" id="r16" value="" onChange={this.onWinghapeChanged} />
+                    <label htmlFor="r16">Thruster 3</label>
                   </div>
-
 
                   <div className="container__input--text">
                     <p>Type Of Wing</p>
@@ -210,7 +256,39 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>Wing Shape: {this.state.finShape}</p>
+                    <p>Wing Shape: {this.state.wingShape}</p>
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+
+               {/* THRUSTER INPUT */}
+               <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Thruster
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+
+                <AccordionItemPanel>
+                  <div className='container__input'>
+                    <input type="radio" name="thruster-shape" id="r17" value="thruster" onChange={this.onThrusterShapeChanged} />
+                    <label htmlFor="r17">Thruster 1</label>
+
+                    <input type="radio" name="thruster-shape" id="r18" value="" onChange={this.onThrusterChanged} />
+                    <label htmlFor="r18">Thruster 2</label>
+
+                    <input type="radio" name="thruster-shape" id="r19" value="" onChange={this.onThrusterChanged} />
+                    <label htmlFor="r19">Thruster 3</label>
+                  </div>
+
+                  <div className="container__input--text">
+                    <p>Type Of Thruster</p>
+                    <p>Type Of Thruster</p>
+                    <p>Type Of Thruster</p>
+                  </div>
+
+                  <div className="container__text--code">
+                    <p>Thruster Shape: {this.state.thrusterShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
