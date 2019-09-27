@@ -43,6 +43,9 @@
   width: 100%;
   text-align: left;
   border: none;
+  -webkit-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
+  -moz-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
+  box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
 }
 
 .accordion__button:hover {
