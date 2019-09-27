@@ -5,7 +5,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import LandingPage from '../../client/components/LandingPage'
 
 import App from '../../client/components/App'
-App.prototype.componentDidMount = () => {}
 
 Enzyme.configure({adapter: new Adapter()})
 
