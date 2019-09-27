@@ -1,13 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Play&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400&display=swap);
+.container__top {
+  margin-top: 1rem; }
+
+.container__input {
+  margin-top: .3rem; }
+
 .container__input--text {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1.5em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  text-align: center; }
 
 .container__text--code {
-  border: 1px solid grey;
+  border: 1px solid #464646;
   height: auto;
   padding: 1em 0em 1em 0em; }
 
@@ -21,7 +29,8 @@
 **/
 .accordion {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 2px; }
+  border-radius: 2px;
+  margin-bottom: 3rem; }
 
 .accordion__item {
   font-family: 'Play', sans-serif; }
@@ -60,7 +69,7 @@
 
 .accordion__panel {
   padding: 20px;
-  animation: fadein 0.35s ease-in;
+  animation: fadein 0.5s ease-in;
   background: rgba(16, 16, 46, 0.5); }
 
 /* -------------------------------------------------- */
@@ -90,20 +99,26 @@
 
 .checkmark__colours {
   width: 25px;
-  left: 3%;
+  left: -10px;
   height: 25px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  -webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55); }
 
 .checkmark__shape {
-  left: -35px;
-  width: 80px;
-  height: 35px;
+  left: -40px;
+  width: 5.3em;
+  height: 2.5em;
   border-radius: 5px;
-  border: 1px solid lightblue;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  background: grey;
+  -webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55);
+  box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55); }
 
 .container__radio input:checked ~ .checkmark {
-  border: 2px solid #1976D2; }
+  border: 2.2px solid #ff6600; }
 
 #radio__colour--blue {
   background-color: lightskyblue; }
@@ -132,6 +147,9 @@
 .b {
   border: 1px dashed lightcoral; }
 
+.margin__left {
+  margin-left: 1em; }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .col {
@@ -151,20 +169,32 @@
   justify-content: center; }
 
 h3 {
-  font-size: 1.75rem;
-  color: #373d51;
   padding: 1.3rem;
-  margin: 0;
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.75rem;
+  color: #f89553;
   font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.58);
+  box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.58); }
 
 a,
-p,
-label {
+p, label {
   font-family: 'Play', sans-serif; }
 
 p {
+  font-family: 'Play', sans-serif;
   color: whitesmoke; }
+
+.container__text--code p {
+  color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; }
+
+.padding__xs--left {
+  padding-left: 15px; }
 
 * {
   margin: 0;

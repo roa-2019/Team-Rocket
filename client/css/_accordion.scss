@@ -1,14 +1,23 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
+.container__top {
+  margin-top: 1rem;
+}
+
+.container__input {
+  margin-top: .3rem;
+}
+
 .container__input--text {
   @include space-around;
   margin-bottom: 1.5em;
   margin-top: 1em;
+  text-align: center;
 }
 
 .container__text--code {
-  border: 1px solid grey;
+  border: 1px solid $codeContainer;
   height: auto;
   padding: 1em 0em 1em 0em;
 }
@@ -25,6 +34,7 @@
 .accordion {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  margin-bottom: 3rem;
 }
 
 .accordion__item {
@@ -70,7 +80,7 @@
 
 .accordion__panel {
   padding: 20px;
-  animation: fadein 0.35s ease-in;
+  animation: fadein 0.5s ease-in;
   background: rgba(16, 16, 46, 0.5);
 
 }

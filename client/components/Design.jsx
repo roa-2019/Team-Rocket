@@ -58,63 +58,63 @@ class Design extends Component {
 
   onWindowShapeChanged = (e) => {
     this.props.dispatch(windowShape(e.currentTarget.value));
-    this.setState({...this.state, windowShape: e.currentTarget.value})
+    this.setState({ ...this.state, windowShape: e.currentTarget.value })
   }
 
   onThrusterShapeChanged = (e) => {
     this.props.dispatch(thrusterShape(e.currentTarget.value));
-    this.setState({ ...this.state, thrusterShape: e.currentTarget.value})
+    this.setState({ ...this.state, thrusterShape: e.currentTarget.value })
   }
 
   render() {
     return (
       <Fragment>
-        <div className='design col b'>
+        <div className='design col'>
 
           <div className="details-panel">
-            <h3>Build Your Rocket</h3>
+            <h3> ~ Build Your Rocket ~ </h3>
             <Accordion>
 
-            <AccordionItem>
+              <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     Color
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                    
-                    <div className='container__input b'>
 
-                      <label className='container__radio' htmlFor="r1">
-                        <input className='custom purple' type="radio" name="change-colour" id="r1" value="Green" onChange={this.onColorChanged} />
-                        <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
-                      </label>
+                  <div className='container__input'>
 
-                      <label className='container__radio' htmlFor="r2">
-                        <input type="radio" name="change-colour" id="r2" value="Blue" onChange={this.onColorChanged} />
-                        <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
-                      </label>
+                    <label className='container__radio' htmlFor="r1">
+                      <input className='custom purple' type="radio" name="change-colour" id="r1" value="Green" onChange={this.onColorChanged} />
+                      <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
+                    </label>
+
+                    <label className='container__radio' htmlFor="r2">
+                      <input type="radio" name="change-colour" id="r2" value="Blue" onChange={this.onColorChanged} />
+                      <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
+                    </label>
 
 
-                      <label className='container__radio' htmlFor="r3">
-                        <input type="radio" name="change-colour" id="r3" value="#FF0000" onChange={this.onColorChanged} />
-                        <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
-                      </label>
+                    <label className='container__radio' htmlFor="r3">
+                      <input type="radio" name="change-colour" id="r3" value="#FF0000" onChange={this.onColorChanged} />
+                      <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
+                    </label>
 
-                      <label className='container__radio' htmlFor="r4">
-                        <input type="radio" name="change-colour" id="r4" value="Yellow" onChange={this.onColorChanged} />
-                        <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
-                      </label>
-                    </div>
-                    <div className="container__input--text">
-                      <p>Type Of Colour</p>
-                      <p>Type Of Colour</p>
-                      <p>Type Of Colour</p>
-                      <p>Type Of Colour</p>
-                    </div>
+                    <label className='container__radio' htmlFor="r4">
+                      <input type="radio" name="change-colour" id="r4" value="Yellow" onChange={this.onColorChanged} />
+                      <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
+                    </label>
+                  </div>
+                  <div className="container__input--text">
+                    <p className="">Green</p>
+                    <p className="">Blue</p>
+                    <p className="">Chuck Norris</p>
+                    <p >Yellow</p>
+                  </div>
 
                   <div className="container__text--code">
-                    <p>Colour: {this.state.changeColor}</p>
+                    <p className="margin__left"> {this.state.changeColor}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -127,7 +127,7 @@ class Design extends Component {
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  <div className='container__input b'>
+                  <div className='container__input '>
 
                     <label className='container__radio' htmlFor="r5">
                       <input type="radio" name="nose-shape" id="r5" value="Triangle" onChange={this.onNoseShapeChanged} />
@@ -152,7 +152,7 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>Nose Shape: {this.state.noseShape}</p>
+                    <p className="margin__left">{this.state.noseShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -169,17 +169,17 @@ class Design extends Component {
 
                     <label className='container__radio' htmlFor="r8">
                       <input type="radio" name="body-shape" id="r8" value="shape" onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--' className='checkmark checkmark__shape'></span>
+                      <span id='radio__body--1' className='checkmark checkmark__shape'></span>
                     </label>
 
                     <label className='container__radio' htmlFor="r9">
                       <input type="radio" name="body-shape" id="r9" value="shape" onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--' className='checkmark checkmark__shape'></span>
+                      <span id='radio__body--2' className='checkmark checkmark__shape'></span>
                     </label>
 
                     <label className='container__radio' htmlFor="r10">
                       <input type="radio" name="body-shape" id="r10" value="shape" onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--' className='checkmark checkmark__shape'></span>
+                      <span id='radio__body--3' className='checkmark checkmark__shape'></span>
                     </label>
                   </div>
 
@@ -190,29 +190,36 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>Body Shape: {this.state.bodyShape}</p>
+                    <p className="margin__left">{this.state.bodyShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
 
-               {/* WINDOWS INPUT */}
-               <AccordionItem>
+              {/* WINDOWS INPUT */}
+              <AccordionItem>
                 <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Windows
+                  <AccordionItemButton>
+                    Windows
                     </AccordionItemButton>
                 </AccordionItemHeading>
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <input type="radio" name="window-shape" id="r11" value="" onChange={this.onWindowShapeChanged} />
-                    <label htmlFor="r11">Wing 1</label>
 
-                    <input type="radio" name="window-shape" id="r12" value="" onChange={this.onWindowShapeChanged} />
-                    <label htmlFor="r12">Wing 2</label>
+                    <label className='container__radio' htmlFor="r11">
+                      <input type="radio" name="window-shape" id="r11" value="" onChange={this.onWindowShapeChanged} />
+                      <span id='radio__window--1' className='checkmark checkmark__shape'></span>
+                    </label>
 
-                    <input type="radio" name="window-shape" id="r13" value="" onChange={this.onWindowShapeChanged} />
-                    <label htmlFor="r13">Wing 3</label>
+                    <label className='container__radio' htmlFor="r12">
+                      <input type="radio" name="window-shape" id="r12" value="" onChange={this.onWindowShapeChanged} />
+                      <span id='radio__window--2' className='checkmark checkmark__shape'></span>
+                    </label>
+
+                    <label className='container__radio' htmlFor="r13">
+                      <input type="radio" name="window-shape" id="r13" value="" onChange={this.onWindowShapeChanged} />
+                      <span id='radio__window--3' className='checkmark checkmark__shape'></span>
+                    </label>
                   </div>
 
                   <div className="container__input--text">
@@ -222,10 +229,10 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>Wing Shape: {this.state.windowShape}</p>
+                    <p className="margin__left">{this.state.windowShape}</p>
                   </div>
 
-                  
+
                 </AccordionItemPanel>
               </AccordionItem>
 
@@ -239,14 +246,20 @@ class Design extends Component {
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <input type="radio" name="window-shape" id="r14" value="window" onChange={this.onWingShapeChanged} />
-                    <label htmlFor="r14">Thruster 1</label>
+                    <label className='container__radio' htmlFor="r14">
+                      <input type="radio" name="window-shape" id="r14" value="window" onChange={this.onWingShapeChanged} />
+                      <span id='radio__wings--1' className='checkmark checkmark__shape'></span>
+                    </label>
 
-                    <input type="radio" name="window-shape" id="r15" value="" onChange={this.onWingShapeChanged} />
-                    <label htmlFor="r15">Thruster 2</label>
+                    <label className='container__radio' htmlFor="r15">
+                      <input type="radio" name="window-shape" id="r15" value="" onChange={this.onWingShapeChanged} />
+                      <span id='radio__wings--2' className='checkmark checkmark__shape'></span>
+                    </label>
 
-                    <input type="radio" name="window-shape" id="r16" value="" onChange={this.onWinghapeChanged} />
-                    <label htmlFor="r16">Thruster 3</label>
+                    <label className='container__radio' htmlFor="r16">
+                      <input type="radio" name="window-shape" id="r16" value="" onChange={this.onWinghapeChanged} />
+                      <span id='radio__wings--3' className='checkmark checkmark__shape'></span>
+                    </label>
                   </div>
 
                   <div className="container__input--text">
@@ -256,13 +269,13 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p>Wing Shape: {this.state.wingShape}</p>
+                    <p>{this.state.wingShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
 
-               {/* THRUSTER INPUT */}
-               <AccordionItem>
+              {/* THRUSTER INPUT */}
+              <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
                     Thruster
@@ -271,24 +284,32 @@ class Design extends Component {
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <input type="radio" name="thruster-shape" id="r17" value="thruster" onChange={this.onThrusterShapeChanged} />
-                    <label htmlFor="r17">Thruster 1</label>
 
-                    <input type="radio" name="thruster-shape" id="r18" value="" onChange={this.onThrusterChanged} />
-                    <label htmlFor="r18">Thruster 2</label>
+                    <label className='container__radio' htmlFor="r17">
+                      <input type="radio" name="thruster-shape" id="r17" value="thruster" onChange={this.onThrusterShapeChanged} />
+                      <span id='radio__thruster--1' className='checkmark checkmark__shape'></span>
+                    </label>
 
-                    <input type="radio" name="thruster-shape" id="r19" value="" onChange={this.onThrusterChanged} />
-                    <label htmlFor="r19">Thruster 3</label>
+                    <label className='container__radio' htmlFor="r18">
+                      <input type="radio" name="thruster-shape" id="r18" value="" onChange={this.onThrusterChanged} />
+                      <span id='radio__thruster--2' className='checkmark checkmark__shape'></span>
+
+                    </label>
+
+                    <label className='container__radio' htmlFor="r19">
+                      <input type="radio" name="thruster-shape" id="r19" value="" onChange={this.onThrusterChanged} />
+                      <span id='radio__thruster--3' className='checkmark checkmark__shape'></span>
+                    </label>
                   </div>
 
                   <div className="container__input--text">
-                    <p>Type Of Thruster</p>
-                    <p>Type Of Thruster</p>
-                    <p>Type Of Thruster</p>
+                    <p>Thruster</p>
+                    <p>Thruster</p>
+                    <p>Thruster</p>
                   </div>
 
                   <div className="container__text--code">
-                    <p>Thruster Shape: {this.state.thrusterShape}</p>
+                    <p>{this.state.thrusterShape}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>

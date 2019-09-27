@@ -7,7 +7,7 @@ class Rockets extends Component {
   render() {
     return (
       <Fragment>
-        <div className='rocket rocket-panel col b '>
+        <div className='rocket rocket-panel col'>
 
           
           <div className="rocket-wrapper b">

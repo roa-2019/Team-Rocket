@@ -4,22 +4,47 @@
 // Body
 @import url('https://fonts.googleapis.com/css?family=Play&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
 
 h3 {
-  font-size: 1.75rem;
-  color: #373d51;
   padding: 1.3rem;
-  margin: 0;
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.75rem;
+  color: $primaryOrange;
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
+  -moz-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
+  box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
 }
 
 a,
-p,
-label {
+p,label {
   font-family: 'Play', sans-serif;
 }
 
 p {
+  font-family: 'Play', sans-serif;
   color: whitesmoke;
 }
+
+.container__text--code p {
+  color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+// .margin__left--text {
+//   left: -15px;
+// }
+
+.padding__xs--left {
+  padding-left: 15px;
+}
+
+// .padding__s--left 
+
+
+//media query container input text display none

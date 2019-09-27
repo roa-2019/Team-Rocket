@@ -28,24 +28,26 @@
 
 .checkmark__colours {
   width: 25px;
-  left: 3%;
+  left: -10px;
   height: 25px;
   border-radius: 5px;
+  @include button__shadow;
 
 }
 
 .checkmark__shape {
-  left: -35px;
-  width: 80px;
-  height: 35px;
+  left: -40px;
+  width: 5.3em;
+  height: 2.5em;
   border-radius: 5px;
-  border: 1px solid lightblue;
   margin-bottom: 1rem;
+  background: grey;
+  @include button__shadow;
 }
 
 // 3. Styled effect for when the radio is selected/checked
 .container__radio input:checked ~ .checkmark {
-  border: 2px solid #1976D2;
+  border: 2.2px solid $accentOrange;
 }
 
 
