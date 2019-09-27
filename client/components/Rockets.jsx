@@ -39,6 +39,7 @@ class Rockets extends Component {
 }
 
 function mapStateToProps(state) {
+
   return {
     noseShape: state.noseShape,
     changeColor: state.changeColor,
