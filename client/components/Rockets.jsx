@@ -36,8 +36,8 @@ class Rockets extends Component {
 
 function mapStateToProps(state) {
     return {
-      noseShape: state.noseShape,
-      noseColor: state.noseColor
+      noseShape: state.rocket.noseShape,
+      noseColor: state.rocket.noseColor
     }
   }
 
