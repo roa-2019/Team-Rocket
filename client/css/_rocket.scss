@@ -1,5 +1,6 @@
 @import 'variables.scss';
 
+
 .rocket-panel {
   display: flex;
   align-items: center;
@@ -15,6 +16,10 @@
   justify-content: center;
 } 
 
-.rocket {
-  background-color: $spaceGrey;
-}
+// .rocket {
+//   background-image: url('/images/rocket-bg.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
