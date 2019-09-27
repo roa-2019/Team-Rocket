@@ -17,9 +17,10 @@ class Rockets extends Component {
               <polygon points="140 170 140 310 50 480 50 340" fill='grey' stroke='black' strokeWidth='2' />
 
               {/* Rocket nose 1  */}
-              {this.props.noseShape == 'Circle' && <ellipse cx="190" cy="110" rx="50" ry='100' stroke="black" strokeWidth="1.5" fill={this.props.noseColor} />}
+              {this.props.noseShape == 'Circle' && <ellipse cx="190" cy="110" rx="50" ry='100' stroke="black" strokeWidth="1.5" fill={this.props.changeColor} />}
               
               {/* Rocket body 1  */}
+
               <rect width='100' height='300' fill='grey' stroke='black' strokeWidth='1' ry='5' y='100' x='140' />
               <rect width='20' height='30' fill='aqua' y='170' x='180' stroke='black' strokeWidth='1' ry='2' />
               <rect width='20' height='30' fill='aqua' y='240' x='180' stroke='black' strokeWidth='1' ry='2' />
@@ -38,7 +39,11 @@ class Rockets extends Component {
 function mapStateToProps(state) {
   return {
     noseShape: state.noseShape,
-    noseColor: state.noseColor
+    changeColor: state.changeColor,
+    bodyShape: state.bodyShape,
+    wingShape: state.wingShape,
+    windowShape: state.windowShape,
+    thrusterShape: state.thrusterShape
   }
 }
 
