@@ -5,13 +5,20 @@ import Rockets from './Rockets'
 import Design from './Design'
 import { connect } from 'react-redux'
 
-class App extends Component  {
+
+
+
+
+class App extends Component {
+
   
   render () {
-    console.log(this.props)
+
     return (
      <Fragment>
+
        { this.props.showLanding ? <LandingPage /> : <><Design /> <Rockets /> </> }
+
      </Fragment>
     )
   }
