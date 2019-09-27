@@ -56,15 +56,16 @@ class Design extends Component {
 
           <div className="details-panel">
             <h3>Build Your Rocket</h3>
+            <Accordion>
 
-            <div className="accordion">
-
-              {/* <!-- Colour --> */}
-              <div className="accordion-item">
-                <a>Colours</a>
-                <div className="info">
-
-                  <div className="container__column">
+            <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Color
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    
                     <div className='container__input b'>
 
                       <label className='container__radio' htmlFor="r1">
@@ -94,8 +95,6 @@ class Design extends Component {
                       <p>Type Of Colour</p>
                       <p>Type Of Colour</p>
                     </div>
-
-                  </div>
 
                   <div className="container__text--code">
                     <p>Colour: {this.state.changeColor}</p>
@@ -166,9 +165,6 @@ class Design extends Component {
                   </div>
 
               {/* <!-- wings --> */}
-              <div className="accordion-item">
-                <a>Wings</a>
-                <div className="info">
 
                   <div className="container__input--text">
                     <p>Type Of Shape</p>
