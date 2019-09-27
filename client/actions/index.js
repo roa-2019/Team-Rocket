@@ -12,9 +12,9 @@ export function noseShape (shape) {
   }
 }
 
-export function noseColor (color) {
+export function Color (color) {
   return {
-    type: NOSE_COLOR,
+    type: COLOR,
     color
   }
 }
@@ -33,4 +33,13 @@ export function finShape (shape) {
   }
 }
 
+export function windowShape (shape) {
+  return {
+    type: WINDOW_SHAPE,
+    shape
+  }
+}
 
+export function thrusterShape () {
+
+}
