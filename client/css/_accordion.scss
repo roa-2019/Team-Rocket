@@ -1,16 +1,19 @@
 // ACCORDIAN BY raichung
 
+@import 'mixins.scss';
 
-
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400');
-
-
-h3 {
-  font-size: 1.75rem;
-  color: #373d51;
-  padding: 1.3rem;
-  margin: 0;
+.container__input--text {
+  @include space-around;
+  margin-bottom: 1.5em;
+  margin-top: 1em;
 }
+
+.container__text--code {
+  border: 1px solid grey;
+  height: auto;
+  padding: 1em 0em 1em 0em;
+}
+
 .accordion a {
   position: relative;
   display: -webkit-box;
@@ -30,7 +33,6 @@ h3 {
   border-bottom: 1px solid #e5e5e5;
 }
 .accordion a::after {
-  font-family: "Font Awesome 5 Free";
   font-weight: 600;
   content: "\f067";
   position: absolute;
@@ -60,8 +62,6 @@ h3 {
   border-bottom: 1px solid whitesmoke;
 }
 .accordion a.active::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
   content: "\f068";
   color: whitesmoke;
   border: 1px solid whitesmoke;

@@ -1,8 +1,11 @@
-@import 'buttons';
 @import 'accordion';
-@import 'rocket';
+@import 'buttons';
+@import 'global';
 @import 'media-queries';
-
+@import 'mixins';
+@import 'rocket';
+@import 'typography.scss';
+@import 'variables';
 
 
 * {
@@ -12,22 +15,13 @@
 }
 
 
+
 #app {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: lightseagreen;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(148, 148, 148);
 }
 
-/* ---------------- 
-GLOBAL 
----------------- */
 
-.col {
-  width: 50%;
-}
-
-.b {
-  border: 1px solid red;
-}

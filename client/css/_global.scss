@@ -1,0 +1,11 @@
+.container__column {
+  @include column;
+}
+
+.col {
+  width: 50%;
+}
+
+.b {
+  border: 1px dashed lightcoral;
+}
