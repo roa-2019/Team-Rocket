@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { noseShape, noseColor, bodyShape, finShape } from '../actions/index'
+import { noseShape, changeColor, bodyShape, wingShape } from '../actions/index'
 
 import {
   Accordion,
@@ -17,9 +17,9 @@ class Design extends Component {
     super(props)
     this.state = {
       noseShape: '',
-      noseColor: '',
+      changeColor: '',
       bodyShape: '',
-      finShape: ''
+      wingShape: ''
     }
   }
 
@@ -39,9 +39,9 @@ class Design extends Component {
     this.setState({ ...this.state, noseShape: e.currentTarget.value })
   }
 
-  onNoseColorChanged = (e) => {
-    this.props.dispatch(noseColor(e.currentTarget.value));
-    this.setState({ ...this.state, noseColor: e.currentTarget.value })
+  onColorChanged = (e) => {
+    this.props.dispatch(changeColor(e.currentTarget.value));
+    this.setState({ ...this.state, changeColor: e.currentTarget.value })
   }
 
   onBodyShapeChanged = (e) => {
@@ -63,46 +63,46 @@ class Design extends Component {
             <h3>Build Your Rocket</h3>
             <Accordion>
 
-              <AccordionItem>
+            <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Colours
+                    Color
                     </AccordionItemButton>
                 </AccordionItemHeading>
-
                 <AccordionItemPanel>
-                  <div className='container__input b'>
+                    
+                    <div className='container__input b'>
 
-                    <label className='container__radio' htmlFor="r1">
-                      <input className='custom purple' type="radio" name="nose-colour" id="r1" value="Green" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r1">
+                        <input className='custom purple' type="radio" name="change-colour" id="r1" value="Green" onChange={this.onColorChanged} />
+                        <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
+                      </label>
 
-                    <label className='container__radio' htmlFor="r2">
-                      <input type="radio" name="nose-colour" id="r2" value="Blue" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r2">
+                        <input type="radio" name="change-colour" id="r2" value="Blue" onChange={this.onColorChanged} />
+                        <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
+                      </label>
 
 
-                    <label className='container__radio' htmlFor="r3">
-                      <input type="radio" name="nose-colour" id="r3" value="#FF0000" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
-                    </label>
+                      <label className='container__radio' htmlFor="r3">
+                        <input type="radio" name="change-colour" id="r3" value="#FF0000" onChange={this.onColorChanged} />
+                        <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
+                      </label>
 
-                    <label className='container__radio' htmlFor="r4">
-                      <input type="radio" name="nose-colour" id="r4" value="Yellow" onChange={this.onNoseColorChanged} />
-                      <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
-                    </label>
-                  </div>
-                  <div className="container__input--text">
-                    <p>Type Of Colour</p>
-                    <p>Type Of Colour</p>
-                    <p>Type Of Colour</p>
-                    <p>Type Of Colour</p>
-                  </div>
+                      <label className='container__radio' htmlFor="r4">
+                        <input type="radio" name="change-colour" id="r4" value="Yellow" onChange={this.onColorChanged} />
+                        <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
+                      </label>
+                    </div>
+                    <div className="container__input--text">
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                      <p>Type Of Colour</p>
+                    </div>
 
                   <div className="container__text--code">
-                    <p>Colour: {this.state.noseColor}</p>
+                    <p>Colour: {this.state.changeColor}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -169,6 +169,8 @@ class Design extends Component {
                     </label>
                   </div>
 
+              {/* <!-- wings --> */}
+
                   <div className="container__input--text">
                     <p>Type Of Shape</p>
                     <p>Type Of Shape</p>
@@ -222,6 +224,5 @@ class Design extends Component {
     )
   }
 }
-
 
 export default connect()(Design)
