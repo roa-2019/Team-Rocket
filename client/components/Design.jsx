@@ -49,6 +49,11 @@ class Design extends Component {
     this.setState({ ...this.state, bodyShape: e.currentTarget.value })
   }
 
+  onFinShapeChanged = (e) => {
+    this.props.dispatch(finShape(e.currentTarget.value));
+    this.setState({ ...this.state, finShape: e.currentTarget.value })
+  }
+
   render() {
     return (
       <Fragment>
@@ -172,42 +177,52 @@ class Design extends Component {
                     <p>Type Of Shape</p>
                   </div>
 
-                <div className="container__text--code">
-                  <p>Body Shape: {this.state.bodyShape}</p>
-                </div>
-                </AccordionItemPanel>
-            </AccordionItem>
-
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Wings
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                
-                <AccordionItemPanel>
-                  <div className='container__input'>
-                    <input type="radio" name="wing-shape" id="r11" value="" onChange={this.onWingShapeChanged} />
-                    <label htmlFor="r11">Wing 1</label>
-
-                    <input type="radio" name="wing-shape" id="r12" value="" onChange={this.onWingShapeChanged} />
-                    <label htmlFor="r12">Wing 2</label>
-
-                    <input type="radio" name="wing-shape" id="r13" value="" onChange={this.onWingShapeChanged} />
-                    <label htmlFor="r13">Wing 3</label>
+                  <div className="container__text--code">
+                    <p>Body Shape: {this.state.bodyShape}</p>
                   </div>
                 </AccordionItemPanel>
-            </AccordionItem>
+              </AccordionItem>
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Wings
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+
+                <AccordionItemPanel>
+                  <div className='container__input'>
+                    <input type="radio" name="fin-shape" id="r11" value="wing" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r11">Fins 1</label>
+
+                    <input type="radio" name="fin-shape" id="r12" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r12">Fins 2</label>
+
+                    <input type="radio" name="fin-shape" id="r13" value="" onChange={this.onFinShapeChanged} />
+                    <label htmlFor="r13">Fins 3</label>
+                  </div>
+
+
+                  <div className="container__input--text">
+                    <p>Type Of Wing</p>
+                    <p>Type Of Wing</p>
+                    <p>Type Of Wing</p>
+                  </div>
+
+                  <div className="container__text--code">
+                    <p>Wing Shape: {this.state.finShape}</p>
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
 
 
             </Accordion>
 
-        </div >
+          </div >
         </div >
       </Fragment >
     )
   }
 }
-
 
 export default connect()(Design)
