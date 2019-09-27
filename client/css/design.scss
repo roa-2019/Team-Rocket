@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
 .design {
-  background-color: $primaryPurple;
+  // background-color: rgba(16, 16, 46, 0.8);
+  background-color: rgba(29, 29, 35, 0.9);
+
+  display: flex;
+  justify-content: center;
 }

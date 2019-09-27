@@ -20,6 +20,10 @@
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(148, 148, 148);
+  // background-color: rgb(148, 148, 148);
+  background-image: url('/images/rocket-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 

@@ -11,6 +11,9 @@
   height: auto;
   padding: 1em 0em 1em 0em; }
 
+.details-panel {
+  width: 80%; }
+
 /**
 * ----------------------------------------------
 * Demo styles
@@ -19,6 +22,9 @@
 .accordion {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px; }
+
+.accordion__item {
+  font-family: 'Play', sans-serif; }
 
 .accordion__item + .accordion__item {
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
@@ -51,7 +57,8 @@
 
 .accordion__panel {
   padding: 20px;
-  animation: fadein 0.35s ease-in; }
+  animation: fadein 0.35s ease-in;
+  background: rgba(16, 16, 46, 0.5); }
 
 /* -------------------------------------------------- */
 /* ---------------- Animation part ------------------ */
@@ -80,6 +87,7 @@
 
 .checkmark__colours {
   width: 25px;
+  left: 3%;
   height: 25px;
   border-radius: 5px; }
 
@@ -107,7 +115,9 @@
   background-color: yellow; }
 
 .design {
-  background-color: #151521; }
+  background-color: rgba(29, 29, 35, 0.9);
+  display: flex;
+  justify-content: center; }
 
 .container__column {
   display: flex;
@@ -137,12 +147,6 @@
   align-items: center;
   justify-content: center; }
 
-.rocket {
-  background-image: url("/images/rocket-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
 h3 {
   font-size: 1.75rem;
   color: #373d51;
@@ -156,6 +160,9 @@ p,
 label {
   font-family: 'Play', sans-serif; }
 
+p {
+  color: whitesmoke; }
+
 * {
   margin: 0;
   padding: 0;
@@ -166,7 +173,10 @@ label {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  background-color: #949494; }
+  background-image: url("/images/rocket-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 
 /*# sourceMappingURL=style.css.map*/
