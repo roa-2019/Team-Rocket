@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react'
 
 import { connect } from 'react-redux'
+import Nose1 from './rocket-parts/nose-parts/Nose1';
+import Nose2 from './rocket-parts/nose-parts/Nose2';
 
 class Rockets extends Component {
 
@@ -22,8 +24,13 @@ class Rockets extends Component {
               <polygon points="240 440 190 460 200 550 240 550" fill='grey' stroke='black' strokeWidth='1' />
 
               {/* Rocket nose 1  */}
-              {this.props.noseShape == 'Circle' && <ellipse cx="290" cy="210" rx="50" ry='100' stroke="black" strokeWidth="1" fill={this.props.changeColor} />}
-              {this.props.noseShape == 'Triangle' && <polygon points="240 200 290 120 340 200" stroke='black' stroke-width='1' fill={this.props.changeColor}/>}
+              {this.props.noseShape == 'Circle' && <Nose1 />}
+
+              {/* nose2 */}
+              {/* {this.props.noseShape == 'Triangle' && <polygon points="240 200 290 120 340 200" stroke='black' stroke-width='1' fill={this.props.changeColor}/>}  */}
+
+              {this.props.noseShape == 'Triangle' && <Nose2 />}
+              
               {/* Rocket body 1  */}
               <polygon points="240 200 340 200 340 500 240 500" fill='grey' stroke='black' strokeWidth='1' />
               <circle cx='290' cy='300' r='20' fill='aqua' stroke='black' strokeWidth='4' strokeOpacity='.4' />
