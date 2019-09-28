@@ -14,7 +14,6 @@ import Thruster1 from './rocket-parts/thruster-parts/Thruster1';
 import Thruster2 from './rocket-parts/thruster-parts/Thruster2';
 import Thruster3 from './rocket-parts/thruster-parts/Thruster3';
 import Thruster4 from './rocket-parts/thruster-parts/Thruster4';
-import Thruster5 from './rocket-parts/thruster-parts/Thruster5';
 
 
 class Rockets extends Component {
@@ -53,8 +52,7 @@ class Rockets extends Component {
               {this.props.thrusterShape == 'Thruster1' && <Thruster1 />}
               {this.props.thrusterShape == 'Thruster2' && <Thruster2 />}
               {this.props.thrusterShape == 'Thruster3' && <Thruster3 />}
-              {this.props.thrusterShape == 'Thurster4' && <Thruster4 />}
-              {this.props.thrusterShape == 'Thruster5' && <Thruster5 />}
+              {this.props.thrusterShape == 'Thruster4' && <Thruster4 />}
               {/* <polygon points='320 500 300 540 280 540 260 500' fill='grey' stroke='black' strokeWidth='1' /> */}
 
             </svg>

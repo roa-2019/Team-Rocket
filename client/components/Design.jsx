@@ -306,13 +306,19 @@ class Design extends Component {
                       <span id='radio__thruster--3' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    
+                    <label className='container__radio' htmlFor="r21">
+                      <input type="radio" name="thruster-shape" id="r21" value="Thruster4" onChange={this.onThrusterShapeChanged} />
+                      <span id='radio__thruster--4' className='checkmark checkmark__shape'></span>
+                    </label>
+
+                                    
                   </div>
 
                   <div className="container__input--text">
-                    <p>Thruster</p>
-                    <p>Thruster</p>
-                    <p>Thruster</p>
+                    <p>Rectanglular</p>
+                    <p>Triangular</p>
+                    <p>Trapeziod</p>
+                    <p>Fin</p>
                   </div>
 
                   <div className="container__text--code">
