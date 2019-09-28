@@ -8,6 +8,10 @@ import Body1 from './rocket-parts/body-parts/Body1';
 import Body2 from './rocket-parts/body-parts/Body2';
 import Body3 from './rocket-parts/body-parts/Body3';
 import Body4 from './rocket-parts/body-parts/Body4';
+import Window1 from './rocket-parts/window-parts/Window1'
+import Window2 from './rocket-parts/window-parts/Window2'
+import Window3 from './rocket-parts/window-parts/Window3'
+import Window4 from './rocket-parts/window-parts/Window4'
 
 class Rockets extends Component {
 
@@ -42,6 +46,12 @@ class Rockets extends Component {
 
               {/*Rocket thruster 1 */}
               <polygon points='320 500 300 540 280 540 260 500' fill='grey' stroke='black' strokeWidth='1' />
+
+              {/*Rocket Window changes */}
+              {this.props.windowShape == 'longWindowSet' && <Window1 />}
+              {this.props.windowShape == 'threeLargeCircularWindows' && <Window2 />}
+              {this.props.windowShape == 'threeMediumRectangularWindows' && <Window3 />}
+              {this.props.windowShape == 'twoLargePanels' && <Window4 />}
             </svg>
           </div>
         </div>
