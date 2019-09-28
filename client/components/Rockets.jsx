@@ -80,6 +80,7 @@ function mapStateToProps(state) {
   return {
     noseShape: state.rocket.noseShape,
     changeColor: state.rocket.changeColor,
+    strokeColor: state.rocket.strokeColor,
     bodyShape: state.rocket.bodyShape,
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,
