@@ -7,6 +7,7 @@ export {default as Wing5} from './wing-parts/Wing5'
 export {default as Nose1} from './nose-parts/Nose1';
 export {default as Nose2} from './nose-parts/Nose2';
 export {default as Nose3} from './nose-parts/Nose3';
+export {default as Nose4} from './nose-parts/Nose4';
 
 export {default as Body1} from './body-parts/Body1';
 export {default as Body2} from './body-parts/Body2';
