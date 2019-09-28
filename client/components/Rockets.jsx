@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
 
 import { connect } from 'react-redux'
+
 import Nose1 from './rocket-parts/nose-parts/Nose1';
 import Nose2 from './rocket-parts/nose-parts/Nose2';
 import Nose3 from './rocket-parts/nose-parts/Nose3';
 import Nose4 from './rocket-parts/nose-parts/Nose4';
-import Nose5 from './rocket-parts/nose-parts/Nose5';
 
 import Body1 from './rocket-parts/body-parts/Body1';
 import Body2 from './rocket-parts/body-parts/Body2';
