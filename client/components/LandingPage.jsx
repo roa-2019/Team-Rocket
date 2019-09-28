@@ -6,7 +6,7 @@ class LandingPage extends Component {
             <Fragment>
                 <div className='header'>
                     <h2>? Rocket Launch : Code Launch</h2>
-                    {/* start coding here */}
+                
 
                 </div>
             </Fragment>
