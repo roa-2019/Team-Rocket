@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
 
-class Thruster4 extends Component {
+class Thruster5 extends Component {
     render() {
         return (
             <Fragment>
-                {/* Thruster 4 square  */}
-                <polygon points='310 500 310 540 270 540 270 500' fill='grey' stroke='black' strokeWidth='1'  />
+                {/* Thruster 5 big bottom */}
+                <polygon points="240 500 340 500 380 570 290 530 200 570" fill='grey' stroke='black' strokeWidth='1'/>
             </Fragment>
 
         )
@@ -13,4 +13,4 @@ class Thruster4 extends Component {
 }
 
 
-export default Thruster4
+export default Thruster5

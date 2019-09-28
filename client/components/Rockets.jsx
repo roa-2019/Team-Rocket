@@ -4,18 +4,31 @@ import { connect } from 'react-redux'
 import Nose1 from './rocket-parts/nose-parts/Nose1';
 import Nose2 from './rocket-parts/nose-parts/Nose2';
 import Nose3 from './rocket-parts/nose-parts/Nose3';
+
 import Body1 from './rocket-parts/body-parts/Body1';
 import Body2 from './rocket-parts/body-parts/Body2';
 import Body3 from './rocket-parts/body-parts/Body3';
 import Body4 from './rocket-parts/body-parts/Body4';
+
 import Window1 from './rocket-parts/window-parts/Window1'
 import Window2 from './rocket-parts/window-parts/Window2'
 import Window3 from './rocket-parts/window-parts/Window3'
 import Window4 from './rocket-parts/window-parts/Window4'
 
+import Wing1 from './rocket-parts/wing-parts/Wing1';
+import Wing3 from './rocket-parts/wing-parts/Wing3';
+import Wing4 from './rocket-parts/wing-parts/Wing4';
+import Wing5 from './rocket-parts/wing-parts/Wing5';
+
+import Thruster1 from './rocket-parts/thruster-parts/Thruster1';
+import Thruster2 from './rocket-parts/thruster-parts/Thruster2';
+import Thruster3 from './rocket-parts/thruster-parts/Thruster3';
+import Thruster4 from './rocket-parts/thruster-parts/Thruster4';
+
 class Rockets extends Component {
 
   render() {
+    
     
     return (
       <Fragment>
@@ -26,12 +39,11 @@ class Rockets extends Component {
 
             <svg height='800' width='800' id="rocket-1">
               {/* Wings */}
-
-              {/* Right wing 2 rectangle slightly off */}
-              <polygon points="340 440 390 460 380 550 340 550" fill='grey' stroke='black' strokeWidth='1' />
-              {/* Left wing 2 rectangle slightly off  */}
-              <polygon points="240 440 190 460 200 550 240 550" fill='grey' stroke='black' strokeWidth='1' />
-
+              {this.props.wingShape == 'Paralelogram' && <Wing1 />}
+              {this.props.wingShape == 'SmallParalelogram' && <Wing3 />}
+              {this.props.wingShape == 'SmallTriangle' && <Wing4 />}
+              {this.props.wingShape == 'Large' && <Wing5 />}
+            
               {/* Rocket nose 1  */}
               {this.props.noseShape == 'Circle' && <Nose1 />}
               {this.props.noseShape == 'Triangle' && <Nose2 />}
@@ -42,10 +54,12 @@ class Rockets extends Component {
               {this.props.bodyShape == 'Trapazoid' && <Body2 />}
               {this.props.bodyShape == 'Pillar' && <Body3 />}
               {this.props.bodyShape == 'Body4' && <Body4 />}
-              
 
               {/*Rocket thruster 1 */}
-              <polygon points='320 500 300 540 280 540 260 500' fill='grey' stroke='black' strokeWidth='1' />
+              {this.props.thrusterShape == 'Thruster1' && <Thruster1 />}
+              {this.props.thrusterShape == 'Thruster2' && <Thruster2 />}
+              {this.props.thrusterShape == 'Thruster3' && <Thruster3 />}
+              {this.props.thrusterShape == 'Thruster4' && <Thruster4 />}
 
               {/*Rocket Window changes */}
               {this.props.windowShape == 'longWindowSet' && <Window1 />}
