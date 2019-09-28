@@ -212,18 +212,23 @@ class Design extends Component {
                   <div className='container__input'>
 
                     <label className='container__radio' htmlFor="r12">
-                      <input type="radio" name="window-shape" id="r12" value="" onChange={this.onWindowShapeChanged} />
+                      <input type="radio" name="window-shape" id="r12" value="longWindowSet" onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--1' className='checkmark checkmark__shape'></span>
                     </label>
 
                     <label className='container__radio' htmlFor="r13">
-                      <input type="radio" name="window-shape" id="r13" value="" onChange={this.onWindowShapeChanged} />
+                      <input type="radio" name="window-shape" id="r13" value="threeLargeCircularWindows" onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--2' className='checkmark checkmark__shape'></span>
                     </label>
 
                     <label className='container__radio' htmlFor="r14">
-                      <input type="radio" name="window-shape" id="r14" value="" onChange={this.onWindowShapeChanged} />
+                      <input type="radio" name="window-shape" id="r14" value="threeMediumRectangularWindows" onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--3' className='checkmark checkmark__shape'></span>
+                    </label>
+
+                    <label className='container__radio' htmlFor="r15">
+                      <input type="radio" name="window-shape" id="r15" value="twoLargePanels" onChange={this.onWindowShapeChanged} />
+                      <span id='radio__window--4' className='checkmark checkmark__shape'></span>
                     </label>
                   </div>
 
