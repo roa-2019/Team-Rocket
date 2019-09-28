@@ -19,7 +19,7 @@ import Thruster4 from './rocket-parts/thruster-parts/Thruster4';
 class Rockets extends Component {
 
   render() {
-    console.log(this.props)
+    
     
     return (
       <Fragment>
