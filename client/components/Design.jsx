@@ -1,7 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { noseShape, changeColor, bodyShape, wingShape, windowShape, thrusterShape } from '../actions/index'
+import { noseShape, changeColor, bodyShape, strokeColor, windowShape, wingShape, thrusterShape } from '../actions/index'
 import ReactDOMServer from 'react-dom/server';
+
+import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
+import { Nose1, Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
+import { Wing1, Wing3, Wing4, Wing5 } from './rocket-parts/indexParts'
+import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
+import { Thruster1, Thruster2, Thruster3, Thruster4 } from './rocket-parts/indexParts'
 
 import {
   Accordion,
@@ -10,7 +16,8 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import { Wing1, Wing3, Wing4, Wing5} from './rocket-parts/indexParts'
+
+
 
 // Demo styles, see 'Styles' section below for some notes on use.
 
@@ -21,6 +28,7 @@ class Design extends Component {
       noseShape: '',
       changeColor: '',
       bodyShape: '',
+      strokeColor: '',
       wingShape: '',
       windowShape: '',
       thrusterShape: ''
@@ -29,7 +37,7 @@ class Design extends Component {
 
 
   componentDidMount() {
-    let items = document.querySelectorAll(".accordion a");
+    let items = document.querySelectorAll('.accordion a');
     items.forEach((item) => item.addEventListener('click', toggleAccordion));
 
     function toggleAccordion() {
@@ -43,7 +51,10 @@ class Design extends Component {
     this.setState({ ...this.state, changeColor: e.currentTarget.value })
   }
 
-  // onStrokeColorChanged
+  onStrokeColorChanged = (e) => {
+    this.props.dispatch(strokeColor(e.currentTarget.value));
+    this.setState({ ...this.state, strokeColor: e.currentTarget.value })
+  }
 
   onNoseShapeChanged = (e) => {
     this.props.dispatch(noseShape(e.currentTarget.value));
@@ -77,7 +88,7 @@ class Design extends Component {
       <Fragment>
         <div className='design col'>
 
-          <div className="details-panel">
+          <div className='details-panel'>
             <h3> ~ Build Your Rocket ~ </h3>
             <Accordion>
 
@@ -91,36 +102,39 @@ class Design extends Component {
                 <AccordionItemPanel>
                   <div className='container__input'>
 
-                    <label className='container__radio' htmlFor="r1">
-                      <input type="radio" name="body-shape" id="r1" value="Rectangle" onChange={this.onBodyShapeChanged} />
+                    <label className='container__radio' htmlFor='r1'>
+                      <input type='radio' name='body-shape' id='r1' value='Rectangle' onChange={this.onBodyShapeChanged} />
                       <span id='radio__body--1' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r2">
-                      <input type="radio" name="body-shape" id="r2" value="Trapezoid" onChange={this.onBodyShapeChanged} />
+                    <label className='container__radio' htmlFor='r2'>
+                      <input type='radio' name='body-shape' id='r2' value='Trapezoid' onChange={this.onBodyShapeChanged} />
                       <span id='radio__body--2' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r3">
-                      <input type="radio" name="body-shape" id="r3" value="Hexagon" onChange={this.onBodyShapeChanged} />
+                    <label className='container__radio' htmlFor='r3'>
+                      <input type='radio' name='body-shape' id='r3' value='Hexagon' onChange={this.onBodyShapeChanged} />
                       <span id='radio__body--3' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r4">
-                      <input type="radio" name="body-shape" id="r4" value="Tower" onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--3' className='checkmark checkmark__shape'></span>
+                    <label className='container__radio' htmlFor='r4'>
+                      <input type='radio' name='body-shape' id='r4' value='Tower' onChange={this.onBodyShapeChanged} />
+                      <span id='radio__body--4' className='checkmark checkmark__shape'></span>
                     </label>
                   </div>
 
-                  <div className="container__input--text">
+                  <div className='container__input--text'>
                     <p>Rectangular</p>
                     <p>Trapezoid</p>
                     <p>Hexagon</p>
                     <p>Tower</p>
                   </div>
 
-                  <div className="container__text--code">
-                    <p className="margin__left">{this.state.bodyShape}</p>
+                  <div className='container__text--code'>
+                    <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Body1 />)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Body2 />)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Body3 />)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Body4 />)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -136,29 +150,29 @@ class Design extends Component {
                 <AccordionItemPanel>
                   <div className='container__input '>
 
-                    <label className='container__radio' htmlFor="r5">
-                      <input type="radio" name="nose-shape" id="r5" value="Ellipse" onChange={this.onNoseShapeChanged} />
+                    <label className='container__radio' htmlFor='r5'>
+                      <input type='radio' name='nose-shape' id='r5' value='Ellipse' onChange={this.onNoseShapeChanged} />
                       <span id='radio__nose--square' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r6">
-                      <input type="radio" name="nose-shape" id="r6" value="Pyramid" onChange={this.onNoseShapeChanged} />
+                    <label className='container__radio' htmlFor='r6'>
+                      <input type='radio' name='nose-shape' id='r6' value='Pyramid' onChange={this.onNoseShapeChanged} />
                       <span id='radio__nose--triangle' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r7">
-                      <input type="radio" name="nose-shape" id="r7" value="Triangular" onChange={this.onNoseShapeChanged} />
-                      <span id='radio__nose--circle' className='checkmark checkmark__shape'></span>
+                    <label className='container__radio' htmlFor='r7'>
+                      <input type='radio' name='nose-shape' id='r7' value='Triangular' onChange={this.onNoseShapeChanged} />
+                      <span id='radio__nose--' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r8">
-                      <input type="radio" name="nose-shape" id="r8" value="Top Window" onChange={this.onNoseShapeChanged} />
+                    <label className='container__radio' htmlFor='r8'>
+                      <input type='radio' name='nose-shape' id='r8' value='Top Window' onChange={this.onNoseShapeChanged} />
                       <span id='radio__nose--circle' className='checkmark checkmark__shape'></span>
                     </label>
 
 
                   </div>
-                  <div className="container__input--text">
+                  <div className='container__input--text'>
                     <p>Ellipse</p>
                     <p>Pyramid</p>
                     <p>Triangular</p>
@@ -166,8 +180,11 @@ class Design extends Component {
 
                   </div>
 
-                  <div className="container__text--code">
-                    <p className="margin__left">{this.state.noseShape}</p>
+                  <div className='container__text--code'>
+                    <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Nose1 />)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Nose2 />)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Nose3 />)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Nose4 />)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -183,37 +200,40 @@ class Design extends Component {
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <label className='container__radio' htmlFor="r9">
-                      <input type="radio" name="wing-shape" id="r9" value="Paralelogram" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor='r9'>
+                      <input type='radio' name='wing-shape' id='r9' value='Paralelogram' onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--1' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r10">
-                      <input type="radio" name="wing-shape" id="r10" value="SmallParalelogram" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor='r10'>
+                      <input type='radio' name='wing-shape' id='r10' value='SmallParalelogram' onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--3' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r11">
-                      <input type="radio" name="wing-shape" id="r11" value="SmallTriangle" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor='r11'>
+                      <input type='radio' name='wing-shape' id='r11' value='SmallTriangle' onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--4' className='checkmark checkmark__shape'></span>
                     </label>
 
 
-                    <label className='container__radio' htmlFor="r12">
-                      <input type="radio" name="wing-shape" id="r12" value="Large" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor='r12'>
+                      <input type='radio' name='wing-shape' id='r12' value='Large' onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--5' className='checkmark checkmark__shape'></span>
                     </label>
                   </div>
 
-                  <div className="container__input--text">
+                  <div className='container__input--text'>
                     <p>Paralelogram(large)</p>
                     <p>Paralelogram(small)</p>
                     <p>Triangular(small)</p>
                     <p>Polygon(large)</p>
                   </div>
 
-                  <div className="container__text--code">
-                    <p className="margin__left">{this.state.wingShape}</p>
+                  <div className='container__text--code'>
+                    <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1 />)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3 />)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4 />)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5 />)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -230,38 +250,41 @@ class Design extends Component {
                   <div className='container__input'>
 
 
-                    <label className='container__radio' htmlFor="r13">
-                      <input type="radio" name="thruster-shape" id="r13" value="Thruster1" onChange={this.onThrusterShapeChanged} />
+                    <label className='container__radio' htmlFor='r13'>
+                      <input type='radio' name='thruster-shape' id='r13' value='Thruster1' onChange={this.onThrusterShapeChanged} />
                       <span id='radio__thruster--1' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r14">
-                      <input type="radio" name="thruster-shape" id="r14" value="Thruster2" onChange={this.onThrusterShapeChanged} />
+                    <label className='container__radio' htmlFor='r14'>
+                      <input type='radio' name='thruster-shape' id='r14' value='Thruster2' onChange={this.onThrusterShapeChanged} />
                       <span id='radio__thruster--2' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r15">
-                      <input type="radio" name="thruster-shape" id="r15" value="Thruster3" onChange={this.onThrusterShapeChanged} />
+                    <label className='container__radio' htmlFor='r15'>
+                      <input type='radio' name='thruster-shape' id='r15' value='Thruster3' onChange={this.onThrusterShapeChanged} />
                       <span id='radio__thruster--3' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r16">
-                      <input type="radio" name="thruster-shape" id="r16" value="Thruster4" onChange={this.onThrusterShapeChanged} />
+                    <label className='container__radio' htmlFor='r16'>
+                      <input type='radio' name='thruster-shape' id='r16' value='Thruster4' onChange={this.onThrusterShapeChanged} />
                       <span id='radio__thruster--4' className='checkmark checkmark__shape'></span>
                     </label>
 
 
                   </div>
 
-                  <div className="container__input--text">
+                  <div className='container__input--text'>
                     <p>Rectanglular</p>
                     <p>Triangular</p>
                     <p>Trapeziod</p>
                     <p>Fin</p>
                   </div>
 
-                  <div className="container__text--code">
-                    <p className="margin__left">{this.state.thrusterShape}</p>
+                  <div className='container__text--code'>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Thruster1 />)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Thruster2 />)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Thruster3 />)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Thruster4 />)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -277,39 +300,39 @@ class Design extends Component {
                 <AccordionItemPanel>
                   <div className='container__input'>
 
-                    <label className='container__radio' htmlFor="r17">
-                      <input type="radio" name="window-shape" id="r17" value="longWindowSet" onChange={this.onWindowShapeChanged} />
+                    <label className='container__radio' htmlFor='r17'>
+                      <input type='radio' name='window-shape' id='r17' value='longWindowSet' onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--1' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r18">
-                      <input type="radio" name="window-shape" id="r18" value="threeLargeCircularWindows" onChange={this.onWindowShapeChanged} />
+                    <label className='container__radio' htmlFor='r18'>
+                      <input type='radio' name='window-shape' id='r18' value='threeLargeCircularWindows' onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--2' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r19">
-                      <input type="radio" name="window-shape" id="r19" value="threeMediumRectangularWindows" onChange={this.onWindowShapeChanged} />
+                    <label className='container__radio' htmlFor='r19'>
+                      <input type='radio' name='window-shape' id='r19' value='threeMediumRectangularWindows' onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--3' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r20">
-                      <input type="radio" name="window-shape" id="r20" value="twoLargePanels" onChange={this.onWindowShapeChanged} />
+                    <label className='container__radio' htmlFor='r20'>
+                      <input type='radio' name='window-shape' id='r20' value='twoLargePanels' onChange={this.onWindowShapeChanged} />
                       <span id='radio__window--4' className='checkmark checkmark__shape'></span>
                     </label>
                   </div>
 
-                  <div className="container__input--text">
+                  <div className='container__input--text'>
                     <p>Long Window</p>
                     <p>Circular</p>
                     <p>Rectangular</p>
                     <p>Large Window</p>
                   </div>
 
-                  <div className="container__text--code">
-                  <p className="margin__left">{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1/>)}</p>
-                    <p className="margin__left">{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3/>)}</p>
-                    <p className="margin__left">{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4/>)}</p>
-                    <p className="margin__left">{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5/>)}</p>
+                  <div className='container__text--code'>
+                    <p className='margin__left'>{this.state.windowShape == 'longWindowSet' && ReactDOMServer.renderToString(<Window1 />)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'threeLargeCircularWindows' && ReactDOMServer.renderToString(<Window2 />)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'threeMediumRectangularWindows' && ReactDOMServer.renderToString(<Window3 />)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'twoLargePanels' && ReactDOMServer.renderToString(<Window4 />)}</p>
                   </div>
 
 
@@ -328,37 +351,37 @@ class Design extends Component {
 
                   <div className='container__input'>
 
-                    <label className='container__radio' htmlFor="r21">
-                      <input className='custom purple' type="radio" name="change-colour" id="r21" value="Green" onChange={this.onColorChanged} />
+                    <label className='container__radio' htmlFor='r21'>
+                      <input className='custom purple' type='radio' name='change-colour' id='r21' value='Green' onChange={this.onColorChanged} />
                       <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r22">
-                      <input type="radio" name="change-colour" id="r22" value="Blue" onChange={this.onColorChanged} />
+                    <label className='container__radio' htmlFor='r22'>
+                      <input type='radio' name='change-colour' id='r22' value='Blue' onChange={this.onColorChanged} />
                       <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
                     </label>
 
 
-                    <label className='container__radio' htmlFor="r23">
-                      <input type="radio" name="change-colour" id="r23" value="#FF0000" onChange={this.onColorChanged} />
+                    <label className='container__radio' htmlFor='r23'>
+                      <input type='radio' name='change-colour' id='r23' value='#FF0000' onChange={this.onColorChanged} />
                       <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r24">
-                      <input type="radio" name="change-colour" id="r24" value="Yellow" onChange={this.onColorChanged} />
+                    <label className='container__radio' htmlFor='r24'>
+                      <input type='radio' name='change-colour' id='r24' value='Yellow' onChange={this.onColorChanged} />
                       <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
                     </label>
                   </div>
-                  <div className="container__input--text">
-                    <p className="">Green</p>
-                    <p className="">Blue</p>
-                    <p className="">Chuck Norris</p>
+                  <div className='container__input--text'>
+                    <p className=''>Green</p>
+                    <p className=''>Blue</p>
+                    <p className=''>Chuck Norris</p>
                     <p >Yellow</p>
                   </div>
 
-                  <div className="container__text--code">
+                  <div className='container__text--code'>
 
-                    <p className="margin__left"> {this.state.changeColor}</p>
+                    <p className='margin__left'> {this.state.changeColor}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -374,36 +397,36 @@ class Design extends Component {
 
                   <div className='container__input'>
 
-                    <label className='container__radio' htmlFor="r25">
-                      <input className='custom purple' type="radio" name="change-colour" id="r25" value="Green" onChange={this.onStrokeColorChanged} />
+                    <label className='container__radio' htmlFor='r25'>
+                      <input className='custom purple' type='radio' name='change-colour' id='r25' value='Green' onChange={this.onStrokeColorChanged} />
                       <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r26">
-                      <input type="radio" name="change-colour" id="r26" value="Blue" onChange={this.onStrokeColorChanged} />
+                    <label className='container__radio' htmlFor='r26'>
+                      <input type='radio' name='change-colour' id='r26' value='Blue' onChange={this.onStrokeColorChanged} />
                       <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
                     </label>
 
 
-                    <label className='container__radio' htmlFor="r27">
-                      <input type="radio" name="change-colour" id="r27" value="#FF0000" onChange={this.onStrokeColorChanged} />
+                    <label className='container__radio' htmlFor='r27'>
+                      <input type='radio' name='change-colour' id='r27' value='#FF0000' onChange={this.onStrokeColorChanged} />
                       <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r28">
-                      <input type="radio" name="change-colour" id="r28" value="Yellow" onChange={this.onStrokeColorChanged} />
+                    <label className='container__radio' htmlFor='r28'>
+                      <input type='radio' name='change-colour' id='r28' value='Yellow' onChange={this.onStrokeColorChanged} />
                       <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
                     </label>
                   </div>
-                  <div className="container__input--text">
-                    <p className="">Green</p>
-                    <p className="">Blue</p>
-                    <p className="">Chuck Norris</p>
-                    <p className="">Yellow</p>
+                  <div className='container__input--text'>
+                    <p className=''>Green</p>
+                    <p className=''>Blue</p>
+                    <p className=''>Chuck Norris</p>
+                    <p className=''>Yellow</p>
                   </div>
 
-                  <div className="container__text--code">
-                    <p className="margin__left"> {this.state.strokeColor}</p>
+                  <div className='container__text--code'>
+                    <p className='margin__left'> {this.state.strokeColor}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
