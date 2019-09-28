@@ -4,11 +4,10 @@ import { noseShape, changeColor, bodyShape, strokeColor, windowShape, wingShape,
 import ReactDOMServer from 'react-dom/server';
 
 import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
-import { Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
+import { Nose1, Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
 import { Wing1, Wing3, Wing4, Wing5 } from './rocket-parts/indexParts'
 import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from './rocket-parts/indexParts'
-import Nose1 from './rocket-parts/nose-parts/Nose1'
 
 import {
   Accordion,
@@ -85,7 +84,6 @@ class Design extends Component {
 
 
   render() {
-    console.log(this.props)
     return (
       <Fragment>
         <div className='design col'>
