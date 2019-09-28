@@ -1,7 +1,6 @@
 import React from 'react'
 import {shallow, render} from 'enzyme'
 
-// import './setup-env'
 
 import Design from '../../client/components/Design'
 
@@ -31,7 +30,7 @@ describe('Accordion (GUI) works as expected', () => {
         choice.simulate('change', {currentTarget})
         // expect(dispatch).toHaveBeenCalled()
         let action = dispatch.mock.calls[0][0]
-        //console.log(dispatch.mock.calls[0])
+        console.log(dispatch.mock.calls[0])
         expect(action.type).toBe('NOSE_COLOR')
         expect(action.color).toBe('Green')
         

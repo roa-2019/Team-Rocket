@@ -1,6 +1,6 @@
 import navigator from '../../../client/reducers/navigator'
 
-import { GoToBuildRocket , LandingPage } from '../../../client/actions/navigate'
+import { GoToBuildRocket } from '../../../client/actions/navigate'
 
 describe('navigator reducer for LandingPage state', () => {
     test('intitial state of navigator is true', () => {
