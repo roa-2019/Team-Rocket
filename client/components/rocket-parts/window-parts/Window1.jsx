@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 class Window1 extends Component {
     render() {
         return (
-            <div>
+            <Fragment>
                 {/*<!-- Window set 1 long, squares and circles (top to bottom) (clockwise) --> */}
                 <circle cx='290' cy='260' r='10' fill='aqua' stroke='black' strokeWidth='1' fill='grey' />
                 <circle cx='290' cy='440' r='10' fill='aqua' stroke='black' strokeWidth='1' fill='grey' />
@@ -16,7 +16,7 @@ class Window1 extends Component {
                 <polygon points='300 380 300 400 280 400 280 380' fill='aqua' stroke='black' strokeWidth='1' />
                 <polygon points='300 400 300 420 280 420 280 400' fill='aqua' stroke='black' strokeWidth='1' />
                 <polygon points='300 420 300 440 280 440 280 420' fill='aqua' stroke='black' strokeWidth='1' />
-            </div>
+            </Fragment>
 
         )
     }
