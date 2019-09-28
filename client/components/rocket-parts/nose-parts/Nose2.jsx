@@ -7,7 +7,7 @@ class Nose2 extends Component {
         return (
             <Fragment>
                 {/* Nose equal triangle 2 */}
-                <polygon points="240 200 290 120 340 200" fill={this.props.changeColor} stroke='black' strokeWidth='1' />
+                <polygon points="240 200 290 120 340 200" fill={this.props.changeColor} stroke={this.props.strokeColor} strokeWidth='1' />
             </Fragment>
 
         )
@@ -16,7 +16,8 @@ class Nose2 extends Component {
 
 function mapStateToProps(state){
     return{
-        changeColor: state.rocket.changeColor
+        changeColor: state.rocket.changeColor,
+        strokeColor: state.rockect.strokeColor
     }
     
 }
