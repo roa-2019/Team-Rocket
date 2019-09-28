@@ -22,4 +22,4 @@ function mapStateToProps(state){
     
 }
 
-export default Thruster1
+export default connect(mapStateToProps)(Thruster1)
