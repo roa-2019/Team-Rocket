@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import Nose1 from './rocket-parts/nose-parts/Nose1';
 import Nose2 from './rocket-parts/nose-parts/Nose2';
 import Nose3 from './rocket-parts/nose-parts/Nose3';
+import Nose4 from './rocket-parts/nose-parts/Nose4';
+import Nose5 from './rocket-parts/nose-parts/Nose5';
 
 import Body1 from './rocket-parts/body-parts/Body1';
 import Body2 from './rocket-parts/body-parts/Body2';
@@ -45,15 +47,16 @@ class Rockets extends Component {
               {this.props.wingShape == 'Large' && <Wing5 />}
             
               {/* Rocket nose 1  */}
-              {this.props.noseShape == 'Circle' && <Nose1 />}
-              {this.props.noseShape == 'Triangle' && <Nose2 />}
-              {this.props.noseShape == 'LongTriangle' && <Nose3 />}
+              {this.props.noseShape == 'Ellipse' && <Nose1 />}
+              {this.props.noseShape == 'Pyramid' && <Nose2 />}
+              {this.props.noseShape == 'Triangular' && <Nose3 />}
+              {this.props.noseShape == 'Top Window' && <Nose4 />}
               
               {/* Rocket body 1  */}
               {this.props.bodyShape == 'Rectangle' && <Body1 />}
-              {this.props.bodyShape == 'Trapazoid' && <Body2 />}
-              {this.props.bodyShape == 'Pillar' && <Body3 />}
-              {this.props.bodyShape == 'Body4' && <Body4 />}
+              {this.props.bodyShape == 'Trapezoid' && <Body2 />}
+              {this.props.bodyShape == 'Hexagon' && <Body3 />}
+              {this.props.bodyShape == 'Tower' && <Body4 />}
 
               {/*Rocket thruster 1 */}
               {this.props.thrusterShape == 'Thruster1' && <Thruster1 />}
