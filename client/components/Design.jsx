@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { noseShape, changeColor, bodyShape, wingShape, windowShape, thrusterShape } from '../actions/index'
+import ReactDOMServer from 'react-dom/server';
 
 import {
   Accordion,
@@ -9,6 +10,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
+import { Wing1, Wing3, Wing4, Wing5} from './rocket-parts/indexParts'
 
 // Demo styles, see 'Styles' section below for some notes on use.
 
@@ -297,10 +299,10 @@ class Design extends Component {
                   </div>
 
                   <div className="container__input--text">
-                    <p>Long Row</p>
-                    <p>Circular</p>
-                    <p>Rectangular</p>
-                    <p>Transparent Panels</p>
+                    <p className="margin__left">{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5/>)}</p>
                   </div>
 
                   <div className="container__text--code">
@@ -352,6 +354,7 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
+
                     <p className="margin__left"> {this.state.changeColor}</p>
                   </div>
                 </AccordionItemPanel>
