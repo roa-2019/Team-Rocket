@@ -1,17 +1,31 @@
 import React, { Component, Fragment } from 'react'
 
 import { connect } from 'react-redux'
+
 import Nose1 from './rocket-parts/nose-parts/Nose1';
 import Nose2 from './rocket-parts/nose-parts/Nose2';
 import Nose3 from './rocket-parts/nose-parts/Nose3';
+import Nose4 from './rocket-parts/nose-parts/Nose4';
+
 import Body1 from './rocket-parts/body-parts/Body1';
 import Body2 from './rocket-parts/body-parts/Body2';
 import Body3 from './rocket-parts/body-parts/Body3';
 import Body4 from './rocket-parts/body-parts/Body4';
+
+import Window1 from './rocket-parts/window-parts/Window1'
+import Window2 from './rocket-parts/window-parts/Window2'
+import Window3 from './rocket-parts/window-parts/Window3'
+import Window4 from './rocket-parts/window-parts/Window4'
+
 import Wing1 from './rocket-parts/wing-parts/Wing1';
 import Wing3 from './rocket-parts/wing-parts/Wing3';
 import Wing4 from './rocket-parts/wing-parts/Wing4';
 import Wing5 from './rocket-parts/wing-parts/Wing5';
+
+import Thruster1 from './rocket-parts/thruster-parts/Thruster1';
+import Thruster2 from './rocket-parts/thruster-parts/Thruster2';
+import Thruster3 from './rocket-parts/thruster-parts/Thruster3';
+import Thruster4 from './rocket-parts/thruster-parts/Thruster4';
 
 class Rockets extends Component {
 
@@ -20,7 +34,6 @@ class Rockets extends Component {
     return (
       <Fragment>
         <div className='rocket rocket-panel col'>
-
           
           <div className="rocket-wrapper b">
 
@@ -32,19 +45,28 @@ class Rockets extends Component {
               {this.props.wingShape == 'Large' && <Wing5 />}
             
               {/* Rocket nose 1  */}
-              {this.props.noseShape == 'Circle' && <Nose1 />}
-              {this.props.noseShape == 'Triangle' && <Nose2 />}
-              {this.props.noseShape == 'LongTriangle' && <Nose3 />}
+              {this.props.noseShape == 'Ellipse' && <Nose1 />}
+              {this.props.noseShape == 'Pyramid' && <Nose2 />}
+              {this.props.noseShape == 'Triangular' && <Nose3 />}
+              {this.props.noseShape == 'Top Window' && <Nose4 />}
               
               {/* Rocket body 1  */}
               {this.props.bodyShape == 'Rectangle' && <Body1 />}
-              {this.props.bodyShape == 'Trapazoid' && <Body2 />}
-              {this.props.bodyShape == 'Pillar' && <Body3 />}
-              {this.props.bodyShape == 'Body4' && <Body4 />}
-              
+              {this.props.bodyShape == 'Trapezoid' && <Body2 />}
+              {this.props.bodyShape == 'Hexagon' && <Body3 />}
+              {this.props.bodyShape == 'Tower' && <Body4 />}
 
               {/*Rocket thruster 1 */}
-              <polygon points='320 500 300 540 280 540 260 500' fill='grey' stroke='black' strokeWidth='1' />
+              {this.props.thrusterShape == 'Thruster1' && <Thruster1 />}
+              {this.props.thrusterShape == 'Thruster2' && <Thruster2 />}
+              {this.props.thrusterShape == 'Thruster3' && <Thruster3 />}
+              {this.props.thrusterShape == 'Thruster4' && <Thruster4 />}
+
+              {/*Rocket Window changes */}
+              {this.props.windowShape == 'longWindowSet' && <Window1 />}
+              {this.props.windowShape == 'threeLargeCircularWindows' && <Window2 />}
+              {this.props.windowShape == 'threeMediumRectangularWindows' && <Window3 />}
+              {this.props.windowShape == 'twoLargePanels' && <Window4 />}
             </svg>
           </div>
         </div>
@@ -58,6 +80,7 @@ function mapStateToProps(state) {
   return {
     noseShape: state.rocket.noseShape,
     changeColor: state.rocket.changeColor,
+    strokeColor: state.rocket.strokeColor,
     bodyShape: state.rocket.bodyShape,
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,

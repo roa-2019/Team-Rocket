@@ -19,9 +19,9 @@ test('Design.test suite is working', () => {
 })
 
 describe('Accordion (GUI) works as expected', () => {
-    test('accordian length', () => {
-     const wrapper = render(<Design />)
-     expect(wrapper.find('.accordion-item').length).toBe(5)
+    test.skip('accordian length', () => {
+     const wrapper = shallow(<Design />)
+     expect(wrapper.find('AccordionItem').length).toBe(6)
     })
     test('making selection calls dispatch', () => {
         const dispatch = jest.fn()
@@ -29,7 +29,11 @@ describe('Accordion (GUI) works as expected', () => {
         const choice = wrapper.find('input[value="Green"]')
         const currentTarget = {name: "nose-colour", value:"Green"}
         choice.simulate('change', {currentTarget})
-        expect(dispatch).toHaveBeenCalled()
+        // expect(dispatch).toHaveBeenCalled()
+        let action = dispatch.mock.calls[0][0]
+        //console.log(dispatch.mock.calls[0])
+        expect(action.type).toBe('NOSE_COLOR')
+        expect(action.color).toBe('Green')
         
     })
    
