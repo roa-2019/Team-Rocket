@@ -11,7 +11,7 @@ import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
 class Rockets extends Component {
 
   render() {
-    
+    console.log(this.props)
     return (
       <Fragment>
         <div className='rocket rocket-panel col'>
