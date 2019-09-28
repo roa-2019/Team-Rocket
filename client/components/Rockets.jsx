@@ -25,19 +25,19 @@ class Rockets extends Component {
               {this.props.wingShape == 'SmallTriangle' && <Wing4 />}
               {this.props.wingShape == 'Large' && <Wing5 />}
             
-              {/* Rocket nose 1  */}
+              {/* Rocket nose  */}
               {this.props.noseShape == 'Ellipse' && <Nose1 />}
               {this.props.noseShape == 'Pyramid' && <Nose2 />}
               {this.props.noseShape == 'Triangular' && <Nose3 />}
               {this.props.noseShape == 'Top Window' && <Nose4 />}
               
-              {/* Rocket body 1  */}
+              {/* Rocket body  */}
               {this.props.bodyShape == 'Rectangle' && <Body1 />}
               {this.props.bodyShape == 'Trapezoid' && <Body2 />}
               {this.props.bodyShape == 'Hexagon' && <Body3 />}
               {this.props.bodyShape == 'Tower' && <Body4 />}
 
-              {/*Rocket thruster 1 */}
+              {/*Rocket thruster */}
               {this.props.thrusterShape == 'Thruster1' && <Thruster1 />}
               {this.props.thrusterShape == 'Thruster2' && <Thruster2 />}
               {this.props.thrusterShape == 'Thruster3' && <Thruster3 />}

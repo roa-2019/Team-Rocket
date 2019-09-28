@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { noseShape, changeColor, bodyShape, windowShape, wingShape, thrusterShape } from '../actions/index'
+import { noseShape, changeColor, bodyShape, strokeColor, windowShape, wingShape, thrusterShape } from '../actions/index'
 import ReactDOMServer from 'react-dom/server';
 
 import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
@@ -28,6 +28,7 @@ class Design extends Component {
       noseShape: '',
       changeColor: '',
       bodyShape: '',
+      strokeColor: '',
       wingShape: '',
       windowShape: '',
       thrusterShape: ''
@@ -50,7 +51,10 @@ class Design extends Component {
     this.setState({ ...this.state, changeColor: e.currentTarget.value })
   }
 
-  // onStrokeColorChanged
+  onStrokeColorChanged = (e) => {
+    this.props.dispatch(strokeColor(e.currentTarget.value));
+    this.setState({ ...this.state, strokeColor: e.currentTarget.value })
+  }
 
   onNoseShapeChanged = (e) => {
     this.props.dispatch(noseShape(e.currentTarget.value));

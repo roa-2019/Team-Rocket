@@ -1,10 +1,11 @@
-import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE } from '../actions'
+import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, STROKE_COLOR, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE } from '../actions'
 
 
 const initialRocketState = {
   noseShape: '',
   changeColor: '',
   bodyShape: '',
+  strokeColor: '',
   wingShape: '',
   windowShape: '',
   thrusterShape: ''
@@ -21,6 +22,9 @@ const rocketReducer = (state = initialRocketState, action) => {
 
     case BODY_SHAPE:
       return { ...state, bodyShape: action.shape }
+      
+    case STROKE_COLOR:
+      return { ...state, strokeColor: action.color }
 
     case WING_SHAPE:
       return { ...state, wingShape: action.shape }
