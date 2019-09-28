@@ -19,7 +19,7 @@ class Window3 extends Component {
 
 function mapStateToProps(state){
     return{
-       strokeColor: state.rockect.strokeColor
+       strokeColor: state.rocket.strokeColor
     }
     
 }

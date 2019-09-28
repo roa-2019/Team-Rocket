@@ -20,7 +20,7 @@ class Thruster1 extends Component {
 function mapStateToProps(state){
     return{
         changeColor: state.rocket.changeColor,
-        strokeColor: state.rockect.strokeColor
+        strokeColor: state.rocket.strokeColor
     }
     
 }

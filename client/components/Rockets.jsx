@@ -2,10 +2,11 @@ import React, { Component, Fragment } from 'react'
 
 import { connect } from 'react-redux'
 import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
-import { Nose1, Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
+import {  Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from './rocket-parts/indexParts'
 import { Wing1, Wing3, Wing4, Wing5 } from './rocket-parts/indexParts'
 import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
+import Nose1 from './rocket-parts/nose-parts/Nose1'
 
 
 class Rockets extends Component {
@@ -60,8 +61,6 @@ function mapStateToProps(state) {
 
   return {
     noseShape: state.rocket.noseShape,
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor,
     bodyShape: state.rocket.bodyShape,
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,
