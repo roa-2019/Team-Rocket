@@ -53,7 +53,7 @@ class Rockets extends Component {
               {this.props.thrusterShape == 'Thruster2' && <Thruster2 />}
               {this.props.thrusterShape == 'Thruster3' && <Thruster3 />}
               {this.props.thrusterShape == 'Thruster4' && <Thruster4 />}
-              {/* <polygon points='320 500 300 540 280 540 260 500' fill='grey' stroke='black' strokeWidth='1' /> */}
+         
 
             </svg>
           </div>
