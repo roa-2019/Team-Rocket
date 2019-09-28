@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { noseShape, changeColor, bodyShape, wingShape, windowShape, thrusterShape } from '../actions/index'
+import ReactDOMServer from 'react-dom/server';
 
 import {
   Accordion,
@@ -9,6 +10,10 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
+import Wing1 from './rocket-parts/wing-parts/Wing1';
+import Wing3 from './rocket-parts/wing-parts/Wing3';
+import Wing4 from './rocket-parts/wing-parts/Wing4';
+import Wing5 from './rocket-parts/wing-parts/Wing5';
 
 // Demo styles, see 'Styles' section below for some notes on use.
 
@@ -256,24 +261,24 @@ class Design extends Component {
 
                 <AccordionItemPanel>
                   <div className='container__input'>
-                    <label className='container__radio' htmlFor="r15">
-                      <input type="radio" name="window-shape" id="r15" value="Paralelogram" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor="r16">
+                      <input type="radio" name="window-shape" id="r16" value="Paralelogram" onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--1' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r16">
-                      <input type="radio" name="window-shape" id="r16" value="SmallParalelogram" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor="r17">
+                      <input type="radio" name="window-shape" id="r17" value="SmallParalelogram" onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--3' className='checkmark checkmark__shape'></span>
                     </label>
 
-                    <label className='container__radio' htmlFor="r17">
-                      <input type="radio" name="window-shape" id="r17" value="SmallTriangle" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor="r18">
+                      <input type="radio" name="window-shape" id="r18" value="SmallTriangle" onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--4' className='checkmark checkmark__shape'></span>
                     </label>
 
                    
-                    <label className='container__radio' htmlFor="r18">
-                      <input type="radio" name="window-shape" id="r18" value="Large" onChange={this.onWingShapeChanged} />
+                    <label className='container__radio' htmlFor="r19">
+                      <input type="radio" name="window-shape" id="r19" value="Large" onChange={this.onWingShapeChanged} />
                       <span id='radio__wings--5' className='checkmark checkmark__shape'></span>
                     </label>
                   </div>
@@ -286,7 +291,11 @@ class Design extends Component {
                   </div>
 
                   <div className="container__text--code">
-                    <p className="margin__left">{this.state.wingShape}</p>
+                    <p className="margin__left">{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5/>)}</p>
+                    
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
