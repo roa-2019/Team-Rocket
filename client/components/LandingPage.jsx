@@ -16,12 +16,14 @@ class LandingPage extends Component {
                             this.props.dispatch(GoToBuildRocket())
                         }
                         }>
-
+ 
                         </img>
                     </div>
                 </div>
             </Fragment>
         )
+ 
     }
+ 
 }
 export default connect()(LandingPage)

@@ -1,5 +1,5 @@
 export {default as Wing1} from './wing-parts/Wing1'
-export {default as Wing2} from './wing-parts/Wing2'
+// export {default as Wing2} from './wing-parts/Wing2'
 export {default as Wing3} from './wing-parts/Wing3'
 export {default as Wing4} from './wing-parts/Wing4'
 export {default as Wing5} from './wing-parts/Wing5'
