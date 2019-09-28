@@ -7,8 +7,8 @@ class Body2 extends Component {
         return (
             <Fragment>
                 {/* Body 2 trapezoid */}
-                <polygon points="200 200 380 200 360 350 220 350 " fill={this.props.changeColor} stroke='black' strokeWidth='1' />
-                <polygon points="240 500 340 500 360 350 220 350" fill={this.props.changeColor}  stroke='black' strokeWidth='1' />
+                <polygon points="200 200 380 200 360 350 220 350 " fill={this.props.changeColor} stroke={this.props.strokeColor} strokeWidth='1' />
+                <polygon points="240 500 340 500 360 350 220 350" fill={this.props.changeColor}  stroke={this.props.strokeColor}  strokeWidth='1' />
             </Fragment>
 
         )
@@ -17,7 +17,8 @@ class Body2 extends Component {
 
 function mapStateToProps(state){
     return{
-        changeColor: state.rocket.changeColor
+        changeColor: state.rocket.changeColor,
+        strokeColor: state.rockect.strokeColor
     }
     
 }
