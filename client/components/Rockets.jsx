@@ -1,29 +1,11 @@
 import React, { Component, Fragment } from 'react'
 
 import { connect } from 'react-redux'
-import Nose1 from './rocket-parts/nose-parts/Nose1';
-import Nose2 from './rocket-parts/nose-parts/Nose2';
-import Nose3 from './rocket-parts/nose-parts/Nose3';
-
-import Body1 from './rocket-parts/body-parts/Body1';
-import Body2 from './rocket-parts/body-parts/Body2';
-import Body3 from './rocket-parts/body-parts/Body3';
-import Body4 from './rocket-parts/body-parts/Body4';
-
-import Window1 from './rocket-parts/window-parts/Window1'
-import Window2 from './rocket-parts/window-parts/Window2'
-import Window3 from './rocket-parts/window-parts/Window3'
-import Window4 from './rocket-parts/window-parts/Window4'
-
-import Wing1 from './rocket-parts/wing-parts/Wing1';
-import Wing3 from './rocket-parts/wing-parts/Wing3';
-import Wing4 from './rocket-parts/wing-parts/Wing4';
-import Wing5 from './rocket-parts/wing-parts/Wing5';
-
-import Thruster1 from './rocket-parts/thruster-parts/Thruster1';
-import Thruster2 from './rocket-parts/thruster-parts/Thruster2';
-import Thruster3 from './rocket-parts/thruster-parts/Thruster3';
-import Thruster4 from './rocket-parts/thruster-parts/Thruster4';
+import { Nose1, Nose2, Nose3 } from './rocket-parts/indexParts'
+import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
+import { Wing1, Wing3, Wing4, Wing5 } from './rocket-parts/indexParts'
+import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
+import { Thruster1, Thruster2, Thruster3, Thruster4 } from './rocket-parts/indexParts'
 
 class Rockets extends Component {
 

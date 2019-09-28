@@ -10,10 +10,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import Wing1 from './rocket-parts/wing-parts/Wing1';
-import Wing3 from './rocket-parts/wing-parts/Wing3';
-import Wing4 from './rocket-parts/wing-parts/Wing4';
-import Wing5 from './rocket-parts/wing-parts/Wing5';
+import { Wing1, Wing3, Wing4, Wing5} from './rocket-parts/indexParts'
 
 // Demo styles, see 'Styles' section below for some notes on use.
 
