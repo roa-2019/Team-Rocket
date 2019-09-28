@@ -299,14 +299,17 @@ class Design extends Component {
                   </div>
 
                   <div className="container__input--text">
-                    <p className="margin__left">{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1/>)}</p>
-                    <p className="margin__left">{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3/>)}</p>
-                    <p className="margin__left">{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4/>)}</p>
-                    <p className="margin__left">{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5/>)}</p>
+                    <p>Long Window</p>
+                    <p>Circular</p>
+                    <p>Rectangular</p>
+                    <p>Large Window</p>
                   </div>
 
                   <div className="container__text--code">
-                    <p className="margin__left">{this.state.windowShape}</p>
+                  <p className="margin__left">{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4/>)}</p>
+                    <p className="margin__left">{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5/>)}</p>
                   </div>
 
 
