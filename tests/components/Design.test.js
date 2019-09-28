@@ -1,12 +1,12 @@
 import React from 'react'
-import {shallow, render} from 'enzyme'
+import { shallow } from 'enzyme'
 
 
 import Design from '../../client/components/Design'
 
 
 jest.mock('react-redux', () => {
-    return{
+    return {
         connect: () => {
             return (component) => component
         }
@@ -14,26 +14,47 @@ jest.mock('react-redux', () => {
 })
 
 test('Design.test suite is working', () => {
-    expect(2+4).toEqual(6)
+    expect(2 + 4).toEqual(6)
 })
 
-describe('Accordion (GUI) works as expected', () => {
-    test.skip('accordian length', () => {
-     const wrapper = shallow(<Design />)
-     expect(wrapper.find('AccordionItem').length).toBe(6)
+describe('Design component', () => {
+    test('renders', () => {
+        const wrapper = shallow(<Design />)
+        console.log(wrapper.find("container__text--code"))
     })
-    test('making selection calls dispatch', () => {
+
+    test('accordian length', () => {
+        const wrapper = shallow(<Design />)
+        expect(wrapper.find('AccordionItem').length).toBe(7)
+    })
+    test('selecting body shape selection calls dispatch', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<Design dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="Green"]')
-        const currentTarget = {name: "nose-colour", value:"Green"}
-        choice.simulate('change', {currentTarget})
+        const choice = wrapper.find('input[value="Hexagon"]')
+        const currentTarget = { name: "body-shape", value: "Hexagon" }
+        choice.simulate('change', { currentTarget })
         // expect(dispatch).toHaveBeenCalled()
         let action = dispatch.mock.calls[0][0]
-        console.log(dispatch.mock.calls[0])
-        expect(action.type).toBe('NOSE_COLOR')
-        expect(action.color).toBe('Green')
-        
+        // console.log(dispatch.mock.calls[0])
+        expect(action.type).toBe('BODY_SHAPE')
+        expect(action.shape).toBe('Hexagon')
     })
-   
+    test('nose change event handler calls dispatch', () => {
+        //test on nose shape event
+    })
+    test('wing shape event handler calls dispatch', () => {
+        //test on nose shape event
+    })
+    test('window change event handler calls dispatch', () => {
+        //test on nose shape event
+    })
+    test('thruster change event handler calls dispatch', () => {
+        //test on nose shape event
+    })
+    test('stroke color change event handler calls dispatch', () => {
+        //test on nose shape event
+    })
+    test('color change event handler calls dispatch', () => {
+        //test on nose shape event
+    })
 })
