@@ -17,7 +17,7 @@ const rocketReducer = (state = initialRocketState, action) => {
       return { ...state, noseShape: action.shape }
 
     case CHANGE_COLOR:
-      return { ...state, Color: action.color }
+      return { ...state, changeColor: action.color }
 
     case BODY_SHAPE:
       return { ...state, bodyShape: action.shape }
