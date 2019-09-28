@@ -9,6 +9,10 @@ import Body1 from './rocket-parts/body-parts/Body1';
 import Body2 from './rocket-parts/body-parts/Body2';
 import Body3 from './rocket-parts/body-parts/Body3';
 import Body4 from './rocket-parts/body-parts/Body4';
+import Wing1 from './rocket-parts/wing-parts/Wing1';
+import Wing3 from './rocket-parts/wing-parts/Wing3';
+import Wing4 from './rocket-parts/wing-parts/Wing4';
+import Wing5 from './rocket-parts/wing-parts/Wing5';
 
 import Thruster1 from './rocket-parts/thruster-parts/Thruster1';
 import Thruster2 from './rocket-parts/thruster-parts/Thruster2';
@@ -30,12 +34,11 @@ class Rockets extends Component {
 
             <svg height='800' width='800' id="rocket-1">
               {/* Wings */}
-
-              {/* Right wing 2 rectangle slightly off */}
-              <polygon points="340 440 390 460 380 550 340 550" fill='grey' stroke='black' strokeWidth='1' />
-              {/* Left wing 2 rectangle slightly off  */}
-              <polygon points="240 440 190 460 200 550 240 550" fill='grey' stroke='black' strokeWidth='1' />
-
+              {this.props.wingShape == 'Paralelogram' && <Wing1 />}
+              {this.props.wingShape == 'SmallParalelogram' && <Wing3 />}
+              {this.props.wingShape == 'SmallTriangle' && <Wing4 />}
+              {this.props.wingShape == 'Large' && <Wing5 />}
+            
               {/* Rocket nose 1  */}
               {this.props.noseShape == 'Circle' && <Nose1 />}
               {this.props.noseShape == 'Triangle' && <Nose2 />}
