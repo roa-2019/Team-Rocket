@@ -1,16 +1,16 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { noseShape, changeColor, bodyShape, strokeColor, windowShape, wingShape, thrusterShape } from '../actions/index'
+import { noseShape, strokeColor, windowShape, wingShape, thrusterShape } from '../actions/index'
 import ReactDOMServer from 'react-dom/server';
 import {Provider} from 'react-redux'
 import store from '../index'
 
-import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
+
 import { Nose1, Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
 import { Wing1, Wing3, Wing4, Wing5 } from './rocket-parts/indexParts'
 import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from './rocket-parts/indexParts'
-import { AccordionColor, AccordionBody, AccordionBorder, AccordionNose, AccordionThruster, AccordionWindows, AccordionWings } from './accordion-parts/indexAccordion.js';
+import { AccordionColor, AccordionBody, AccordionBorder, AccordionNose, AccordionStrokeColor, AccordionThruster, AccordionWindows, AccordionWings } from './accordion-parts/indexAccordion.js';
 
 import {
   Accordion,
@@ -29,9 +29,8 @@ class Design extends Component {
     super(props)
     this.state = {
       noseShape: '',
-      changeColor: '',
-      bodyShape: '',
-      strokeColor: '',
+      // changeColor: '',
+      // strokeColor: '',
       wingShape: '',
       windowShape: '',
       thrusterShape: ''
@@ -49,19 +48,11 @@ class Design extends Component {
     }
   }
 
-  onStrokeColorChanged = (e) => {
-    this.props.dispatch(strokeColor(e.currentTarget.value));
-    this.setState({ ...this.state, strokeColor: e.currentTarget.value })
-  }
+
 
   onNoseShapeChanged = (e) => {
     this.props.dispatch(noseShape(e.currentTarget.value));
     this.setState({ ...this.state, noseShape: e.currentTarget.value })
-  }
-
-  onBodyShapeChanged = (e) => {
-    this.props.dispatch(bodyShape(e.currentTarget.value));
-    this.setState({ ...this.state, bodyShape: e.currentTarget.value })
   }
 
   onWingShapeChanged = (e) => {
@@ -91,52 +82,7 @@ class Design extends Component {
             <Accordion>
 
               {/* BODY INPUT */}
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    Body
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <div className='container__input'>
-
-                    <label className='container__radio' htmlFor='r1'>
-                      <input type='radio' name='body-shape' id='r1' value='Rectangle' onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--1' className='checkmark checkmark__shape'></span>
-                    </label>
-
-                    <label className='container__radio' htmlFor='r2'>
-                      <input type='radio' name='body-shape' id='r2' value='Trapezoid' onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--2' className='checkmark checkmark__shape'></span>
-                    </label>
-
-                    <label className='container__radio' htmlFor='r3'>
-                      <input type='radio' name='body-shape' id='r3' value='Hexagon' onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--3' className='checkmark checkmark__shape'></span>
-                    </label>
-
-                    <label className='container__radio' htmlFor='r4'>
-                      <input type='radio' name='body-shape' id='r4' value='Tower' onChange={this.onBodyShapeChanged} />
-                      <span id='radio__body--4' className='checkmark checkmark__shape'></span>
-                    </label>
-                  </div>
-
-                  <div className='container__input--text'>
-                    <p>Rectangular</p>
-                    <p>Trapezoid</p>
-                    <p>Hexagon</p>
-                    <p>Tower</p>
-                  </div>
-
-                  <div className='container__text--code'>
-                    <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Provider store={store}><Body1 /></Provider>)}</p>
-                    <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Provider store={store}><Body2 /></Provider>)}</p>
-                    <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Provider store={store}><Body3 /></Provider>)}</p>
-                    <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Provider store={store}><Body4 /></Provider>)}</p>
-                  </div>
-                </AccordionItemPanel>
-              </AccordionItem>
-
+              <AccordionBody />
 
               {/* NOSE INPUT */}
               <AccordionItem>
@@ -342,50 +288,7 @@ class Design extends Component {
               <AccordionColor />
 
               {/* Stroke color INPUT */}
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>
-                    Border Color
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-
-                  <div className='container__input'>
-
-                    <label className='container__radio' htmlFor='r25'>
-                      <input className='custom purple' type='radio' name='change-colour' id='r25' value='Green' onChange={this.onStrokeColorChanged} />
-                      <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
-                    </label>
-
-                    <label className='container__radio' htmlFor='r26'>
-                      <input type='radio' name='change-colour' id='r26' value='Blue' onChange={this.onStrokeColorChanged} />
-                      <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
-                    </label>
-
-
-                    <label className='container__radio' htmlFor='r27'>
-                      <input type='radio' name='change-colour' id='r27' value='#FF0000' onChange={this.onStrokeColorChanged} />
-                      <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
-                    </label>
-
-                    <label className='container__radio' htmlFor='r28'>
-                      <input type='radio' name='change-colour' id='r28' value='Yellow' onChange={this.onStrokeColorChanged} />
-                      <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
-                    </label>
-                  </div>
-                  <div className='container__input--text'>
-                    <p className=''>Green</p>
-                    <p className=''>Blue</p>
-                    <p className=''>Chuck Norris</p>
-                    <p className=''>Yellow</p>
-                  </div>
-
-                  <div className='container__text--code'>
-                    <p className='margin__left'> {this.state.strokeColor}</p>
-                  </div>
-                </AccordionItemPanel>
-              </AccordionItem>
-
+              <AccordionStrokeColor />
 
 
             </Accordion>
