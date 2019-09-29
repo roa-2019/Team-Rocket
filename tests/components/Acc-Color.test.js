@@ -23,7 +23,6 @@ describe('Colors change when selected', () => {
         const onColorChanged = jest.fn()
         const dispatch = jest.fn()
         const wrapper = shallow(<RocketColor onColorChanged={onColorChanged} dispatch={dispatch} />)
-        
         const border = wrapper.find('input[id="r21"]')
         const currentTarget = {name: "change-colour", value: "Green"}
         border.simulate('change', { currentTarget })
