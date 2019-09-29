@@ -1,15 +1,30 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 import Design from '../../client/components/Design'
-
+// import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
 import { renderToString } from 'react-dom/server'
+const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
+
+
 
 jest.mock('react-redux', () => {
     return {
         connect: () => {
             return (component) => component
         }
+    }
+})
+
+jest.mock('react-dom/server', () => {
+    return {
+        renderToString: jest.fn((args) => {
+            // console.log('rts')
+            let res = MockrenderToStringActual('<div>Hi</div>')
+            // console.log(<div>res</div>)
+            // console.log(typeof res)
+            return <span>test</span>
+        })
     }
 })
 
@@ -23,20 +38,27 @@ describe('Design component', () => {
         const wrapper = shallow(<Design />)
         expect(wrapper.find('AccordionItem').length).toBe(7)
     })
-    test.skip('selecting body shape selection calls dispatch', () => {
+    test('selecting body shape selection calls dispatch', () => {
+
+        // ReactDOMServer.renderToString(<Provider store={store}><Body3 /></Provider>)
+
         const dispatch = jest.fn()
-        const wrapper = shallow(<Design dispatch={dispatch} />)
+        const wrapper = mount(<Design dispatch={dispatch} />)
         const choice = wrapper.find('input[value="Hexagon"]')
 
         const currentTarget = { name: "body-shape", value: "Hexagon" }
 
         choice.simulate('change', { currentTarget })
         let action = dispatch.mock.calls[0][0]
+        let thing = wrapper.find('.container__text--code')
+        // thing.forEach((t) => console.log(t.html()))
 
         expect(dispatch).toHaveBeenCalled()
         expect(action.type).toBe('BODY_SHAPE')
         expect(action.shape).toBe('Hexagon')
-        expect(renderToString(<Design />)).toBe()
+        // expect(renderToString).toHaveBeenCalled()
+        // console.log(renderToString.mock.calls)
+        
     })
   
     test('stroke color change event changes state', () => {
