@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { noseShape, changeColor, bodyShape, strokeColor, windowShape, wingShape, thrusterShape } from '../actions/index'
 import ReactDOMServer from 'react-dom/server';
+import {Provider} from 'react-redux'
+import store from '../index'
 
 import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
 import { Nose1, Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
@@ -131,10 +133,10 @@ class Design extends Component {
                   </div>
 
                   <div className='container__text--code'>
-                    <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Body1 />)}</p>
-                    <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Body2 />)}</p>
-                    <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Body3 />)}</p>
-                    <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Body4 />)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Provider store={store}><Body1 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Provider store={store}><Body2 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Provider store={store}><Body3 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Provider store={store}><Body4 /></Provider>)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -181,10 +183,10 @@ class Design extends Component {
                   </div>
 
                   <div className='container__text--code'>
-                    <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Nose1 />)}</p>
-                    <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Nose2 />)}</p>
-                    <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Nose3 />)}</p>
-                    <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Nose4 />)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Provider store={store}><Nose1 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Provider store={store}><Nose2 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Provider store={store}><Nose3 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Provider store={store}><Nose4 /></Provider>)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -230,10 +232,10 @@ class Design extends Component {
                   </div>
 
                   <div className='container__text--code'>
-                    <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1 />)}</p>
-                    <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3 />)}</p>
-                    <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4 />)}</p>
-                    <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5 />)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Provider store={store}><Wing1 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Provider store={store}><Wing3 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Provider store={store}><Wing4 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Provider store={store}><Wing5 /></Provider>)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -281,10 +283,10 @@ class Design extends Component {
                   </div>
 
                   <div className='container__text--code'>
-                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Thruster1 />)}</p>
-                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Thruster2 />)}</p>
-                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Thruster3 />)}</p>
-                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Thruster4 />)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Provider store={store}><Thruster1 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Provider store={store}><Thruster2 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Provider store={store}><Thruster3 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Provider store={store}><Thruster4 /></Provider>)}</p>
                   </div>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -329,10 +331,10 @@ class Design extends Component {
                   </div>
 
                   <div className='container__text--code'>
-                    <p className='margin__left'>{this.state.windowShape == 'longWindowSet' && ReactDOMServer.renderToString(<Window1 />)}</p>
-                    <p className='margin__left'>{this.state.windowShape == 'threeLargeCircularWindows' && ReactDOMServer.renderToString(<Window2 />)}</p>
-                    <p className='margin__left'>{this.state.windowShape == 'threeMediumRectangularWindows' && ReactDOMServer.renderToString(<Window3 />)}</p>
-                    <p className='margin__left'>{this.state.windowShape == 'twoLargePanels' && ReactDOMServer.renderToString(<Window4 />)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'longWindowSet' && ReactDOMServer.renderToString(<Provider store={store}><Window1 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'threeLargeCircularWindows' && ReactDOMServer.renderToString(<Provider store={store}><Window2 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'threeMediumRectangularWindows' && ReactDOMServer.renderToString(<Provider store={store}><Window3 /></Provider>)}</p>
+                    <p className='margin__left'>{this.state.windowShape == 'twoLargePanels' && ReactDOMServer.renderToString(<Provider store={store}><Window4 /></Provider>)}</p>
                   </div>
 
 
@@ -441,18 +443,5 @@ class Design extends Component {
     )
   }
 }
-
-function mapStateToProps(state) {
-
-  return {
-    noseShape: state.rocket.noseShape,
-    bodyShape: state.rocket.bodyShape,
-    wingShape: state.rocket.wingShape,
-    windowShape: state.rocket.windowShape,
-    thrusterShape: state.rocket.thrusterShape,
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
-  }
-}
-
-export default connect(mapStateToProps)(Design)
+  
+export default connect()(Design)
