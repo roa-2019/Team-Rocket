@@ -24,16 +24,6 @@ class AccordionWindows extends Component {
     }
   }
 
-  componentDidMount() {
-    let items = document.querySelectorAll('.accordion a');
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-    function toggleAccordion() {
-      this.classList.toggle('active');
-      this.nextElementSibling.classList.toggle('active');
-    }
-  }
-
   onWindowShapeChanged = (e) => {
     this.props.dispatch(windowShape(e.currentTarget.value));
     this.setState({ ...this.state, windowShape: e.currentTarget.value })

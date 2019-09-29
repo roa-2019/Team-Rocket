@@ -24,16 +24,6 @@ class AccordionWings extends Component {
     }
   }
 
-  componentDidMount() {
-    let items = document.querySelectorAll('.accordion a');
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-    function toggleAccordion() {
-      this.classList.toggle('active');
-      this.nextElementSibling.classList.toggle('active');
-    }
-  }
-
   onWingShapeChanged = (e) => {
     this.props.dispatch(wingShape(e.currentTarget.value));
     this.setState({ ...this.state, wingShape: e.currentTarget.value })

@@ -24,16 +24,6 @@ class AccordionBody extends Component {
     }
   }
 
-  componentDidMount() {
-    let items = document.querySelectorAll('.accordion a');
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-    function toggleAccordion() {
-      this.classList.toggle('active');
-      this.nextElementSibling.classList.toggle('active');
-    }
-  }
-
   onBodyShapeChanged = (e) => {
     this.props.dispatch(bodyShape(e.currentTarget.value));
     this.setState({ ...this.state, bodyShape: e.currentTarget.value })

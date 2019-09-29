@@ -24,16 +24,6 @@ class AccordionNose extends Component {
     }
   }
 
-  componentDidMount() {
-    let items = document.querySelectorAll('.accordion a');
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-    function toggleAccordion() {
-      this.classList.toggle('active');
-      this.nextElementSibling.classList.toggle('active');
-    }
-  }
-
   onNoseShapeChanged = (e) => {
     this.props.dispatch(noseShape(e.currentTarget.value));
     this.setState({ ...this.state, noseShape: e.currentTarget.value })

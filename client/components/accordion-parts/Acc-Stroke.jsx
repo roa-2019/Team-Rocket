@@ -18,22 +18,6 @@ class AccordionStrokeColor extends Component {
     }
   }
 
-  componentDidMount() {
-    let items = document.querySelectorAll('.accordion a');
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-    function toggleAccordion() {
-      this.classList.toggle('active');
-      this.nextElementSibling.classList.toggle('active');
-    }
-  }
-
-
-  onColorChanged = (e) => {
-    this.props.dispatch(changeColor(e.currentTarget.value));
-    this.setState({ ...this.state, changeColor: e.currentTarget.value })
-  }
-
   onStrokeColorChanged = (e) => {
     this.props.dispatch(strokeColor(e.currentTarget.value));
     this.setState({ ...this.state, strokeColor: e.currentTarget.value })
@@ -92,7 +76,6 @@ class AccordionStrokeColor extends Component {
 
 function mapStateToProps(state) {
   return {
-    changeColor: state.rocket.changeColor,
     strokeColor: state.rocket.strokeColor,
   }
 }

@@ -23,15 +23,7 @@ class AccordionThruster extends Component {
     }
   }
 
-  componentDidMount() {
-    let items = document.querySelectorAll('.accordion a');
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
 
-    function toggleAccordion() {
-      this.classList.toggle('active');
-      this.nextElementSibling.classList.toggle('active');
-    }
-  }
 
   onThrusterShapeChanged = (e) => {
     this.props.dispatch(thrusterShape(e.currentTarget.value));

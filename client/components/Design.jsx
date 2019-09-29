@@ -10,16 +10,7 @@ import { AccordionBody, AccordionColor, AccordionNose, AccordionStrokeColor, Acc
 class Design extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      // noseShape: '',
-      // changeColor: '',
-      // strokeColor: '',
-      // wingShape: '',
-      // windowShape: '',
-      // thrusterShape: ''
-    }
   }
-
 
   componentDidMount() {
     let items = document.querySelectorAll('.accordion a');
