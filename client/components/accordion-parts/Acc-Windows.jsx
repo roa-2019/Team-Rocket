@@ -64,11 +64,4 @@ class RocketWindows extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
-  }
-}
-
-export default connect(mapStateToProps)(RocketWindows)
+export default connect()(RocketWindows)

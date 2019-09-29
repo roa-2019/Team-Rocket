@@ -65,11 +65,4 @@ class RocketNose extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
-  }
-}
-
-export default connect(mapStateToProps)(RocketNose)
+export default connect()(RocketNose)

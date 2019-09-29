@@ -65,11 +65,4 @@ class RocketWings extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
-  }
-}
-
-export default connect(mapStateToProps)(RocketWings)
+export default connect()(RocketWings)

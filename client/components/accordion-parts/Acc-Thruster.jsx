@@ -64,11 +64,4 @@ class RocketThruster extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
-  }
-}
-
-export default connect(mapStateToProps)(RocketThruster)
+export default connect()(RocketThruster)
