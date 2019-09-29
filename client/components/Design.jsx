@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { noseShape, changeColor, bodyShape, strokeColor, windowShape, wingShape, thrusterShape } from '../actions/index'
-import ReactDOMServer from 'react-dom/server';
+import ReactDOMServer from 'react-dom/server'
 import {Provider} from 'react-redux'
 import store from '../index'
 

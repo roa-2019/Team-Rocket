@@ -1,25 +1,28 @@
 import React from 'react'
-import {shallow, render, mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-// import './setup-env'
+import { shallow, render, mount } from 'enzyme'
+
 
 import Rockets from '../../client/components/Rockets'
 
 jest.mock('react-redux', () => {
-    return{
+    return {
         connect: () => {
             return (component) => component
         }
     }
 })
 
-test('Rocket.test suite is working', () => {
-    expect(false).toBeFalsy()
-})
 
-describe('Roksts component renders correctly', () => {
-    test('renders one svg tag', () => {
-        const wrapper = shallow(<Rockets />)
-        expect(wrapper.find('svg').length).toBe(1)
+
+describe('Rockets component renders correctly', () => {
+    test('Rocket.test suite is working', () => {
+        expect(false).toBeFalsy()
     })
+    test('renders one svg tag', () => {
+        const wrapper = render(<Rockets />)
+        expect(wrapper.find('svg').length).toBe(1)
+        
+    })
+    // 
+
 })

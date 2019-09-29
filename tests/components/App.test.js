@@ -1,12 +1,19 @@
 import React from 'react'
-import Enzyme, {shallow, render, mount} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-// import './setup-env'
+import {shallow} from 'enzyme'
+
+
 import LandingPage from '../../client/components/LandingPage'
 
 import App from '../../client/components/App'
+import Rockets from '../../client/components/Rockets'
 
-Enzyme.configure({adapter: new Adapter()})
+jest.mock('react-redux', () => {
+  return {
+    connect: () => {
+      return (component) => component
+    }
+  }
+})
 
 test('App.test runner is working', () => {
   expect(true).toBeTruthy()
@@ -20,10 +27,16 @@ test('App.test runner is working', () => {
 
 test.skip('renders one LandingPage Component', () => {
   const wrapper = shallow(<App />)
- expect(wrapper.find(LandingPage).length).toBe(1)
+  expect(wrapper.find(LandingPage).length).toBe(1)
   })
 
   test('teneray operator for LandingPage', () => {
+    const wrapper = shallow(<App />)
+    wrapper.setProps({showLanding: true})
+    expect(wrapper.find(Rockets ).length).toBe(0)
+    expect(wrapper.find(LandingPage).length).toBe(1)
 
+    expect(wrapper.html()).toContain("Landingimg.jpg")
+    
   })
 
