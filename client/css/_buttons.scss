@@ -1,7 +1,87 @@
 // Radio Button Wrappers
 
-.rb-nose-wrapper,
-.rb-colour-wrapper {
-  display: flex;
-  justify-content: space-around;
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.container__input {
+  @include space-around;
 }
+
+.container__radio {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+
+
+// 1. Hide the browsers default radio button
+.container__radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+// 2. Create the custom radio button styling the span in the container
+.checkmark {
+  position: absolute;
+}
+
+.checkmark__colours {
+  width: 25px;
+  left: -10px;
+  height: 25px;
+  border-radius: 5px;
+  @include button__shadow;
+
+}
+
+.checkmark__shape {
+  left: -40px;
+  width: 5.3em;
+  height: 2.5em;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background: grey;
+  @include button__shadow;
+}
+
+// 3. Styled effect for when the radio is selected/checked
+.container__radio input:checked ~ .checkmark {
+  border: 2.2px solid $accentOrange;
+}
+
+
+// Colours for Radio Buttons
+
+#radio__colour--blue {
+  background-color: lightskyblue;
+}
+
+#radio__colour--green {
+  background-color: lightgreen;
+}
+
+#radio__colour--chuckNorris {
+  background-color: $chuckNorris;
+}
+
+#radio__colour--yellow {
+  background-color:yellow;
+}
+
+// Shapes for Radio Buttons
+
+// #circle {
+//   width: 100px;
+//   height: 100px;
+//   background: red;
+//   border-radius: 50%
+// }
+
+// #triangle-up {
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-bottom: 100px solid red;
+// }

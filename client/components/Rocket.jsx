@@ -9,6 +9,7 @@ class Rocket extends Component {
         <div className='rocket rocket-panel col'>
 
           <div className="rocket-wrapper b">
+
             Rocket
             <p>{this.props.noseShape}</p>
           </div>
@@ -19,11 +20,6 @@ class Rocket extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    noseShape: state.noseShape,
-    noseColor: state.noseColor
-  }
-}
+
 
 export default connect(mapStateToProps)(Rocket)

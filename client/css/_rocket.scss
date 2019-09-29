@@ -1,3 +1,6 @@
+@import 'variables.scss';
+
+
 .rocket-panel {
   display: flex;
   align-items: center;
@@ -7,5 +10,10 @@
 .rocket-wrapper {
   height: 75%;
   width: 50%;
-  min-width: 200px;
+  min-width: 600px;
+  margin-left: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } 
+
