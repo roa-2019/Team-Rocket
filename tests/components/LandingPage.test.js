@@ -18,6 +18,12 @@ describe('LandingPage tests', () => {
   test('LandingPage.test suite is working', () => {
     expect(5 % 2).toEqual(1)
   })
+
+  test('component renders one image', () => {
+    const wrapper = shallow(<LandingPage />)
+    expect(wrapper.find('img').length).toBe(1)
+  })
+
   test('on click calls dispatch and changes state', () => {
     const dispatch = jest.fn()
     const wrapper = shallow(<LandingPage dispatch={dispatch} />)

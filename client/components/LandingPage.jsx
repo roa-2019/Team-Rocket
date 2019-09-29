@@ -12,8 +12,7 @@ class LandingPage extends Component {
                         <img src="/images/Landingimg.jpg" onClick={() => {
                             this.props.dispatch(GoToBuildRocket())
                         }
-                        }>
- 
+                        }> 
                         </img>
                     </div>
                 </div>
