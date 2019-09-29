@@ -1,11 +1,7 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import Design from '../../client/components/Design'
-// import { Body1, Body2, Body3, Body4 } from './rocket-parts/indexParts'
-import { renderToString } from 'react-dom/server'
-const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
-
 
 
 jest.mock('react-redux', () => {
@@ -16,17 +12,6 @@ jest.mock('react-redux', () => {
     }
 })
 
-jest.mock('react-dom/server', () => {
-    return {
-        renderToString: jest.fn((args) => {
-            // console.log('rts')
-            let res = MockrenderToStringActual('<div>Hi</div>')
-            // console.log(<div>res</div>)
-            // console.log(typeof res)
-            return <span>test</span>
-        })
-    }
-})
 
 test('Design.test suite is working', () => {
     expect(2 + 4).toEqual(6)
