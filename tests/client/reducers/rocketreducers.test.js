@@ -1,7 +1,7 @@
 import rocketReducer from '../../../client/reducers/rocketreducer'
 import { bodyShape, changeColor } from '../../../client/actions'
 
-describe('reocket reducer works as expected', () => {
+describe('rocket reducer works as expected', () => {
 
     test('initial state of noseShape is as expected', () => {
         let state = rocketReducer(undefined, { type: "@@INIT" })

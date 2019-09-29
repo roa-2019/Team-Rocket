@@ -17,24 +17,26 @@ test('Rocket.test suite is working', () => {
 })
 
 describe('Rockets component renders correctly', () => {
-
     test('renders one svg tag', () => {
         const wrapper = render(<Rockets />)
         expect(wrapper.find('svg').length).toBe(1)
 
     })
-    test('test tenery operators for body parts', () => {
+
+    test('test tenery operators for thruster parts', () => {
         const wrapper = shallow(<Rockets />)
-        let thruster2Points = "320 500 350 540 230 540 260 500"
-        wrapper.setProps(
-            {
-                thrusterShape: "Thruster2",
-                changeColor: "blue",
-                strokeColor: "yellow"
-            })
 
-        expect(wrapper.html()).toContain(thruster2Points)
+        wrapper.setProps({thrusterShape: "Thruster2", changeColor: "blue",
+                strokeColor: "yellow"})
+        const shapeProps = wrapper.instance().props
+        expect(shapeProps.thrusterShape).toBe("Thruster2")
+        
+    })
+    test('tenery operators for nose parts', () => {
+        const wrapper = shallow(<Rockets />)
+        wrapper.setProps({ noseShape: "Ellipse"})
 
+        expect(wrapper.instance().props.noseShape).toBe("Ellipse")
     })
 
 })
