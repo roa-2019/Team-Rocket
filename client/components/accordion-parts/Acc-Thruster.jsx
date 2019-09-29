@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
+import { connect, Provider } from 'react-redux'
 import { thrusterShape } from '../../actions/index'
-import ReactDOMServer from 'react-dom/server';
-import { Provider } from 'react-redux'
+import ReactDOMServer from 'react-dom/server'
 import store from '../../index'
 
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from '../rocket-parts/indexParts'

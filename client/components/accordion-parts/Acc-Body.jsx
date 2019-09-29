@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
+import { connect, Provider } from 'react-redux'
 import { bodyShape } from '../../actions/index'
-import ReactDOMServer from 'react-dom/server';
-import { Provider } from 'react-redux'
+import ReactDOMServer from 'react-dom/server'
 import store from '../../index'
 
 import { Body1, Body2, Body3, Body4 } from '../rocket-parts/indexParts'

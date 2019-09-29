@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
+import { connect, Provider } from 'react-redux'
 import { wingShape } from '../../actions/index'
-import ReactDOMServer from 'react-dom/server';
-import { Provider } from 'react-redux'
+import ReactDOMServer from 'react-dom/server'
 import store from '../../index'
 
 import { Wing1, Wing3, Wing4, Wing5 } from '../rocket-parts/indexParts'
