@@ -94,7 +94,8 @@ class AccordionBody extends Component {
 
 function mapStateToProps(state) {
   return {
-    bodyShape: state.rocket.bodyShape,
+    changeColor: state.rocket.changeColor,
+    strokeColor: state.rocket.strokeColor
   }
 }
 

@@ -1,16 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { changeColor } from '../../actions/index'
+import { changeColor, strokeColor } from '../../actions/index'
 
 import {
-  Accordion,
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-class AccordionStroke extends Component {
+class AccordionStrokeColor extends Component {
 
   constructor(props) {
     super(props)
@@ -29,6 +28,12 @@ class AccordionStroke extends Component {
     }
   }
 
+
+  onColorChanged = (e) => {
+    this.props.dispatch(changeColor(e.currentTarget.value));
+    this.setState({ ...this.state, changeColor: e.currentTarget.value })
+  }
+
   onStrokeColorChanged = (e) => {
     this.props.dispatch(strokeColor(e.currentTarget.value));
     this.setState({ ...this.state, strokeColor: e.currentTarget.value })
@@ -36,35 +41,34 @@ class AccordionStroke extends Component {
 
   render() {
     return (
-      <Fragment>
         <AccordionItem>
           <AccordionItemHeading>
             <AccordionItemButton>
-              Color
-                    </AccordionItemButton>
+              Border Color
+                  </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel>
 
             <div className='container__input'>
 
-              <label className='container__radio' htmlFor='r21'>
-                <input className='custom purple' type='radio' name='change-colour' id='r21' value='Green' onChange={this.onColorChanged} />
+              <label className='container__radio' htmlFor='r25'>
+                <input className='custom purple' type='radio' name='change-colour' id='r25' value='Green' onChange={this.onStrokeColorChanged} />
                 <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
               </label>
 
-              <label className='container__radio' htmlFor='r22'>
-                <input type='radio' name='change-colour' id='r22' value='Blue' onChange={this.onColorChanged} />
+              <label className='container__radio' htmlFor='r26'>
+                <input type='radio' name='change-colour' id='r26' value='Blue' onChange={this.onStrokeColorChanged} />
                 <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
               </label>
 
 
-              <label className='container__radio' htmlFor='r23'>
-                <input type='radio' name='change-colour' id='r23' value='#FF0000' onChange={this.onColorChanged} />
+              <label className='container__radio' htmlFor='r27'>
+                <input type='radio' name='change-colour' id='r27' value='#FF0000' onChange={this.onStrokeColorChanged} />
                 <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
               </label>
 
-              <label className='container__radio' htmlFor='r24'>
-                <input type='radio' name='change-colour' id='r24' value='Yellow' onChange={this.onColorChanged} />
+              <label className='container__radio' htmlFor='r28'>
+                <input type='radio' name='change-colour' id='r28' value='Yellow' onChange={this.onStrokeColorChanged} />
                 <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
               </label>
             </div>
@@ -76,11 +80,11 @@ class AccordionStroke extends Component {
             </div>
 
             <div className='container__text--code'>
-              <p className='margin__left'> {this.state.changeColor}</p>
+              <p className='margin__left'> {this.state.strokeColor}</p>
             </div>
           </AccordionItemPanel>
         </AccordionItem>
-      </Fragment>
+
     )
   }
 }
@@ -92,4 +96,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(AccordionStroke)
+export default connect(mapStateToProps)(AccordionStrokeColor)
