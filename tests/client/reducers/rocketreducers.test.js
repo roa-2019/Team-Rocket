@@ -27,7 +27,7 @@ describe('reocket reducer works as expected', () => {
         let state = rocketReducer(intColor, changeColor("pink"))
         expect(state.changeColor).toBe("pink")
     })
-    test('state of stroke changes', () => {
+    test.skip('state of stroke changes', () => {
         //test stroke action/reducer
     })
 })

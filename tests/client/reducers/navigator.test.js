@@ -10,7 +10,6 @@ describe('navigator reducer for LandingPage state', () => {
     test('action GoToBuildRocket changes state to false', () => {
         let initState = true
         let state = navigator(initState, GoToBuildRocket("GoToBuildRocket"))
-        console.log(state)
         expect(state).toBe(false)
     })
 

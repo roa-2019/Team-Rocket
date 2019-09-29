@@ -18,43 +18,47 @@ test('Design.test suite is working', () => {
 })
 
 describe('Design component', () => {
-    test('renders', () => {
+    test.skip('renders', () => {
         const wrapper = shallow(<Design />)
-        console.log(wrapper.find("container__text--code"))
+        
+        
     })
 
     test('accordian length', () => {
         const wrapper = shallow(<Design />)
         expect(wrapper.find('AccordionItem').length).toBe(7)
     })
-    test('selecting body shape selection calls dispatch', () => {
+    test.skip('selecting body shape selection calls dispatch', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<Design dispatch={dispatch} />)
         const choice = wrapper.find('input[value="Hexagon"]')
         const currentTarget = { name: "body-shape", value: "Hexagon" }
+        
+
         choice.simulate('change', { currentTarget })
-        // expect(dispatch).toHaveBeenCalled()
+
+        expect(dispatch).toHaveBeenCalled()
         let action = dispatch.mock.calls[0][0]
         // console.log(dispatch.mock.calls[0])
         expect(action.type).toBe('BODY_SHAPE')
         expect(action.shape).toBe('Hexagon')
     })
-    test('nose change event handler calls dispatch', () => {
+    test.skip('nose change event handler calls dispatch', () => {
         //test on nose shape event
     })
-    test('wing shape event handler calls dispatch', () => {
+    test.skip('wing shape event handler calls dispatch', () => {
         //test on nose shape event
     })
-    test('window change event handler calls dispatch', () => {
+    test.skip('window change event handler calls dispatch', () => {
         //test on nose shape event
     })
-    test('thruster change event handler calls dispatch', () => {
+    test.skip('thruster change event handler calls dispatch', () => {
         //test on nose shape event
     })
-    test('stroke color change event handler calls dispatch', () => {
+    test.skip('stroke color change event handler calls dispatch', () => {
         //test on nose shape event
     })
-    test('color change event handler calls dispatch', () => {
+    test.skip('color change event handler calls dispatch', () => {
         //test on nose shape event
     })
 })

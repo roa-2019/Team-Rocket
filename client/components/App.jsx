@@ -20,10 +20,10 @@ class App extends Component {
   }
 }
 
-function MapStateToProps (state)  {
+function mapStateToProps (state)  {
   return {
     showLanding: state.navigator
   }
 }
 
-export default connect (MapStateToProps)(App)
+export default connect (mapStateToProps)(App)
