@@ -28,7 +28,7 @@ class RocketThruster extends Component {
 
           <label className='container__radio' htmlFor='r13'>
             <input type='radio' name='thruster-shape' id='r13' value='Thruster1' onChange={this.onThrusterShapeChanged} />
-            <span id='radio__thruster--1' className='checkmark checkmark__shape'></span>
+            <span id='radio__thruster--1' className='checkmark checkmark__shape'><p className='checkmark__label b'> RECT</p></span>
           </label>
 
           <label className='container__radio' htmlFor='r14'>
