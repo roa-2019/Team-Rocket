@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
+import { connect, Provider } from 'react-redux'
 import { windowShape } from '../../actions/index'
-import ReactDOMServer from 'react-dom/server';
-import { Provider } from 'react-redux'
+import ReactDOMServer from 'react-dom/server'
 import store from '../../index'
 
 import { Window1, Window2, Window3, Window4 } from '../rocket-parts/indexParts'
@@ -65,11 +64,4 @@ class RocketWindows extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
-  }
-}
-
-export default connect(mapStateToProps)(RocketWindows)
+export default connect()(RocketWindows)

@@ -9,7 +9,15 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-import { RocketBody, RocketColor, RocketNose, RocketStrokeColor, RocketThruster, RocketWindows, RocketWings } from './accordion-parts/indexAccordion.js';
+import { 
+  RocketBody, 
+  RocketColor, 
+  RocketNose, 
+  RocketStrokeColor, 
+  RocketThruster, 
+  RocketWindows, 
+  RocketWings 
+} from './accordion-parts/indexAccordion.js';
 
 class Design extends Component {
   constructor(props) {
@@ -45,7 +53,6 @@ class Design extends Component {
                   <RocketBody />
                 </AccordionItemPanel>
               </AccordionItem>
-
 
               {/* Rocket Nose Input */}
               <AccordionItem>
