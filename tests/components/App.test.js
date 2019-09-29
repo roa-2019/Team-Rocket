@@ -25,7 +25,7 @@ test('when true shows LandingPage component', () => {
   wrapper.setProps({showLanding: true})
   expect(wrapper.find(LandingPage).length).toBe(1)
 })
-  test('when state true does not shoe rocket components', () => {
+  test('when state true does not show rocket components', () => {
     const wrapper = shallow(<App />)
     wrapper.setProps({showLanding: true})
     expect(wrapper.find(Rockets ).length).toBe(0)
