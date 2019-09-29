@@ -6,6 +6,7 @@ import { Nose1, Nose2, Nose3, Nose4 } from './rocket-parts/indexParts'
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from './rocket-parts/indexParts'
 import { Wing1, Wing3, Wing4, Wing5 } from './rocket-parts/indexParts'
 import { Window1, Window2, Window3, Window4 } from './rocket-parts/indexParts'
+import Launch from './Launch'
 
 class Rockets extends Component {
 
@@ -47,6 +48,7 @@ class Rockets extends Component {
               {this.props.windowShape == 'threeMediumRectangularWindows' && <Window3 />}
               {this.props.windowShape == 'twoLargePanels' && <Window4 />}
             </svg>
+            <Launch />
           </div>
         </div>
       </Fragment>
