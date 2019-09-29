@@ -9,7 +9,6 @@ import { Wing1, Wing3, Wing4, Wing5 } from '../rocket-parts/indexParts'
 
 
 import {
-  Accordion,
   AccordionItem,
   AccordionItemHeading,
   AccordionItemButton,
@@ -89,7 +88,6 @@ class AccordionWings extends Component {
           </div>
         </AccordionItemPanel>
       </AccordionItem>
-
     )
   }
 }

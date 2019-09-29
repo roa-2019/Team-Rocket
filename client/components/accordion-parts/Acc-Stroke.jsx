@@ -41,49 +41,50 @@ class AccordionStrokeColor extends Component {
 
   render() {
     return (
-        <AccordionItem>
-          <AccordionItemHeading>
-            <AccordionItemButton>
-              Border Color
+      <AccordionItem>
+        <AccordionItemHeading>
+          <AccordionItemButton>
+            Border Color
                   </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel>
+        </AccordionItemHeading>
+        <AccordionItemPanel>
 
-            <div className='container__input'>
+          <div className='container__input'>
 
-              <label className='container__radio' htmlFor='r25'>
-                <input className='custom purple' type='radio' name='change-colour' id='r25' value='Green' onChange={this.onStrokeColorChanged} />
-                <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
-              </label>
+            <label className='container__radio' htmlFor='r25'>
+              <input className='custom purple' type='radio' name='change-colour' id='r25' value='Green' onChange={this.onStrokeColorChanged} />
+              <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
+            </label>
 
-              <label className='container__radio' htmlFor='r26'>
-                <input type='radio' name='change-colour' id='r26' value='Blue' onChange={this.onStrokeColorChanged} />
-                <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
-              </label>
+            <label className='container__radio' htmlFor='r26'>
+              <input type='radio' name='change-colour' id='r26' value='Blue' onChange={this.onStrokeColorChanged} />
+              <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
+            </label>
 
 
-              <label className='container__radio' htmlFor='r27'>
-                <input type='radio' name='change-colour' id='r27' value='#FF0000' onChange={this.onStrokeColorChanged} />
-                <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
-              </label>
+            <label className='container__radio' htmlFor='r27'>
+              <input type='radio' name='change-colour' id='r27' value='#FF0000' onChange={this.onStrokeColorChanged} />
+              <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
+            </label>
 
-              <label className='container__radio' htmlFor='r28'>
-                <input type='radio' name='change-colour' id='r28' value='Yellow' onChange={this.onStrokeColorChanged} />
-                <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
-              </label>
-            </div>
-            <div className='container__input--text'>
-              <p className=''>Green</p>
-              <p className=''>Blue</p>
-              <p className=''>Chuck Norris</p>
-              <p className=''>Yellow</p>
-            </div>
+            <label className='container__radio' htmlFor='r28'>
+              <input type='radio' name='change-colour' id='r28' value='Yellow' onChange={this.onStrokeColorChanged} />
+              <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
+            </label>
+          </div>
 
-            <div className='container__text--code'>
-              <p className='margin__left'> {this.state.strokeColor}</p>
-            </div>
-          </AccordionItemPanel>
-        </AccordionItem>
+          <div className='container__input--text'>
+            <p className=''>Green</p>
+            <p className=''>Blue</p>
+            <p className=''>Chuck Norris</p>
+            <p className=''>Yellow</p>
+          </div>
+
+          <div className='container__text--code'>
+            <p className='margin__left'> {this.state.strokeColor}</p>
+          </div>
+        </AccordionItemPanel>
+      </AccordionItem>
 
     )
   }
