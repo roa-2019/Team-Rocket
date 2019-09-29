@@ -44,6 +44,12 @@
   background: grey;
   @include button__shadow;
 }
+.checkmark__label{
+  text-align: center;
+  width: 5.3em;
+  height : 2.5em;
+  color: white;
+}
 
 // 3. Styled effect for when the radio is selected/checked
 .container__radio input:checked ~ .checkmark {
