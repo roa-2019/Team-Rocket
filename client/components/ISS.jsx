@@ -10,10 +10,7 @@ class ISS extends Component{
             satellite: {}
         }
     }
-    componentDidMount(){
-        this.getISSLoc()
-    }
-
+   
     getISSLoc = () => {
         getSatellite(IssId)
         .then(satellite => {
@@ -27,6 +24,7 @@ class ISS extends Component{
     render (){
         return (
             <Fragment>
+                <button onClick ={this.getISSLoc}>LAUNCH!</button>
                 <p>The International Space Station</p>
                 <p>Latitude: {this.state.satellite.latitude} </p>
                 <p>Longitude: {this.state.satellite.longitude} </p>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Enzyme, { shallow, render, mount } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme'
 
 
 import LandingPage from '../../client/components/LandingPage'
@@ -13,12 +13,12 @@ jest.mock('react-redux', () => {
   }
 })
 
-
-describe('LandingPage tests', () => {
-  test('LandingPage.test suite is working', () => {
+ test('LandingPage.test suite is working', () => {
     expect(5 % 2).toEqual(1)
   })
 
+describe('LandingPage tests', () => {
+  
   test('component renders one image', () => {
     const wrapper = shallow(<LandingPage />)
     expect(wrapper.find('img').length).toBe(1)
