@@ -1,6 +1,7 @@
 export const NOSE_SHAPE = 'NOSE_SHAPE'
 export const CHANGE_COLOR = 'CHANGE_COLOR'
 export const BODY_SHAPE = 'BODY_SHAPE'
+export const STROKE_COLOR = 'STROKE_COLOR'
 export const WING_SHAPE = 'WING_SHAPE'
 export const WINDOW_SHAPE = 'WINDOW_SHAPE'
 export const THRUSTER_SHAPE = 'THRUSTER_SHAPE'
@@ -26,6 +27,14 @@ export function bodyShape (shape) {
     shape
   }
 }
+
+export function strokeColor (color) {
+  return {
+    type: STROKE_COLOR,
+    color
+  }
+}
+
 
 export function wingShape (shape) {
   return {

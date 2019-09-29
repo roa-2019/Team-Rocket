@@ -26,7 +26,7 @@ class Window1 extends Component {
 
 function mapStateToProps(state){
     return{
-       strokeColor: state.rockect.strokeColor
+       strokeColor: state.rocket.strokeColor
     }
     
 }

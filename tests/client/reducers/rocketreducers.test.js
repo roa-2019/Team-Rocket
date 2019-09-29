@@ -1,15 +1,33 @@
 import rocketReducer from '../../../client/reducers/rocketreducer'
-import {bodyShape } from '../../../client/actions'
+import { bodyShape, changeColor } from '../../../client/actions'
 
-test('initial state is as expected', () => {
-    let state = rocketReducer(undefined, {type:"@@INIT"})
-    expect(state.noseShape).toBe("")
+describe('reocket reducer works as expected', () => {
+
+    test('initial state of noseShape is as expected', () => {
+        let state = rocketReducer(undefined, { type: "@@INIT" })
+        expect(state.noseShape).toBe("")
+    })
+
+    test('action body shape changes state shape', () => {
+        let intShape = { bodyShape: "rect" }
+        let state = rocketReducer(intShape, bodyShape("circle"))
+        expect(state.bodyShape).toBe("circle")
+
+    })
+
+    test('body shape changes do not change nose shape', () => {
+        let intShape = { bodyShape: "rect", noseShape: "circle" }
+        let state = rocketReducer(intShape, bodyShape("hexagon"))
+        expect(state.bodyShape).toBe("hexagon")
+        expect(state.noseShape).toBe("circle")
+    })
+
+    test('state of color changes', () => {
+        let intColor = { changeColor: "green" }
+        let state = rocketReducer(intColor, changeColor("pink"))
+        expect(state.changeColor).toBe("pink")
+    })
+    test('state of stroke changes', () => {
+        //test stroke action/reducer
+    })
 })
-
-test('action body shape changes state shape', () => {
-    let intShape = { bodyShape: "rect"}
-    let state = rocketReducer(intShape, bodyShape("circle"))
-    expect(state.bodyShape).toBe("circle")
-})
-
-// body shape changes do not change nose shape
