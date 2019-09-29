@@ -21,7 +21,6 @@ class RocketWindows extends Component {
     this.setState({ ...this.state, windowShape: e.currentTarget.value })
   }
 
-
   render() {
     return (
       <Fragment>

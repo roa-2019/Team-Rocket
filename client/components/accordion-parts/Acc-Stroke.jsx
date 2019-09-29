@@ -54,7 +54,6 @@ class RocketStrokeColor extends Component {
           <p className='margin__left'> {this.state.strokeColor}</p>
         </div>
       </Fragment>
-
     )
   }
 }

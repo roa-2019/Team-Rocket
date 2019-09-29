@@ -21,7 +21,6 @@ class RocketThruster extends Component {
     this.setState({ ...this.state, thrusterShape: e.currentTarget.value })
   }
 
-
   render() {
     return (
       <Fragment>

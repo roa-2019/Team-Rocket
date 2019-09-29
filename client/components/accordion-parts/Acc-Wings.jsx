@@ -62,7 +62,6 @@ class RocketWings extends Component {
           <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Provider store={store}><Wing5 /></Provider>)}</p>
         </div>
       </Fragment>
-
     )
   }
 }

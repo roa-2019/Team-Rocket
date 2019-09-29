@@ -32,10 +32,9 @@ class Design extends Component {
         <div className='design col'>
           <div className='details-panel'>
             <h3> ~ Build Your Rocket ~ </h3>
-
             <Accordion>
 
-
+              {/* Rocket Body Input*/}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -43,12 +42,12 @@ class Design extends Component {
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  {/* Rocket Body Input*/}
                   <RocketBody />
-                  {/* Rocket Body Input*/}
                 </AccordionItemPanel>
               </AccordionItem>
 
+
+              {/* Rocket Nose Input */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -56,13 +55,11 @@ class Design extends Component {
                    </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  {/* Rocket Nose Input */}
                   <RocketNose />
-                  {/* Rocket Nose Input */}
                 </AccordionItemPanel>
               </AccordionItem>
 
-
+              {/* Rocket Wings Input */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -70,12 +67,11 @@ class Design extends Component {
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  {/* Rocket Wings Input */}
                   <RocketWings />
-                  {/* Rocket Wings Input */}
                 </AccordionItemPanel>
               </AccordionItem>
 
+              {/* Rocket Thruster Input*/}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -83,13 +79,11 @@ class Design extends Component {
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  {/* Rocket Thruster Input*/}
                   <RocketThruster />
-                  {/* Rocket Thruster Input*/}
                 </AccordionItemPanel>
               </AccordionItem>
 
-
+              {/* Rocket Windows Input*/}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -97,14 +91,11 @@ class Design extends Component {
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  {/* Rocket Windows Input*/}
                   <RocketWindows />
-                  {/* Rocket Windows Input*/}
                 </AccordionItemPanel>
               </AccordionItem>
 
-
-
+              {/* Rocket Colors Input */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -112,13 +103,11 @@ class Design extends Component {
                  </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                  {/* Rocket Colors Input */}
                   <RocketColor />
-                  {/* Rocket Colors Input */}
                 </AccordionItemPanel>
               </AccordionItem>
 
-
+              {/* Rocket Stroke Colors Input */}
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
@@ -126,14 +115,11 @@ class Design extends Component {
                  </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-              {/* Rocket Stroke Colors Input */}
-              <RocketStrokeColor />
-              {/* Rocket Stroke Colors Input */}
-              </AccordionItemPanel>
+                  <RocketStrokeColor />
+                </AccordionItemPanel>
               </AccordionItem>
 
             </Accordion>
-
           </div >
         </div >
       </Fragment >

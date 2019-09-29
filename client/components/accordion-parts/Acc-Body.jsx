@@ -25,7 +25,6 @@ class RocketBody extends Component {
     return (
 
       <Fragment>
-
         <div className='container__input'>
 
           <label className='container__radio' htmlFor='r1'>
