@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 class Nose1 extends Component {
     render() {
-        console.log(this.props)
+
            return (
             <Fragment>
                 {/*<!-- Nose circle 1 --> */}
