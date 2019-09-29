@@ -1,6 +1,5 @@
 const initialState = true
 
-
 const navigator = (state = initialState, action) => {
     switch(action.type) {
         case 'GoToBuildRocket':
