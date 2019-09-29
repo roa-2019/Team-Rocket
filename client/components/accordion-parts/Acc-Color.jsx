@@ -1,15 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { changeColor, strokeColor } from '../../actions/index'
+import { changeColor} from '../../actions/index'
 
-import {
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion';
 
-class AccordionColor extends Component {
+class RocketColor extends Component {
 
   constructor(props) {
     super(props)
@@ -25,14 +19,7 @@ class AccordionColor extends Component {
 
   render() {
     return (
-
-      <AccordionItem>
-        <AccordionItemHeading>
-          <AccordionItemButton>
-            Color
-            </AccordionItemButton>
-        </AccordionItemHeading>
-        <AccordionItemPanel>
+<Fragment>
 
           <div className='container__input'>
 
@@ -68,9 +55,9 @@ class AccordionColor extends Component {
           <div className='container__text--code'>
             <p className='margin__left'> {this.state.changeColor}</p>
           </div>
+          </Fragment>
 
-        </AccordionItemPanel>
-      </AccordionItem>
+ 
     )
   }
 }
@@ -81,5 +68,5 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(AccordionColor)
+export default connect(mapStateToProps)(RocketColor)
 

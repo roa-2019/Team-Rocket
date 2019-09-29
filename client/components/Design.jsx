@@ -3,9 +3,13 @@ import { connect } from 'react-redux'
 
 import {
   Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-import { AccordionBody, AccordionColor, AccordionNose, AccordionStrokeColor, AccordionThruster, AccordionWindows, AccordionWings } from './accordion-parts/indexAccordion.js';
+import { RocketBody, RocketColor, RocketNose, RocketStrokeColor, RocketThruster, RocketWindows, RocketWings } from './accordion-parts/indexAccordion.js';
 
 class Design extends Component {
   constructor(props) {
@@ -30,26 +34,104 @@ class Design extends Component {
             <h3> ~ Build Your Rocket ~ </h3>
 
             <Accordion>
-              {/* Rocket Body Input*/}
-              <AccordionBody />
 
-              {/* Rocket Wings Input */}
-              <AccordionNose />
 
-              {/* Rocket Wings Input */}
-              <AccordionWings />
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Body
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  {/* Rocket Body Input*/}
+                  <RocketBody />
+                  {/* Rocket Body Input*/}
+                </AccordionItemPanel>
+              </AccordionItem>
 
-              {/* Rocket Thruster Input*/}
-              <AccordionThruster />
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Nose
+                   </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  {/* Rocket Nose Input */}
+                  <RocketNose />
+                  {/* Rocket Nose Input */}
+                </AccordionItemPanel>
+              </AccordionItem>
 
-              {/* Rocket Windows Input*/}
-              <AccordionWindows />
 
-              {/* Rocket Colors Input */}
-              <AccordionColor />
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Wings
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  {/* Rocket Wings Input */}
+                  <RocketWings />
+                  {/* Rocket Wings Input */}
+                </AccordionItemPanel>
+              </AccordionItem>
 
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Thruster
+                  </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  {/* Rocket Thruster Input*/}
+                  <RocketThruster />
+                  {/* Rocket Thruster Input*/}
+                </AccordionItemPanel>
+              </AccordionItem>
+
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Windows
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  {/* Rocket Windows Input*/}
+                  <RocketWindows />
+                  {/* Rocket Windows Input*/}
+                </AccordionItemPanel>
+              </AccordionItem>
+
+
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Color
+                 </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  {/* Rocket Colors Input */}
+                  <RocketColor />
+                  {/* Rocket Colors Input */}
+                </AccordionItemPanel>
+              </AccordionItem>
+
+
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>
+                    Border Color
+                 </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
               {/* Rocket Stroke Colors Input */}
-              <AccordionStrokeColor />
+              <RocketStrokeColor />
+              {/* Rocket Stroke Colors Input */}
+              </AccordionItemPanel>
+              </AccordionItem>
+
             </Accordion>
 
           </div >
