@@ -1,0 +1,19 @@
+@import 'variables.scss';
+
+
+.rocket-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rocket-wrapper {
+  height: 75%;
+  width: 50%;
+  min-width: 600px;
+  margin-left: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
