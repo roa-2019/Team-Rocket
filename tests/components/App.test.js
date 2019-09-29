@@ -6,6 +6,7 @@ import LandingPage from '../../client/components/LandingPage'
 
 import App from '../../client/components/App'
 import Rockets from '../../client/components/Rockets'
+import Design from '../../client/components/Design'
 
 jest.mock('react-redux', () => {
   return {
@@ -18,25 +19,22 @@ jest.mock('react-redux', () => {
 test('App.test runner is working', () => {
   expect(true).toBeTruthy()
 })
-
-// test('<App> root has className of app', () => {
-//   const wrapper = shallow(<App />)
-//   const root = wrapper.find('div')
-//   expect(root.length).toBe(1)
-// })
-
-test.skip('renders one LandingPage Component', () => {
+describe('App cpmponent render the right pages', ()  => {
+test('when true shows LandingPage component', () => {
   const wrapper = shallow(<App />)
+  wrapper.setProps({showLanding: true})
   expect(wrapper.find(LandingPage).length).toBe(1)
-  })
-
-  test('teneray operator for LandingPage', () => {
+})
+  test('when state true does not shoe rocket components', () => {
     const wrapper = shallow(<App />)
     wrapper.setProps({showLanding: true})
     expect(wrapper.find(Rockets ).length).toBe(0)
-    expect(wrapper.find(LandingPage).length).toBe(1)
-
     expect(wrapper.html()).toContain("Landingimg.jpg")
-    
   })
-
+  test('when state false shows rocket and design components', () => {
+    const wrapper = shallow(<App />)
+    wrapper.setProps({showLanding: false})
+    expect(wrapper.find(Rockets).length).toBe(1)
+    expect(wrapper.find(Design).length).toBe(1)
+  })
+})

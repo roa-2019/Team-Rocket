@@ -21,13 +21,14 @@ describe('Design component', () => {
     test.skip('renders', () => {
         const wrapper = shallow(<Design />)
         
+        
     })
 
     test('accordian length', () => {
         const wrapper = shallow(<Design />)
         expect(wrapper.find('AccordionItem').length).toBe(7)
     })
-    test('selecting body shape selection calls dispatch', () => {
+    test.skip('selecting body shape selection calls dispatch', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<Design dispatch={dispatch} />)
         const choice = wrapper.find('input[value="Hexagon"]')
