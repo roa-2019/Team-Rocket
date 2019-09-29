@@ -4,10 +4,11 @@ import { connect } from 'react-redux'
 
 class Nose1 extends Component {
     render() {
-        return (
+        console.log(this.props)
+           return (
             <Fragment>
                 {/*<!-- Nose circle 1 --> */}
-                <ellipse cx="290" cy="210" rx="50" ry='100' stroke={this.props.strokeColor}strokeWidth="1" fill={this.props.changeColor} />
+                <ellipse cx="290" cy="210" rx="50" ry='100' stroke={this.props.strokeColor} strokeWidth="1" fill={this.props.changeColor} />
             </Fragment>
 
         )
@@ -17,7 +18,7 @@ class Nose1 extends Component {
 function mapStateToProps(state){
     return{
         changeColor: state.rocket.changeColor,
-        strokeColor: state.rockect.strokeColor
+        strokeColor: state.rocket.strokeColor
     }
     
 }
