@@ -59,11 +59,5 @@ class RocketColor extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    changeColor: state.rocket.changeColor,
-  }
-}
-
-export default connect(mapStateToProps)(RocketColor)
+export default connect()(RocketColor)
 

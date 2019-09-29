@@ -11,18 +11,14 @@ class Window3 extends Component {
                 <polygon points="270 340 310 340 310 360 270 360" fill='aqua' stroke={this.props.strokeColor} strokeWidth='4' strokeOpacity='.4' />
                 <polygon points="270 390 310 390 310 410 270 410" fill='aqua' stroke={this.props.strokeColor} strokeWidth='4' strokeOpacity='.4' />
             </Fragment>
-
         )
     }
 }
-
 
 function mapStateToProps(state){
     return{
        strokeColor: state.rocket.strokeColor
     }
-    
 }
-
 
 export default connect(mapStateToProps)(Window3)
