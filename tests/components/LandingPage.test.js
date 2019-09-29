@@ -13,6 +13,8 @@ jest.mock('react-redux', () => {
     }
   })
 
+
+describe('LandingPage tests', () => {})
 test('LandingPage.test suite is working', () => {
     expect(5%2).toEqual(1)
 })
