@@ -9,7 +9,6 @@ class Nose2 extends Component {
                 {/* Nose equal triangle 2 */}
                 <polygon points="240 200 290 120 340 200" fill={this.props.changeColor} stroke={this.props.strokeColor} strokeWidth='1' />
             </Fragment>
-
         )
     }
 }
@@ -19,7 +18,6 @@ function mapStateToProps(state){
         changeColor: state.rocket.changeColor,
         strokeColor: state.rocket.strokeColor
     }
-    
 }
 
 export default connect(mapStateToProps)(Nose2)

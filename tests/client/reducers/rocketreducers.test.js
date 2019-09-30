@@ -1,5 +1,5 @@
 import rocketReducer from '../../../client/reducers/rocketreducer'
-import { bodyShape, changeColor } from '../../../client/actions'
+import { bodyShape, changeColor, strokeColor } from '../../../client/actions'
 
 describe('rocket reducer works as expected', () => {
 
@@ -27,7 +27,9 @@ describe('rocket reducer works as expected', () => {
         let state = rocketReducer(intColor, changeColor("pink"))
         expect(state.changeColor).toBe("pink")
     })
-    test.skip('state of stroke changes', () => {
-        //test stroke action/reducer
+    test('state of stroke changes', () => {
+        let intStroke = { strokeColor: "green" }
+        let state = rocketReducer(intStroke, strokeColor("pink"))
+        expect(state.strokeColor).toBe("pink")
     })
 })

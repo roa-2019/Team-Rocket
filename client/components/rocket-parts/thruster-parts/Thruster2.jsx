@@ -9,7 +9,6 @@ class Thruster2 extends Component {
                 {/* Thruster 2 trapezoid */}
                 <polygon points='320 500 350 540 230 540 260 500' fill={this.props.changeColor} stroke={this.props.strokeColor} strokeWidth='1' />
             </Fragment>
-
         )
     }
 }
@@ -19,7 +18,6 @@ function mapStateToProps(state){
         changeColor: state.rocket.changeColor,
         strokeColor: state.rocket.strokeColor
     }
-    
 }
 
 

@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react'
-import { GoToBuildRocket } from '../actions/navigate.js'
-import { connect } from 'react-redux'
-
+import React, { Component, Fragment } from "react";
+import { GoToBuildRocket } from "../actions/navigate.js";
+import { connect } from "react-redux";
 
 class LandingPage extends Component {
     render() {
@@ -18,8 +17,7 @@ class LandingPage extends Component {
                 </div>
             </Fragment>
         )
- 
     }
- 
 }
-export default connect()(LandingPage)
+
+export default connect()(LandingPage);
