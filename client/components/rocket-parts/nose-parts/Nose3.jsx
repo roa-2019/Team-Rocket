@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux';
 
 class Nose3 extends Component {
     render() {
@@ -12,11 +11,4 @@ class Nose3 extends Component {
     }
 }
 
-function mapStateToProps(state){
-    return{
-        changeColor: state.rocket.changeColor,
-        strokeColor: state.rocket.strokeColor
-    }
-}
-
-export default connect(mapStateToProps)(Nose3)
+export default Nose3

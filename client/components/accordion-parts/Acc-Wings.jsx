@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect, Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { wingShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
-import store from '../../index'
 
 import { Wing1, Wing3, Wing4, Wing5 } from '../rocket-parts/indexParts'
 
@@ -55,14 +54,21 @@ class RocketWings extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Provider store={store}><Wing1 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Provider store={store}><Wing3 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Provider store={store}><Wing4 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Provider store={store}><Wing5 /></Provider>)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
         </div>
       </Fragment>
     )
   }
 }
 
-export default connect()(RocketWings)
+function mapStateToProps(state){
+  return{
+      changeColor: state.rocket.changeColor,
+      strokeColor: state.rocket.strokeColor
+  }
+}
+
+export default connect(mapStateToProps)(RocketWings)

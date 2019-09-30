@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import { connect } from 'react-redux'
-
 class Thruster1 extends Component {
 
 
@@ -15,11 +13,4 @@ class Thruster1 extends Component {
   }
 }
 
-function mapStateToProps(state){
-    return{
-        changeColor: state.rocket.changeColor,
-        strokeColor: state.rocket.strokeColor
-    }
-}
-
-export default connect(mapStateToProps)(Thruster1)
+export default Thruster1

@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect, Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { noseShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
-import store from '../../index'
 
 import { Nose1, Nose2, Nose3, Nose4 } from '../rocket-parts/indexParts'
 
@@ -55,14 +54,21 @@ class RocketNose extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Provider store={store}><Nose1 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Provider store={store}><Nose2 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Provider store={store}><Nose3 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Provider store={store}><Nose4 /></Provider>)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Nose1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Nose2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Nose3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Nose4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
         </div>
       </Fragment>
     )
   }
 }
 
-export default connect()(RocketNose)
+function mapStateToProps(state){
+  return{
+      changeColor: state.rocket.changeColor,
+      strokeColor: state.rocket.strokeColor
+  }
+}
+
+export default connect(mapStateToProps)(RocketNose)

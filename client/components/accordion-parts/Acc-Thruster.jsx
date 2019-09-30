@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect, Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { thrusterShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
-import store from '../../index'
 
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from '../rocket-parts/indexParts'
 
@@ -54,14 +53,21 @@ class RocketThruster extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Provider store={store}><Thruster1 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Provider store={store}><Thruster2 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Provider store={store}><Thruster3 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Provider store={store}><Thruster4 /></Provider>)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Thruster1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Thruster2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Thruster3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Thruster4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
         </div>
       </Fragment>
     )
   }
 }
 
-export default connect()(RocketThruster)
+function mapStateToProps(state){
+  return{
+      changeColor: state.rocket.changeColor,
+      strokeColor: state.rocket.strokeColor
+  }
+}
+
+export default connect(mapStateToProps)(RocketThruster)
