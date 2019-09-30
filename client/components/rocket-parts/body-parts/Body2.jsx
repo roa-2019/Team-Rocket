@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import { connect } from 'react-redux'
-
 class Body2 extends Component {
     render() {
         return (
@@ -14,11 +12,4 @@ class Body2 extends Component {
     }
 }
 
-function mapStateToProps(state){
-    return{
-        changeColor: state.rocket.changeColor,
-        strokeColor: state.rocket.strokeColor
-    }
-}
-
-export default connect(mapStateToProps)(Body2)
+export default Body2
