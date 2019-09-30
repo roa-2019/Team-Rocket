@@ -2,10 +2,11 @@
 @import 'buttons';
 @import 'design';
 @import 'global';
+@import 'landingpage';
 @import 'media-queries';
 @import 'mixins';
 @import 'rocket';
-@import 'typography.scss';
+@import 'typography';
 @import 'variables';
 
 
@@ -20,9 +21,18 @@
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  background-image: url('/images/rocket-bg.jpg');
+  // background-image: url('/images/rocket-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.test {
+  color: yellow;
+}
+
+// .landingimg {
+//   width: 100%;
+//   height: 100vh;
+//   background-image: url("./images/landingpageimg.png")
+// }
