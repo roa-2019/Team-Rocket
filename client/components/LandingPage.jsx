@@ -7,30 +7,41 @@ class LandingPage extends Component {
         return (
             <Fragment>
                 <div>
-<<<<<<< HEAD
-=======
                     <div className='landingLogo'>
-                    <img src="/images/landinglogoplanet.png" width="1200px" className="landinglogo" /> 
+                        <img src="/images/landinglogoplanet.png" width="1200px" className="landinglogo" />
                     </div>
->>>>>>> 585d71698420dacc7adf953ec7592d79902a6df0
                     <div className='Landingimg'>
-                      
-                        <div className ="landingImg" onClick={() => {
-                            this.props.dispatch(GoToBuildRocket())
-<<<<<<< HEAD
-                        }
-                        }> 
-                        </img>
-=======
-                        }}></div>
-                           <div class="typewriter">
-                        <h1>On an assigned mission from NZ Space Agency to explore mars and gather data on the existence of habitable conditions and the possibility of presence of life. Your Rocket Ship was entangled in a meteor shower and streams of cosmic debris. You have landed safely on Mars, however there is severe damage to the exterior panelling of your rocket as well as engine damage. The rocket is still un-operable and needs to be re-built. Your mission is to rebuild your rocket and return safely to Earth. Do you accept this mission?</h1>
-                        </div>
-                         </div>  
->>>>>>> 585d71698420dacc7adf953ec7592d79902a6df0
-                    </div>
 
-                 
+                        <div className="landingImg" onClick={() => {
+                            this.props.dispatch(GoToBuildRocket())
+                        }}></div>
+                        <div className="landing-storyline-div b">
+                            <p className="landing-storyline-para b">
+                                JV Bot 2000 is on a mission to Mars to gather data and explore the planet as a habitat for Galactic Migrants. His Rocket Ship was intangled in a meteor storm and has sustained significant damage.
+                            <br />
+                                JV Bot 2000 landed safely on Mars dispite the severe damage to the exterior pannelling of his Rocket. The Rocket is in-operable and needs to be rebuilt.
+                            <br />
+                                Your mission is to rebuild JV-Bot's Rocket so he can return safely to Earth!
+                           <br />
+                                Do you accept this mission?
+                            <br />
+                               <buttom>
+                                   Accept Mission
+                                </buttom> 
+                            </p>
+                            <div className="landing-storyline-hiders">
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
             </Fragment>
         )
     }
