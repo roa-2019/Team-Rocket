@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import { connect } from 'react-redux'
-
 class Window2 extends Component {
     render() {
         return (
@@ -11,17 +9,8 @@ class Window2 extends Component {
                 <circle cx='290' cy='370' r='20' fill='aqua' stroke={this.props.strokeColor} strokeWidth='4' strokeOpacity='.4' />
                 <circle cx='290' cy='440' r='20' fill='aqua' stroke={this.props.strokeColor} strokeWidth='4' strokeOpacity='.4' />
             </Fragment>
-
         )
     }
 }
 
-
-function mapStateToProps(state){
-    return{
-       strokeColor: state.rocket.strokeColor
-    }
-    
-}
-
-export default connect(mapStateToProps)(Window2)
+export default Window2

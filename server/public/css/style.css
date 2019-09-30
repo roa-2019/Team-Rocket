@@ -117,6 +117,12 @@
   -moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55);
   box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55); }
 
+.checkmark__label {
+  text-align: center;
+  width: 5.3em;
+  height: 2.5em;
+  color: white; }
+
 .container__radio input:checked ~ .checkmark {
   border: 2.2px solid #ff6600; }
 
@@ -150,6 +156,89 @@
 .margin__left {
   margin-left: 1em; }
 
+.landingLogo {
+  background-image: url("/images/backgroundlandingimg.png");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center; }
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; }
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
+
+@keyframes typing {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+
+.landing-storyline-div {
+  position: relative;
+  font-family: Consolas, monospace; }
+
+.landing-storyline-para {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
+  color: black; }
+
+.landing-storyline-hiders {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.landing-storyline-hiders p {
+  position: relative;
+  clear: both;
+  margin: 0;
+  float: right;
+  width: 0;
+  background: black;
+  animation: typing 2s steps(30, end);
+  animation-fill-mode: both; }
+
+.landing-storyline-hiders p:nth-child(2) {
+  animation-delay: 2s; }
+
+.landing-storyline-hiders p:nth-child(3) {
+  animation-delay: 4s; }
+
+.landing-storyline-hiders p:nth-child(4) {
+  animation-delay: 6s; }
+
+.landing-storyline-hiders p:nth-child(5) {
+  animation-delay: 8s; }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .col {
@@ -170,6 +259,10 @@
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.JvBot {
+  top: 10;
+  left: 0; }
 
 h3 {
   padding: 1.3rem;
@@ -213,6 +306,21 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+
+h3 {
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3.5s linear infinite;
+  animation-iteration-count: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0); }
+
+@keyframes animate {
+  0% {
+    background-position: -500%; }
+  100% {
+    background-position: 500%; } }
 
 
 /*# sourceMappingURL=style.css.map*/

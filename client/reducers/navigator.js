@@ -1,9 +1,10 @@
-const initialState = true
+import NAVIGATE from '../actions/navigate'
 
+const initialState = true
 
 const navigator = (state = initialState, action) => {
     switch(action.type) {
-        case 'GoToBuildRocket':
+        case NAVIGATE:
             return false 
         default: 
             return state 
