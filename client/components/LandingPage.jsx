@@ -15,7 +15,9 @@ class LandingPage extends Component {
                     </div>
                     <div className='Landingimg'>
 
+
                         
+
                         <div className="landing-storyline-div b">
                             <p className="landing-storyline-para b">
                                 JV Bot 2000 is on a mission to Mars to gather data and explore the planet as a habitat for Galactic Migrants. His Rocket Ship was intangled in a meteor storm and has sustained significant damage.
@@ -41,6 +43,7 @@ class LandingPage extends Component {
                         </div>
                     </div>
                     </div>
+                </div>
                 </div>
 
 
