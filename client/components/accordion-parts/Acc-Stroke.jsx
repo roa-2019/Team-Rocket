@@ -33,7 +33,7 @@ class RocketStrokeColor extends Component {
 
 
           <label className='container__radio' htmlFor='r27'>
-            <input type='radio' name='change-colour' id='r27' value='#FF0000' onChange={this.onStrokeColorChanged} />
+            <input type='radio' name='change-colour' id='r27' value='#C00000' onChange={this.onStrokeColorChanged} />
             <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
           </label>
 
