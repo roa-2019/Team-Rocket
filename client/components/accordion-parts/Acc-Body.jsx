@@ -15,11 +15,12 @@ class RocketBody extends Component {
   }
 
   onBodyShapeChanged = (e) => {
-    this.props.dispatch(bodyShape(e.currentTarget.value));
+    dispatch(bodyShape(e.currentTarget.value));
     this.setState({ ...this.state, bodyShape: e.currentTarget.value })
   }
 
   render() {
+    let { changeColor, strokeColor } = this.props
     return (
 
       <Fragment>
@@ -54,10 +55,10 @@ class RocketBody extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Body1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Body2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Body3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Body4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Body1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Body2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Body3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Body4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
         </div>
       </Fragment>
     )

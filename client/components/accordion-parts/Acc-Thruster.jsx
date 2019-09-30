@@ -15,11 +15,12 @@ class RocketThruster extends Component {
   }
 
   onThrusterShapeChanged = (e) => {
-    this.props.dispatch(thrusterShape(e.currentTarget.value));
+    dispatch(thrusterShape(e.currentTarget.value));
     this.setState({ ...this.state, thrusterShape: e.currentTarget.value })
   }
 
   render() {
+    let { changeColor, strokeColor } = this.props
     return (
       <Fragment>
         <div className='container__input'>
@@ -53,10 +54,10 @@ class RocketThruster extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Thruster1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Thruster2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Thruster3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Thruster4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Thruster1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Thruster2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Thruster3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Thruster4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
         </div>
       </Fragment>
     )
