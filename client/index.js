@@ -3,8 +3,11 @@ import {render} from 'react-dom'
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
+<<<<<<< HEAD
 
 // DO NOT DELETE FOLLOWING LINE
+=======
+>>>>>>> 585d71698420dacc7adf953ec7592d79902a6df0
 import css from './css/main.scss'
 
 import reducers from './reducers'
