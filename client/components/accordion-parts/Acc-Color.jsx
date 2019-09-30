@@ -52,7 +52,8 @@ class RocketColor extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'> {this.state.changeColor}</p>
+          <p className='margin__left'> 
+         </p>
         </div>
       </Fragment>
     )
