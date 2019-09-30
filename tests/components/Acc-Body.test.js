@@ -7,7 +7,6 @@ import { RocketBody } from '../../client/components/accordion-parts/indexAccordi
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
 
-
 jest.mock('react-redux', () => {
     return {
         connect: () => {
@@ -26,6 +25,8 @@ jest.mock('react-dom/server', () => {
         })
     }
 })
+
+
 
 test('Acc-Body test suite working', () => {
     expect(5+5).toEqual(10)
