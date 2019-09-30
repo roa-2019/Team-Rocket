@@ -7,14 +7,41 @@ class LandingPage extends Component {
         return (
             <Fragment>
                 <div>
+                    <div className='landingLogo'>
+                        <img src="/images/landinglogoplanet.png" width="1200px" className="landinglogo" />
+                    </div>
                     <div className='Landingimg'>
-                        <img src="/images/Landingimg.jpg" onClick={() => {
+
+                        <div className="landingImg" onClick={() => {
                             this.props.dispatch(GoToBuildRocket())
-                        }
-                        }> 
-                        </img>
+                        }}></div>
+                        <div className="landing-storyline-div b">
+                            <p className="landing-storyline-para b">
+                                JV Bot 2000 is on a mission to Mars to gather data and explore the planet as a habitat for Galactic Migrants. His Rocket Ship was intangled in a meteor storm and has sustained significant damage.
+                            <br />
+                                JV Bot 2000 landed safely on Mars dispite the severe damage to the exterior pannelling of his Rocket. The Rocket is in-operable and needs to be rebuilt.
+                            <br />
+                                Your mission is to rebuild JV-Bot's Rocket so he can return safely to Earth!
+                           <br />
+                                Do you accept this mission?
+                            <br />
+                               <buttom>
+                                   Accept Mission
+                                </buttom> 
+                            </p>
+                            <div className="landing-storyline-hiders">
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
+
             </Fragment>
         )
     }

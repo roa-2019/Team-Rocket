@@ -4,7 +4,8 @@ import {Provider} from 'react-redux'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
-// DO NOT DELETE FOLLOWING LINE
+
+// DO NOT DELETE FOLLOWING LINE OF CSS BUNDLING
 import css from './css/main.scss'
 
 import reducers from './reducers'
