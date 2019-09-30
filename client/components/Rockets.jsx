@@ -6,12 +6,15 @@ import { Nose1, Nose2, Nose3, Nose4 } from "./rocket-parts/indexParts";
 import { Thruster1, Thruster2, Thruster3, Thruster4 } from "./rocket-parts/indexParts";
 import { Wing1, Wing3, Wing4, Wing5 } from "./rocket-parts/indexParts";
 import { Window1, Window2, Window3, Window4 } from "./rocket-parts/indexParts";
+import  JvBot from './JvBot'
+
 
 class Rockets extends Component {
   render() {
     return (
       <Fragment>
         <div className="rocket rocket-panel col">
+
           <div className="rocket-wrapper b">
             <svg height="800" width="800" id="rocket-1">
               {/* Wings */}
@@ -45,6 +48,17 @@ class Rockets extends Component {
               {this.props.windowShape == "twoLargePanels" && <Window4 />}
             </svg>
           </div>
+
+          <div className = 'JvBot b'>
+            <JvBot />
+            {this.props.wingShape == "SmallTriangle" && <p className="robot__error--wing b">"The Rocket will not take off with wings that small"</p>}
+            {this.props.noseShape == "Pyramid" && <p className= "robot__error--nose">"Oops you'll have to choose a nose that isn't wonky"</p>}
+            {this.props.thrusterShape == 'Thruster1' && <p className = "robot__error--thruster">"Oh no, that's way too small - your're going to have to choose another one"</p> }
+            {this.props.bodyShape == "Rectangle" && <p className="robot__error--bodyShape">"Do you see me? How am I supposed to fit into such a thin Rocket?!"</p>}
+            {this.props.windowShape == "twoLargePanels" && <p className="robot__error--window b">"There's no glass in these windows, I'll get sucked into Space!"</p>} 
+            {this.props.changeColor == "chuckNorris" && <p>"Chuck Norris?! Yeaaaahh Buddy!!</p> }
+          </div>
+       
         </div>
       </Fragment>
     );
@@ -57,8 +71,11 @@ function mapStateToProps(state) {
     bodyShape: state.rocket.bodyShape,
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,
-    thrusterShape: state.rocket.thrusterShape
+    thrusterShape: state.rocket.thrusterShape,
+    changeColor: state.rocket.changeColor
   };
 }
 
 export default connect(mapStateToProps)(Rockets);
+
+

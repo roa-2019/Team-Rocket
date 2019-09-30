@@ -177,6 +177,10 @@
   align-items: center;
   justify-content: center; }
 
+.JvBot {
+  top: 10;
+  left: 0; }
+
 h3 {
   padding: 1.3rem;
   margin: 2rem;
