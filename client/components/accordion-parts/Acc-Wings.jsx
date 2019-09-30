@@ -15,7 +15,7 @@ class RocketWings extends Component {
   }
 
   onWingShapeChanged = (e) => {
-    dispatch(wingShape(e.currentTarget.value));
+    this.props.dispatch(wingShape(e.currentTarget.value));
     this.setState({ ...this.state, wingShape: e.currentTarget.value })
 
   }

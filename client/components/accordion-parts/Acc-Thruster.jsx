@@ -15,7 +15,7 @@ class RocketThruster extends Component {
   }
 
   onThrusterShapeChanged = (e) => {
-    dispatch(thrusterShape(e.currentTarget.value));
+    this.props.dispatch(thrusterShape(e.currentTarget.value));
     this.setState({ ...this.state, thrusterShape: e.currentTarget.value })
   }
 

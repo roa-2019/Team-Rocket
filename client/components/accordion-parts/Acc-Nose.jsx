@@ -15,7 +15,7 @@ class RocketNose extends Component {
   }
 
   onNoseShapeChanged = (e) => {
-    dispatch(noseShape(e.currentTarget.value));
+    this.props.dispatch(noseShape(e.currentTarget.value));
     this.setState({ ...this.state, noseShape: e.currentTarget.value })
 
   }

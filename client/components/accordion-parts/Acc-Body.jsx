@@ -15,7 +15,7 @@ class RocketBody extends Component {
   }
 
   onBodyShapeChanged = (e) => {
-    dispatch(bodyShape(e.currentTarget.value));
+    this.props.dispatch(bodyShape(e.currentTarget.value));
     this.setState({ ...this.state, bodyShape: e.currentTarget.value })
   }
 
