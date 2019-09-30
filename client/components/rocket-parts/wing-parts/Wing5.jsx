@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import { connect } from 'react-redux'
-
 class Wing5 extends Component {
     render() {
         return (
@@ -16,13 +14,4 @@ class Wing5 extends Component {
     }
 }
 
-
-function mapStateToProps(state){
-    return{
-        changeColor: state.rocket.changeColor,
-        strokeColor: state.rocket.strokeColor
-    }
-    
-}
-
-export default connect(mapStateToProps)(Wing5)
+export default Wing5

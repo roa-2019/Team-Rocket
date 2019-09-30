@@ -2,10 +2,11 @@
 @import 'buttons';
 @import 'design';
 @import 'global';
+@import 'landingpage';
 @import 'media-queries';
 @import 'mixins';
 @import 'rocket';
-@import 'typography.scss';
+@import 'typography';
 @import 'variables';
 
 
@@ -20,7 +21,7 @@
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  background-image: url('/images/rocket-bg.jpg');
+  // background-image: url('/images/rocket-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +32,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 3.5s linear infinite;
-  // animation-iteration-count: 1;
+  animation-iteration-count: 1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -44,3 +45,5 @@ h3 {
     background-position: 500%;
   }
 }
+
+

@@ -11,6 +11,7 @@ import  JvBot from './JvBot'
 
 class Rockets extends Component {
   render() {
+    let { changeColor, strokeColor, wingShape, noseShape, bodyShape, thrusterShape, windowShape } = this.props
     return (
       <Fragment>
         <div className="rocket rocket-panel col">
@@ -18,34 +19,34 @@ class Rockets extends Component {
           <div className="rocket-wrapper b">
             <svg height="800" width="800" id="rocket-1">
               {/* Wings */}
-              {this.props.wingShape == "Paralelogram" && <Wing1 />}
-              {this.props.wingShape == "SmallParalelogram" && <Wing3 />}
-              {this.props.wingShape == "SmallTriangle" && <Wing4 />}
-              {this.props.wingShape == "Large" && <Wing5 />}
+              {wingShape == "Paralelogram" && <Wing1 changeColor={changeColor} strokeColor={strokeColor} />}
+              {wingShape == "SmallParalelogram" && <Wing3 changeColor={changeColor} strokeColor={strokeColor} />}
+              {wingShape == "SmallTriangle" && <Wing4 changeColor={changeColor} strokeColor={strokeColor} />}
+              {wingShape == "Large" && <Wing5 changeColor={changeColor} strokeColor={strokeColor} />}
 
               {/* Rocket nose  */}
-              {this.props.noseShape == "Ellipse" && <Nose1 />}
-              {this.props.noseShape == "Pyramid" && <Nose2 />}
-              {this.props.noseShape == "Triangular" && <Nose3 />}
-              {this.props.noseShape == "Top Window" && <Nose4 />}
+              {noseShape == "Ellipse" && <Nose1 changeColor={changeColor} strokeColor={strokeColor} />}
+              {noseShape == "Pyramid" && <Nose2 changeColor={changeColor} strokeColor={strokeColor} />}
+              {noseShape == "Triangular" && <Nose3 changeColor={changeColor} strokeColor={strokeColor} />}
+              {noseShape == "Top Window" && <Nose4 changeColor={changeColor} strokeColor={strokeColor} />}
 
               {/* Rocket body  */}
-              {this.props.bodyShape == "Rectangle" && <Body1 />}
-              {this.props.bodyShape == "Trapezoid" && <Body2 />}
-              {this.props.bodyShape == "Hexagon" && <Body3 />}
-              {this.props.bodyShape == "Tower" && <Body4 />}
+              {bodyShape == "Rectangle" && <Body1 changeColor={changeColor} strokeColor={strokeColor} />}
+              {bodyShape == "Trapezoid" && <Body2 changeColor={changeColor} strokeColor={strokeColor} />}
+              {bodyShape == "Hexagon" && <Body3 changeColor={changeColor} strokeColor={strokeColor} />}
+              {bodyShape == "Tower" && <Body4 changeColor={changeColor} strokeColor={strokeColor} />}
 
               {/*Rocket thruster */}
-              {this.props.thrusterShape == "Thruster1" && <Thruster1 />}
-              {this.props.thrusterShape == "Thruster2" && <Thruster2 />}
-              {this.props.thrusterShape == "Thruster3" && <Thruster3 />}
-              {this.props.thrusterShape == "Thruster4" && <Thruster4 />}
+              {thrusterShape == "Thruster1" && <Thruster1 changeColor={changeColor} strokeColor={strokeColor} />}
+              {thrusterShape == "Thruster2" && <Thruster2 changeColor={changeColor} strokeColor={strokeColor} />}
+              {thrusterShape == "Thruster3" && <Thruster3 changeColor={changeColor} strokeColor={strokeColor} />}
+              {thrusterShape == "Thruster4" && <Thruster4 changeColor={changeColor} strokeColor={strokeColor} />}
 
               {/*Rocket Window changes */}
-              {this.props.windowShape == "longWindowSet" && <Window1 />}
-              {this.props.windowShape == "threeLargeCircularWindows" && <Window2 />}
-              {this.props.windowShape == "threeMediumRectangularWindows" && <Window3 />}
-              {this.props.windowShape == "twoLargePanels" && <Window4 />}
+              {windowShape == "longWindowSet" && <Window1 strokeColor={strokeColor} />}
+              {windowShape == "threeLargeCircularWindows" && <Window2 strokeColor={strokeColor} />}
+              {windowShape == "threeMediumRectangularWindows" && <Window3 strokeColor={strokeColor} />}
+              {windowShape == "twoLargePanels" && <Window4 strokeColor={strokeColor} />}
             </svg>
           </div>
 
@@ -72,7 +73,8 @@ function mapStateToProps(state) {
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,
     thrusterShape: state.rocket.thrusterShape,
-    changeColor: state.rocket.changeColor
+    changeColor: state.rocket.changeColor,
+    strokeColor: state.rocket.strokeColor
   };
 }
 

@@ -7,13 +7,13 @@ class RocketStrokeColor extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      changeStroke: '',
+      strokeColor: '',
     }
   }
 
   onStrokeColorChanged = (e) => {
     this.props.dispatch(strokeColor(e.currentTarget.value));
-    this.setState({ ...this.state, strokeColor: e.currentTarget.value })
+    this.setState({strokeColor: e.currentTarget.value })
   }
 
   render() {
@@ -51,7 +51,7 @@ class RocketStrokeColor extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'> {this.state.strokeColor}</p>
+          <p className='margin__left'> .rocketColor &#123; <br/> color: {this.state.strokeColor} <br/> &#125;</p>
         </div>
       </Fragment>
     )

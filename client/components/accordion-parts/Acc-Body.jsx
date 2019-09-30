@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { connect, Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { bodyShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
-import store from '../../index'
 
 import { Body1, Body2, Body3, Body4 } from '../rocket-parts/indexParts'
 
@@ -21,6 +20,7 @@ class RocketBody extends Component {
   }
 
   render() {
+    let { changeColor, strokeColor } = this.props
     return (
 
       <Fragment>
@@ -55,14 +55,21 @@ class RocketBody extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Provider store={store}><Body1 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Provider store={store}><Body2 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Provider store={store}><Body3 /></Provider>)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Provider store={store}><Body4 /></Provider>)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Body1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Body2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Body3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Body4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
         </div>
       </Fragment>
     )
   }
 }
 
-export default connect()(RocketBody)
+function mapStateToProps(state){
+  return{
+      changeColor: state.rocket.changeColor,
+      strokeColor: state.rocket.strokeColor
+  }
+}
+
+export default connect(mapStateToProps)(RocketBody)
