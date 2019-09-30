@@ -4,6 +4,9 @@ import {Provider} from 'react-redux'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
+// DO NOT DELETE FOLLOWING LINE
+import css from './css/main.scss'
+
 import reducers from './reducers'
 import App from './components/App'
 
