@@ -7,14 +7,15 @@ class LandingPage extends Component {
         return (
             <Fragment>
                 <div>
+                <div className="landingImg" onClick={() => {
+                            this.props.dispatch(GoToBuildRocket())
+                        }}>
                     <div className='landingLogo'>
                         <img src="/images/landinglogoplanet.png" width="1200px" className="landinglogo" />
                     </div>
                     <div className='Landingimg'>
 
-                        <div className="landingImg" onClick={() => {
-                            this.props.dispatch(GoToBuildRocket())
-                        }}></div>
+                        
                         <div className="landing-storyline-div b">
                             <p className="landing-storyline-para b">
                                 JV Bot 2000 is on a mission to Mars to gather data and explore the planet as a habitat for Galactic Migrants. His Rocket Ship was intangled in a meteor storm and has sustained significant damage.
@@ -25,9 +26,9 @@ class LandingPage extends Component {
                            <br />
                                 Do you accept this mission?
                             <br />
-                               <buttom>
+                               <button>
                                    Accept Mission
-                                </buttom> 
+                                </button> 
                             </p>
                             <div className="landing-storyline-hiders">
                                 <p>&nbsp;</p>
@@ -38,6 +39,7 @@ class LandingPage extends Component {
                             </div>
 
                         </div>
+                    </div>
                     </div>
                 </div>
 

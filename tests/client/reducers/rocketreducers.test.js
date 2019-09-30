@@ -3,7 +3,7 @@ import { bodyShape, changeColor, strokeColor } from '../../../client/actions'
 
 describe('rocket reducer works as expected', () => {
 
-    test('initial state of noseShape is as expected', () => {
+    test('initial state of noseShape is empty string', () => {
         let state = rocketReducer(undefined, { type: "@@INIT" })
         expect(state.noseShape).toBe("")
     })
