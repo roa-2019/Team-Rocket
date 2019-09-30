@@ -1,7 +1,7 @@
+export const NAVIGATE = 'NAVIGATE'
 
-  export const GoToBuildRocket = () => {
+  export function GoToBuildRocket () {
     return {
-      type: 'GoToBuildRocket',
-      
+      type: 'NAVIGATE'
     }
   }

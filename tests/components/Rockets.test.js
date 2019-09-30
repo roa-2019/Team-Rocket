@@ -17,7 +17,7 @@ test('Rocket.test suite is working', () => {
 })
 
 describe('Rockets component renders correctly', () => {
-    test('renders one svg tag', () => {
+    test('renders two svg tags', () => {
         const wrapper = render(<Rockets />)
         expect(wrapper.find('svg').length).toBe(2)
     })
