@@ -24,9 +24,11 @@
   "jest": {
     "setupFiles": [
       "./tests/client/config/jsdom.js",
-      "./tests/client/config/enzyme.js",
-      "./tests/client/config/styles.js"
-    ]    
+      "./tests/client/config/enzyme.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss|css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
