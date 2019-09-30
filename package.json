@@ -25,7 +25,10 @@
     "setupFiles": [
       "./tests/client/config/jsdom.js",
       "./tests/client/config/enzyme.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(scss|css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "dependencies": {
     "express": "^4.17.1",
