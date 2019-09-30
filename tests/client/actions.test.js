@@ -11,16 +11,3 @@ test('noseShape returns a shape', () => {
     expect(typeof (action.shape)).toBe("string")
     expect(action.shape).toBe('circle')
 })
-
-// test('API call to ISS', () => {
-//     const scope = nock('http://localhost')
-//     .get('/https://api.wheretheiss.at/v1/satellites/25544')
-//         .reply(200, [{ data: "Where is the ISS at?" }])
-
-//     const issId = 25544
-
-//     return getSatellite(issId)
-//     .then(() => {
-//         expect()
-//     })
-// })
