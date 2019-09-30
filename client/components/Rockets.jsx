@@ -57,7 +57,7 @@ class Rockets extends Component {
             {this.props.thrusterShape == 'Thruster1' && <p className = "robot__error--thruster">"That does not appear to be a thruster. Try another one."</p> }
             {this.props.bodyShape == "Rectangle" && <p className="robot__error--bodyShape">"Do you see me? How am I supposed to fit into such a thin Rocket?!"</p>}
             {this.props.windowShape == "twoLargePanels" && <p className="robot__error--window b">"There's no glass in these windows, I'll get sucked into Space!"</p>} 
-            {this.props.changeColor == "chuckNorris" && <p>"Chuck Norris?! Yeaaaahh Buddy!!</p> }
+            {this.props.changeColor == "chuckNorris" && <p>"Chuck Norris?! Yeaaaahh Buddy!!<br/>Who knew that chuck norris red was a thing?<br/> chucknorris == RGB (c00c 0000 0000)</p> }
           </div>
        
         </div>
