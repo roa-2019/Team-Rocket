@@ -21,6 +21,7 @@ class RocketWings extends Component {
   }
 
   render() {
+    let { changeColor, strokeColor } = this.props
     return (
       <Fragment>
         <div className='container__input'>
@@ -54,10 +55,10 @@ class RocketWings extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'Paralelogram' && ReactDOMServer.renderToString(<Wing1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'SmallParalelogram' && ReactDOMServer.renderToString(<Wing3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'SmallTriangle' && ReactDOMServer.renderToString(<Wing4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.wingShape == 'Large' && ReactDOMServer.renderToString(<Wing5 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
         </div>
       </Fragment>
     )

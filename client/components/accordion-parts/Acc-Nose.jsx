@@ -21,6 +21,7 @@ class RocketNose extends Component {
   }
 
   render() {
+    let { changeColor, strokeColor } = this.props
     return (
       <Fragment>
         <div className='container__input '>
@@ -54,10 +55,10 @@ class RocketNose extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Nose1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Nose2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Nose3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Nose4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Nose1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Nose2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Nose3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Nose4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
         </div>
       </Fragment>
     )
