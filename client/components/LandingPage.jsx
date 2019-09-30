@@ -25,9 +25,9 @@ class LandingPage extends Component {
                            <br />
                                 Do you accept this mission?
                             <br />
-                               <buttom>
+                               <button>
                                    Accept Mission
-                                </buttom> 
+                                </button> 
                             </p>
                             <div className="landing-storyline-hiders">
                                 <p>&nbsp;</p>
