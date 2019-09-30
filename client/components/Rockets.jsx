@@ -39,10 +39,10 @@ class Rockets extends Component {
               {this.props.thrusterShape == "Thruster4" && <Thruster4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />}
 
               {/*Rocket Window changes */}
-              {this.props.windowShape == "longWindowSet" && <Window1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />}
-              {this.props.windowShape == "threeLargeCircularWindows" && <Window2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />}
-              {this.props.windowShape == "threeMediumRectangularWindows" && <Window3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />}
-              {this.props.windowShape == "twoLargePanels" && <Window4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />}
+              {this.props.windowShape == "longWindowSet" && <Window1 strokeColor={this.props.strokeColor} />}
+              {this.props.windowShape == "threeLargeCircularWindows" && <Window2 strokeColor={this.props.strokeColor} />}
+              {this.props.windowShape == "threeMediumRectangularWindows" && <Window3 strokeColor={this.props.strokeColor} />}
+              {this.props.windowShape == "twoLargePanels" && <Window4 strokeColor={this.props.strokeColor} />}
             </svg>
           </div>
         </div>
@@ -59,7 +59,7 @@ function mapStateToProps(state) {
     windowShape: state.rocket.windowShape,
     thrusterShape: state.rocket.thrusterShape,
     changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.changeColor
+    strokeColor: state.rocket.strokeColor
   };
 }
 

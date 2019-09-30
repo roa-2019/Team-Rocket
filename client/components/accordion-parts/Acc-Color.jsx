@@ -8,13 +8,13 @@ class RocketColor extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      strokeColor: '',
+      changeColor: '',
     }
   }
 
   onColorChanged = (e) => {
     this.props.dispatch(changeColor(e.currentTarget.value));
-    this.setState({ ...this.state, changeColor: e.currentTarget.value })
+    this.setState({changeColor: e.currentTarget.value })
   }
 
   render() {

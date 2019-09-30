@@ -53,10 +53,10 @@ class RocketWindows extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.windowShape == 'longWindowSet' && ReactDOMServer.renderToString(<Window1 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.windowShape == 'threeLargeCircularWindows' && ReactDOMServer.renderToString(<Window2 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.windowShape == 'threeMediumRectangularWindows' && ReactDOMServer.renderToString(<Window3 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.windowShape == 'twoLargePanels' && ReactDOMServer.renderToString(<Window4 changeColor={this.props.changeColor} strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.windowShape == 'longWindowSet' && ReactDOMServer.renderToString(<Window1 strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.windowShape == 'threeLargeCircularWindows' && ReactDOMServer.renderToString(<Window2 strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.windowShape == 'threeMediumRectangularWindows' && ReactDOMServer.renderToString(<Window3 strokeColor={this.props.strokeColor} />)}</p>
+          <p className='margin__left'>{this.state.windowShape == 'twoLargePanels' && ReactDOMServer.renderToString(<Window4 strokeColor={this.props.strokeColor} />)}</p>
         </div>
       </Fragment>
     )
@@ -65,7 +65,6 @@ class RocketWindows extends Component {
 
 function mapStateToProps(state){
   return{
-      changeColor: state.rocket.changeColor,
       strokeColor: state.rocket.strokeColor
   }
 }
