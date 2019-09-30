@@ -6,15 +6,6 @@ class JvBot extends Component {
     return (
       <Fragment>
         <svg width="800" height="400" >
-            {/* <defs>
-                <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" strokeWidth="0.5" />
-                </pattern>
-                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-                    <rect width="100" height="100" fill="url(#smallGrid)" />
-                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" strokeWidth="1" />
-                </pattern>
-            </defs> */}
             {/* <!-- outer head --> */}
             <rect x='380' y=' 100' width='160' height='120' fill='blue' ry='20' />
             {/* <!-- Inner head --> */}
@@ -52,18 +43,12 @@ class JvBot extends Component {
             {/* <!-- middle --> */}
             <rect x='405' y='240' width='110' height='70' fill='lightblue' ry='20' />
             {/* <!-- inner --> */}
-            {/* <g>
-                <rect x='407.5' y='242.5' width='105' height='65' fill='orange' ry='20' />
-                <text x="420" y="295" fontSize="60" fill="red">J V</text>
-            </g> */}
             {/* <!-- body dots --> */}
             <circle cx='405' cy='310' r='3' fill='lightblue' />
             <circle cx='405' cy='240' r='3' fill='lightblue' />
             <circle cx='515' cy='240' r='3' fill='lightblue' />
             <circle cx='515' cy='310' r='3' fill='lightblue' />
             {/* <!-- bottom connector --> */} />
-​
-            {/* <path fill='transparent' stroke='blue' strokeWidth='20' d="M 25 50 C 25 100 150 100 150 50" /> */}
         </svg>    
       </ Fragment>
     )
