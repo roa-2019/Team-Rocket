@@ -41,3 +41,55 @@
     from, to { border-color: transparent }
     50% { border-color: orange }
   }
+
+//_____________________________________________________==
+
+  // storyline typewritter effect
+
+@keyframes typing {
+  from { width: 100% }
+  to { width: 0 }
+  
+}
+
+.landing-storyline-div {
+  position: relative;
+  font-family: Consolas, monospace; 
+}
+
+.landing-storyline-para {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
+  color: black
+}
+.landing-storyline-hiders{
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.landing-storyline-hiders p {
+  position: relative; 
+  clear: both; 
+  margin: 0;
+  float: right;
+  width:0; 
+  background: black; 
+  animation: typing 2s steps(30, end);
+  animation-fill-mode: both;  
+}
+
+.landing-storyline-hiders p:nth-child(2) {
+  animation-delay: 2s;
+}
+.landing-storyline-hiders p:nth-child(3) {
+  animation-delay: 4s;
+}
+.landing-storyline-hiders p:nth-child(4) {
+  animation-delay: 6s;
+}
+.landing-storyline-hiders p:nth-child(5) {
+  animation-delay: 8s;
+}
