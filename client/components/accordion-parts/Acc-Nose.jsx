@@ -21,7 +21,7 @@ class RocketNose extends Component {
   }
 
   render() {
-    let { changeColor, strokeColor } = this.props
+    let { changeColor, strokeColor, noseShape } = this.props
     return (
       <Fragment>
         <div className='container__input '>

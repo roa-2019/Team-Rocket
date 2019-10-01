@@ -20,6 +20,7 @@ class RocketWindows extends Component {
   }
 
   render() {
+    let { strokeColor, windowShape } = this.props
     return (
       <Fragment>
         <div className='container__input'>
