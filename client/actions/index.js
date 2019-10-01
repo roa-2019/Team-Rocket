@@ -6,6 +6,7 @@ export const WING_SHAPE = 'WING_SHAPE'
 export const WINDOW_SHAPE = 'WINDOW_SHAPE'
 export const THRUSTER_SHAPE = 'THRUSTER_SHAPE'
 export const IS_ROCKET_COMPLETE = 'IS_ROCKET_COMPLETE'
+export const ROBOT_MESSAGE = 'ROBOT_MESSAGE'
 
 
 export function noseShape (shape) {
@@ -61,5 +62,11 @@ export function isRocketComplete (boolean) {
   return {
     type: IS_ROCKET_COMPLETE,
     boolean
+  }
+}
+export function robotMessage (message) {
+  return {
+    type: ROBOT_MESSAGE,
+    message
   }
 }
