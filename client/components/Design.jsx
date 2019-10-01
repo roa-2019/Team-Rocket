@@ -22,6 +22,18 @@ import {
 class Design extends Component {
   constructor(props) {
     super(props)
+<<<<<<< HEAD
+    this.state = {
+      noseShape: '',
+      changeColor: '',
+      bodyShape: '',
+      strokeColor: '',
+      wingShape: '',
+      windowShape: '',
+      thrusterShape: '',
+    }
+=======
+>>>>>>> dev
   }
 
   componentDidMount() {
