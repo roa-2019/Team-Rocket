@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme';
 
 
-import { RocketWings } from '../../client/components/accordion-parts/indexAccordion';
+import { RocketWings } from '../../../client/components/accordion-parts/indexAccordion';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 

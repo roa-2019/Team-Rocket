@@ -19,7 +19,6 @@ class RocketWings extends Component {
   };
 
   render() {
-    console.log(this.props.wingShape)
     let { changeColor, strokeColor, wingShape } = this.props;
     return (
       <Fragment>

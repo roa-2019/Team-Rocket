@@ -1,8 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 
-import { RocketNose } from '../../client/components/accordion-parts/indexAccordion';
+import { RocketThruster } from '../../../client/components/accordion-parts/indexAccordion';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -28,21 +28,20 @@ jest.mock('react-dom/server', () => {
 })
 
 
-describe('ACC-Nose shape', () => {
-    test('selecting shape calls dispatch', () => {
+describe('changing Thurster shape', () => {
+    test('selecting thruster shape calls dispatch', () => {
         const dispatch = jest.fn()
-        const wrapper = shallow(<RocketNose dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="Ellipse"]')
+        const wrapper = shallow(<RocketThruster dispatch={dispatch} />)
+        const choice = wrapper.find('input[value="Thruster3"]')
 
-        const currentTarget = { name: "nose-shape", value: "Ellipse" }
+        const currentTarget = { name: "thruster-shape", value: "Thruster3" }
 
         choice.simulate('change', { currentTarget })
         let action = dispatch.mock.calls[0][0]
+        let thing = wrapper.find('.container__text--code')
 
-        expect(dispatch).toHaveBeenCalled()
         expect(dispatch.mock.calls.length).toBe(1)
-        expect(action.type).toBe('NOSE_SHAPE')
-        expect(action.shape).toBe('Ellipse')
-         
+        expect(action.type).toBe('THRUSTER_SHAPE')
+        expect(action.shape).toBe('Thruster3')
     })
 })

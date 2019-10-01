@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme';
 
 
-import { RocketWindows } from '../../client/components/accordion-parts/indexAccordion';
+import { RocketNose } from '../../../client/components/accordion-parts/indexAccordion';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -28,22 +28,21 @@ jest.mock('react-dom/server', () => {
 })
 
 
-
 describe('ACC-Nose shape', () => {
     test('selecting shape calls dispatch', () => {
         const dispatch = jest.fn()
-        const wrapper = shallow(<RocketWindows dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="threeLargeCircularWindows"]')
+        const wrapper = shallow(<RocketNose dispatch={dispatch} />)
+        const choice = wrapper.find('input[value="Ellipse"]')
 
-        const currentTarget = { name: "window-shape", value: "Round" }
+        const currentTarget = { name: "nose-shape", value: "Ellipse" }
 
         choice.simulate('change', { currentTarget })
         let action = dispatch.mock.calls[0][0]
 
         expect(dispatch).toHaveBeenCalled()
         expect(dispatch.mock.calls.length).toBe(1)
-        expect(action.type).toBe('WINDOW_SHAPE')
-        expect(action.shape).toBe('Round')
+        expect(action.type).toBe('NOSE_SHAPE')
+        expect(action.shape).toBe('Ellipse')
          
     })
 })
