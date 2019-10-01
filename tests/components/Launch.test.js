@@ -1,9 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 
 import Launch from '../../client/components/Launch'
-import { exportAllDeclaration } from '@babel/types';
 
 
 jest.mock('react-redux', () => {
@@ -14,12 +13,31 @@ jest.mock('react-redux', () => {
     }
 })
 
+
+
 describe('Launch', () => {
-    test('launch button checksProps', () => {
-        checkProps = jest.fn()
-        const wrapper = shallow(<Launch />)
-        const launchButton = wrapper.find('.launch-button')
+    let wrapper, dispatch, launchButton
+
+    beforeEach(() => {
+        window.alert = jest.fn()
+        wrapper = mount(<Launch dispatch={dispatch}  />)
+        launchButton = wrapper.find('button')
+        dispatch = jest.fn()
+    })
+
+    test('launch button calls checksProps', () => {
+        let checkProps = jest.fn()
+        wrapper.instance().checkProps = checkProps
+        wrapper.instance().forceUpdate()
+
         launchButton.simulate('click')
-        expect(checkProps).toHaveBeenCalled
+        
+        expect(checkProps).toHaveBeenCalled()  
+    })
+    test('alert if missing rocket body part', () => {
+        wrapper.setProps({ noseShape: ""})
+        launchButton.simulate('click')
+        
+        expect(window.alert).toHaveBeenCalled('add a nose')
     })
 })

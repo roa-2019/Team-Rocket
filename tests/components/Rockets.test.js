@@ -12,9 +12,6 @@ jest.mock('react-redux', () => {
     }
 })
 
-test('Rocket.test suite is working', () => {
-    expect(false).toBeFalsy()
-})
 
 describe('Rockets component renders correctly', () => {
     test('renders two svg tags', () => {
