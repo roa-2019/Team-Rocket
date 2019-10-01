@@ -27,9 +27,7 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test('Acc-Body test suite working', () => {
-    expect(5+5).toEqual(10)
-})
+
 
 describe('Acc-Body test', () => {
     test('selecting body shape selection calls dispatch', () => {

@@ -13,9 +13,6 @@ jest.mock('react-redux', () => {
     }
 })
 
-test('color test suite runs', () => {
-    expect(10*2).toEqual(20)
-})
 
 describe('Colors change when selected', () => {
 

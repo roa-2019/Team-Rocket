@@ -27,9 +27,7 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test('acc-windows test suite runs', () => {
-    expect(4%2).toEqual(0)
-})
+
 
 describe('ACC-Nose shape', () => {
     test('selecting shape calls dispatch', () => {

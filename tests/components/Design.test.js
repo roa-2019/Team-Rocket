@@ -13,9 +13,6 @@ jest.mock('react-redux', () => {
 })
 
 
-test('Design.test suite is working', () => {
-    expect(2 + 4).toEqual(6)
-})
 
 describe('Design component', () => {
    

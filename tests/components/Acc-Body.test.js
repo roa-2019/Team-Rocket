@@ -26,12 +26,6 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-
-
-test('Acc-Body test suite working', () => {
-    expect(5+5).toEqual(10)
-})
-
 describe('Acc-Body test', () => {
     test('selecting body shape selection calls dispatch', () => {
         const dispatch = jest.fn()
@@ -42,8 +36,6 @@ describe('Acc-Body test', () => {
 
         choice.simulate('change', { currentTarget })
         let action = dispatch.mock.calls[0][0]
-        let thing = wrapper.find('.container__text--code')
-        
 
         expect(dispatch).toHaveBeenCalled()
         expect(action.type).toBe('BODY_SHAPE')

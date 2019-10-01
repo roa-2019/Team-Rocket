@@ -16,9 +16,7 @@ jest.mock('react-redux', () => {
   }
 })
 
-test('App.test runner is working', () => {
-  expect(true).toBeTruthy()
-})
+
 describe('App component renders the right pages', ()  => {
 test('when true shows LandingPage component', () => {
   const wrapper = shallow(<App />)

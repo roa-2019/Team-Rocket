@@ -27,9 +27,6 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test('Acc-Thurster test suite runs', () => {
-    expect(2==2).toBe(true)
-})
 
 describe('changing Thurster shape', () => {
     test('selecting thruster shape calls dispatch', () => {
