@@ -29,7 +29,7 @@ test('when true shows LandingPage component', () => {
     const wrapper = shallow(<App />)
     wrapper.setProps({showLanding: true})
     expect(wrapper.find(Rockets ).length).toBe(0)
-    expect(wrapper.html()).toContain("Landingimg.jpg")
+    expect(wrapper.html()).not.toContain("Landingimg.jpg")
   })
   test('when state false shows rocket and design components', () => {
     const wrapper = shallow(<App />)
