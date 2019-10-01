@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 
 
 import Nose from '../../../client/components/rocket-parts/Nose'
-import { exportAllDeclaration } from '@babel/types';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 

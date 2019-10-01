@@ -44,5 +44,4 @@ describe('<Body />', () => {
         expect(wrapper.html()).toContain(polygonColors)
         expect(wrapper.html()).not.toContain(otherColors)
     })
-
 })
