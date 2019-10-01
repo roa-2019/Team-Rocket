@@ -51,7 +51,7 @@ class Rockets extends Component {
               {this.props.wingShape == "SmallTriangle" && <p className="robot__error--wing typewriter b">"The Rocket will not take off with wings that small"</p>}
               {this.props.thrusterShape == 'Thruster1' && <p className="robot__error--thruster">"Oh no, that's way too small - your're going to have to choose another one"</p>}
               {this.props.windowShape == "twoLargePanels" && <p className="robot__error--window b">"There's no glass in these windows, I'll get sucked into Space!"</p>}
-              {this.props.changeColor == "chuckNorris" && <p>"Chuck Norris?! Yeaaaahh Buddy!!</p>}
+              {this.props.changeColor == "#C00000" && <p>"Chuck Norris?! Yeaaaahh Buddy!!</p>}
             </div>
           </div>
 
