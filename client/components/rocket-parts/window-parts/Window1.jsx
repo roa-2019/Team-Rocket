@@ -7,8 +7,8 @@ class Window1 extends Component {
         return (
             <Fragment>
                 {/*<!-- Window set 1 long, squares and circles (top to bottom) (clockwise) --> */}
-                <circle cx='290' cy='260' r='10' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' fill='grey' />
-                <circle cx='290' cy='440' r='10' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' fill='grey' />
+                <circle cx='290' cy='260' r='10' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' fill='aqua' />
+                <circle cx='290' cy='440' r='10' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' fill='aqua' />
                 <polygon points='300 260 300 280 280 280 280 260' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' />
                 <polygon points='300 280 300 300 280 300 280 280' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' />
                 <polygon points='300 300 300 320 280 320 280 300' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' />

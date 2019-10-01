@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import { isRocketComplete } from '../actions/index'
 
 class Launch extends Component {
     constructor(props) {
         super(props);
         this.checkProps = this.checkProps.bind(this)
-
     }
     checkProps() {
         const nose = this.props.noseShape
@@ -14,19 +14,19 @@ class Launch extends Component {
         const window = this.props.windowShape
         const thruster = this.props.thrusterShape
 
-        if (nose == "") {return console.log("add a nose")} 
-        else if (body == "") {return console.log("add a body")} 
-        else if (wing == "") {return console.log("add a wing")} 
-        else if (window == "") {return console.log("add a window")} 
-        else if (thruster == "") {return console.log("add a thruster")} 
-        else console.log("pass")
+        if (nose == "") { return alert("add a nose") }
+        else if (body == "") { return alert("add a body") }
+        else if (wing == "") { return alert("add a wing") }
+        else if (window == "") { return alert("add a window") }
+        else if (thruster == "") { return alert("add a thruster") }
+        else this.props.dispatch(isRocketComplete(true));
     }
     render() {
-        console.log(this.props)
         return (
             <Fragment>
                 <div id='launch-button'>
-                    <button onClick={() => this.checkProps()} >Launch</button> 
+                    <button onClick={() => this.checkProps()} >Launch</button>
+                    {/* {this.state.launchRocket && <Animations />} */}
                 </div>
             </Fragment>
         )
@@ -35,7 +35,6 @@ class Launch extends Component {
 
 
 function mapStateToProps(state) {
-
     return {
         noseShape: state.rocket.noseShape,
         bodyShape: state.rocket.bodyShape,
@@ -44,6 +43,7 @@ function mapStateToProps(state) {
         thrusterShape: state.rocket.thrusterShape,
         strokeColor: state.rocket.strokeColor,
         changeColor: state.rocket.changeColor,
+        isRocketComplete: state.rocket.isRocketComplete,
     }
 }
 

@@ -33,7 +33,7 @@ class Design extends Component {
       strokeColor: '',
       wingShape: '',
       windowShape: '',
-      thrusterShape: ''
+      thrusterShape: '',
     }
   }
 
