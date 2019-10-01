@@ -41,3 +41,4 @@ describe('<Window />', () => {
         expect(wrapper.html()).not.toContain(circularWindows)
     })
 })
+
