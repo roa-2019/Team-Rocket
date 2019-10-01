@@ -20,6 +20,7 @@ jest.mock('react-redux', () => {
 describe('App component renders the right pages', () => {
   const wrapper = shallow(<App />)
   wrapper.setProps({ showLanding: true })
+
   test('when true shows LandingPage component', () => {
     expect(wrapper.find(LandingPage).length).toBe(1)
   })
@@ -32,6 +33,7 @@ describe('App component renders the right pages', () => {
 describe('show landing false', () => {
   const wrapper = shallow(<App />)
   wrapper.setProps({ showLanding: false })
+  
   test('when state false shows rocket and design components', () => {
     expect(wrapper.find(Rockets).length).toBe(1)
     expect(wrapper.find(Design).length).toBe(1)
