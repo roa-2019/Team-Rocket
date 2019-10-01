@@ -1,43 +1,43 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { bodyShape } from "../../actions/index";
+import { noseShape } from "../../actions/index";
 import ReactDOMServer from "react-dom/server";
 
-import { Body } from "../rocket-parts/indexParts";
+import { Nose } from "../rocket-parts/indexParts";
 import AccButtons from './AccButtons'
 
-class RocketBody extends Component {
+class RocketNose extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bodyShape: ""
+      noseShape: ""
     };
   }
 
-  onBodyShapeChanged = e => {
-    this.props.dispatch(bodyShape(e.currentTarget.value));
-    this.setState({ ...this.state, bodyShape: e.currentTarget.value });
+  onNoseShapeChanged = e => {
+    this.props.dispatch(noseShape(e.currentTarget.value));
+    this.setState({ ...this.state, noseShape: e.currentTarget.value });
   };
 
   render() {
-    let { bodyShape, changeColor, strokeColor } = this.props;
-    let values = ["Rectangle", "Trapezoid", "Hexagon", "Tower"];
-    let type = "body";
+    let { noseShape, changeColor, strokeColor } = this.props;
+    let values = ["Ellipse", "Pyramid", "Triangular", "Top Window"];
+    let type = "nose";
 
     return (
       <Fragment>
         <AccButtons
           values={values}
-          offset={1}
-          onChange={this.onBodyShapeChanged}
+          offset={5}
+          onChange={this.onNoseShapeChanged}
           type={type}
         />
 
         <div className="container__text--code">
           <p className="margin__left">
             {ReactDOMServer.renderToString(
-              <Body
-                bodyShape={bodyShape}
+              <Nose
+                noseShape={noseShape}
                 changeColor={changeColor}
                 strokeColor={strokeColor}
               />
@@ -51,10 +51,10 @@ class RocketBody extends Component {
 
 function mapStateToProps(state) {
   return {
-    bodyShape: state.rocket.bodyShape,
+    noseShape: state.rocket.noseShape,
     changeColor: state.rocket.changeColor,
     strokeColor: state.rocket.strokeColor
   };
 }
 
-export default connect(mapStateToProps)(RocketBody);
+export default connect(mapStateToProps)(RocketNose);
