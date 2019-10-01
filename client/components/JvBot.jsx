@@ -6,7 +6,6 @@ class JvBot extends Component {
   render() {
     return (
       <Fragment>
-        <Messages />
         <svg className='robot' width="160" height="335" xmlns="http://www.w3.org/2000/svg">
           {/* <!-- outer head --> */}
           <rect x='0' y='40' width='160' height='120' fill='blue' ry='20' />
@@ -71,6 +70,7 @@ class JvBot extends Component {
           <circle cx='65' cy='330' r='5' fill='orange' />
           <circle cx='95' cy='330' r='5' fill='orange' />
         </svg>
+        <Messages />
       </ Fragment>
     )
   }

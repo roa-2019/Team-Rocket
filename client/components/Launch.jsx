@@ -44,9 +44,10 @@ function mapStateToProps(state) {
         wingShape: state.rocket.wingShape,
         windowShape: state.rocket.windowShape,
         thrusterShape: state.rocket.thrusterShape,
-        strokeColor: state.rocket.strokeColor,
-        changeColor: state.rocket.changeColor,
         isRocketComplete: state.rocket.isRocketComplete,
+        changeColor: state.rocket.changeColor,
+        strokeColor: state.rocket.strokeColor,
+        robot: state.rocket.robotMessage
     }
 }
 
