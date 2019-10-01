@@ -5,7 +5,7 @@ class Nose extends Component {
     return (
       <Fragment>
         {
-          (this.props.noseShape = "Ellipse" && (
+          (this.props.noseShape == "Ellipse" && (
             <>
               <ellipse
                 id="ellipse"
@@ -20,28 +20,9 @@ class Nose extends Component {
             </>
           ))
         }
-        {/* <ellipse
-          id="ellipse"
-          cx="290"
-          cy="210"
-          rx="50"
-          ry="100"
-          stroke={this.props.strokeColor}
-          strokeWidth="1"
-          fill={this.props.changeColor}
-        />
-        <animate
-          href="#ellipse"
-          attributeName="cy"
-          from="210"
-          to="-100"
-          dur="5s"
-          begin="click"
-          fill="freeze"
-        /> */}
 
         {
-          (this.props.noseShape = "Pyramid" && (
+          (this.props.noseShape == "Pyramid" && (
             <>
               <polygon
                 points="700,355 700,0 0,700"
@@ -54,7 +35,7 @@ class Nose extends Component {
         }
 
         {
-          (this.props.noseShape = "Triangular" && (
+          (this.props.noseShape == "Triangular" && (
             <>
               <polygon
                 points="240 200 290 80 340 200"
@@ -67,7 +48,7 @@ class Nose extends Component {
         }
 
         {
-          (this.props.noseShape = "Top Window" && (
+          (this.props.noseShape == "Top Window" && (
             <>
               <polygon
                 points="240 200 290 80 340 200"

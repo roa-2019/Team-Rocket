@@ -30,7 +30,7 @@ describe('LandingPage tests', () => {
     const image = wrapper.find('img')
     image.simulate('click')
     const action = dispatch.mock.calls[0][0]
-    expect(action.type).toBe("GoToBuildRocket")
+    expect(action.type).toBe("NAVIGATE")
 
   })
 })

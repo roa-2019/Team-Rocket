@@ -33,7 +33,7 @@ class Rockets extends Component {
               <Thruster thrusterShape ={thrusterShape} changeColor={changeColor} strokeColor={strokeColor} />
 
               {/*Rocket Window changes */}
-              <Window windowShape ={windoeShape} changeColor={changeColor} strokeColor={strokeColor} />
+              <Window windowShape ={windowShape} changeColor={changeColor} strokeColor={strokeColor} />
             </svg>
             <Launch />
           </div>
