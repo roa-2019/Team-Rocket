@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { noseShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
 
-import { Nose1, Nose2, Nose3, Nose4 } from '../rocket-parts/indexParts'
+import { Nose } from '../rocket-parts/indexParts'
 
 class RocketNose extends Component {
 
@@ -55,10 +55,16 @@ class RocketNose extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.noseShape == 'Ellipse' && ReactDOMServer.renderToString(<Nose1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Pyramid' && ReactDOMServer.renderToString(<Nose2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Triangular' && ReactDOMServer.renderToString(<Nose3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.noseShape == 'Top Window' && ReactDOMServer.renderToString(<Nose4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+        <p className="margin__left">
+            {" "}
+            {ReactDOMServer.renderToString(
+              <Nose
+                noseShape={noseShape}
+                changeColor={changeColor}
+                strokeColor={strokeColor}
+              />
+            )}
+          </p>
         </div>
       </Fragment>
     )
@@ -68,6 +74,7 @@ class RocketNose extends Component {
 function mapStateToProps(state){
   return{
       changeColor: state.rocket.changeColor,
+      noseShape: state.rocket.noseShape,
       strokeColor: state.rocket.strokeColor
   }
 }

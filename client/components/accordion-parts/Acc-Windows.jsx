@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { windowShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
 
-import { Window1, Window2, Window3, Window4 } from '../rocket-parts/indexParts'
+import { Window } from '../rocket-parts/indexParts'
 
 class RocketWindows extends Component {
 
@@ -53,10 +53,15 @@ class RocketWindows extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.windowShape == 'longWindowSet' && ReactDOMServer.renderToString(<Window1 strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.windowShape == 'threeLargeCircularWindows' && ReactDOMServer.renderToString(<Window2 strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.windowShape == 'threeMediumRectangularWindows' && ReactDOMServer.renderToString(<Window3 strokeColor={this.props.strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.windowShape == 'twoLargePanels' && ReactDOMServer.renderToString(<Window4 strokeColor={this.props.strokeColor} />)}</p>
+        <p className="margin__left">
+            {" "}
+            {ReactDOMServer.renderToString(
+              <Window
+                windowShape={windowShape}
+                strokeColor={strokeColor}
+              />
+            )}
+          </p>
         </div>
       </Fragment>
     )
@@ -65,7 +70,8 @@ class RocketWindows extends Component {
 
 function mapStateToProps(state){
   return{
-      strokeColor: state.rocket.strokeColor
+      strokeColor: state.rocket.strokeColor,
+      windowShape: state.rocket.windowShape
   }
 }
 

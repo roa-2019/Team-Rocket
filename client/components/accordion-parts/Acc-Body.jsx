@@ -1,75 +1,115 @@
-import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
-import { bodyShape } from '../../actions/index'
-import ReactDOMServer from 'react-dom/server'
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { bodyShape } from "../../actions/index";
+import ReactDOMServer from "react-dom/server";
 
-import { Body1, Body2, Body3, Body4 } from '../rocket-parts/indexParts'
+import { Body } from "../rocket-parts/indexParts";
 
 class RocketBody extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      bodyShape: ''
-    }
+      bodyShape: ""
+    };
   }
 
-  onBodyShapeChanged = (e) => {
+  onBodyShapeChanged = e => {
     this.props.dispatch(bodyShape(e.currentTarget.value));
-    this.setState({ ...this.state, bodyShape: e.currentTarget.value })
-  }
+    this.setState({ ...this.state, bodyShape: e.currentTarget.value });
+  };
 
   render() {
-    let { changeColor, strokeColor } = this.props
+    let { bodyShape, changeColor, strokeColor } = this.props;
     return (
-
       <Fragment>
-        <div className='container__input'>
-
-          <label className='container__radio' htmlFor='r1'>
-            <input type='radio' name='body-shape' id='r1' value='Rectangle' onChange={this.onBodyShapeChanged} />
-            <span id='radio__body--1' className='checkmark checkmark__shape'></span>
+        <div className="container__input">
+          <label className="container__radio" htmlFor="r1">
+            <input
+              type="radio"
+              name="body-shape"
+              id="r1"
+              value="Rectangle"
+              onChange={this.onBodyShapeChanged}
+            />
+            <span
+              id="radio__body--1"
+              className="checkmark checkmark__shape"
+            ></span>
           </label>
 
-          <label className='container__radio' htmlFor='r2'>
-            <input type='radio' name='body-shape' id='r2' value='Trapezoid' onChange={this.onBodyShapeChanged} />
-            <span id='radio__body--2' className='checkmark checkmark__shape'></span>
+          <label className="container__radio" htmlFor="r2">
+            <input
+              type="radio"
+              name="body-shape"
+              id="r2"
+              value="Trapezoid"
+              onChange={this.onBodyShapeChanged}
+            />
+            <span
+              id="radio__body--2"
+              className="checkmark checkmark__shape"
+            ></span>
           </label>
 
-          <label className='container__radio' htmlFor='r3'>
-            <input type='radio' name='body-shape' id='r3' value='Hexagon' onChange={this.onBodyShapeChanged} />
-            <span id='radio__body--3' className='checkmark checkmark__shape'></span>
+          <label className="container__radio" htmlFor="r3">
+            <input
+              type="radio"
+              name="body-shape"
+              id="r3"
+              value="Hexagon"
+              onChange={this.onBodyShapeChanged}
+            />
+            <span
+              id="radio__body--3"
+              className="checkmark checkmark__shape"
+            ></span>
           </label>
 
-          <label className='container__radio' htmlFor='r4'>
-            <input type='radio' name='body-shape' id='r4' value='Tower' onChange={this.onBodyShapeChanged} />
-            <span id='radio__body--4' className='checkmark checkmark__shape'></span>
+          <label className="container__radio" htmlFor="r4">
+            <input
+              type="radio"
+              name="body-shape"
+              id="r4"
+              value="Tower"
+              onChange={this.onBodyShapeChanged}
+            />
+            <span
+              id="radio__body--4"
+              className="checkmark checkmark__shape"
+            ></span>
           </label>
         </div>
 
-        <div className='container__input--text'>
+        <div className="container__input--text">
           <p>Rectangular</p>
           <p>Trapezoid</p>
           <p>Hexagon</p>
           <p>Tower</p>
         </div>
 
-        <div className='container__text--code'>
-          <p className='margin__left'>{this.state.bodyShape == 'Rectangle' && ReactDOMServer.renderToString(<Body1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Trapezoid' && ReactDOMServer.renderToString(<Body2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Hexagon' && ReactDOMServer.renderToString(<Body3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.bodyShape == 'Tower' && ReactDOMServer.renderToString(<Body4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+        <div className="container__text--code">
+          <p className="margin__left">
+            {" "}
+            {ReactDOMServer.renderToString(
+              <Body
+                bodyShape={bodyShape}
+                changeColor={changeColor}
+                strokeColor={strokeColor}
+              />
+            )}
+          </p>
         </div>
       </Fragment>
-    )
+    );
   }
 }
 
-function mapStateToProps(state){
-  return{
-      changeColor: state.rocket.changeColor,
-      strokeColor: state.rocket.strokeColor
-  }
+function mapStateToProps(state) {
+  return {
+    bodyShape: state.rocket.bodyShape,
+    changeColor: state.rocket.changeColor,
+    strokeColor: state.rocket.strokeColor
+  };
 }
 
-export default connect(mapStateToProps)(RocketBody)
+export default connect(mapStateToProps)(RocketBody);
