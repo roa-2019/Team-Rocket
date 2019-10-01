@@ -28,7 +28,7 @@ class RocketThruster extends Component {
       <Fragment>
         <AccButtons
           values={values}
-          offset={9}
+          offset={13}
           onChange={this.onThrusterShapeChanged}
           type={type}
         />
