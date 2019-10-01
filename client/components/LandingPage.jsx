@@ -7,6 +7,9 @@ class LandingPage extends Component {
         return (
             <Fragment>
                 <div>
+                <div className="landingImg" onClick={() => {
+                            this.props.dispatch(GoToBuildRocket())
+                        }}>
                     <div className='landingLogo'>
                         <img src="/images/landinglogoplanet.png" width="1200px" className="landinglogo" />
                     </div>
@@ -31,12 +34,11 @@ class LandingPage extends Component {
                             <p> <button onclick="StartButton"   onClick={() => {
                             this.props.dispatch(GoToBuildRocket())
                         }} >Begin Mission </button></p>
-                            </div>
-                            
+
+                           </div>
+                       </div>
                     </div>
                 </div>
-
-
             </Fragment>
         )
     }

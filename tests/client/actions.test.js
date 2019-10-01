@@ -1,26 +1,44 @@
 import nock from 'nock'
 import * as actions from '../../client/actions'
-import { getSatellite } from '../../client/apiClient/iss'
-
-test('actions.test suite is working', () => {
-    expect(5 % 2).toEqual(1)
-})
 
 test('noseShape returns a shape', () => {
-    let action = actions.noseShape('circle')
+    let action = actions.noseShape('Ellipse')
     expect(typeof (action.shape)).toBe("string")
-    expect(action.shape).toBe('circle')
+    expect(action.shape).toBe('Ellipse')
 })
 
-// test('API call to ISS', () => {
-//     const scope = nock('http://localhost')
-//     .get('/https://api.wheretheiss.at/v1/satellites/25544')
-//         .reply(200, [{ data: "Where is the ISS at?" }])
+test('changeColor returns a color', () => {
+    let action = actions.changeColor('Green')
+    expect(typeof (action.color)).toBe("string")
+    expect(action.color).toBe('Green')
+})
 
-//     const issId = 25544
+test('bodyShape returns a shape', () => {
+    let action = actions.bodyShape('Rectangle')
+    expect(typeof (action.shape)).toBe("string")
+    expect(action.shape).toBe('Rectangle')
+})
 
-//     return getSatellite(issId)
-//     .then(() => {
-//         expect()
-//     })
-// })
+test('strokeColor returns a color', () => {
+    let action = actions.strokeColor('Yellow')
+    expect(typeof (action.color)).toBe("string")
+    expect(action.color).toBe('Yellow')
+})
+
+test('wingShape returns a shape', () => {
+    let action = actions.wingShape('SmallParalelogram')
+    expect(typeof (action.shape)).toBe("string")
+    expect(action.shape).toBe('SmallParalelogram')
+})
+
+test('windowShape returns a shape', () => {
+    let action = actions.windowShape('twoLargePanels')
+    expect(typeof (action.shape)).toBe("string")
+    expect(action.shape).toBe('twoLargePanels')
+})
+
+test('thrusterShape returns a shape', () => {
+    let action = actions.thrusterShape('Thruster4')
+    expect(typeof (action.shape)).toBe("string")
+    expect(action.shape).toBe('Thruster4')
+})
