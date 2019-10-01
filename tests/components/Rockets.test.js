@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, render, mount } from 'enzyme'
+import { shallow, render } from 'enzyme'
 
 
 import Rockets from '../../client/components/Rockets'
@@ -17,10 +17,9 @@ test('Rocket.test suite is working', () => {
 })
 
 describe('Rockets component renders correctly', () => {
-    test('renders one svg tag', () => {
+    test('renders two svg tags', () => {
         const wrapper = render(<Rockets />)
-        expect(wrapper.find('svg').length).toBe(1)
-
+        expect(wrapper.find('svg').length).toBe(2)
     })
 
     test('test tenery operators for thruster parts', () => {

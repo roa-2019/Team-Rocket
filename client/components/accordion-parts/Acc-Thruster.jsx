@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { thrusterShape } from '../../actions/index'
 import ReactDOMServer from 'react-dom/server'
 
-import { Thruster1, Thruster2, Thruster3, Thruster4 } from '../rocket-parts/indexParts'
+import { Thruster } from '../rocket-parts/indexParts'
 
 class RocketThruster extends Component {
 
@@ -20,7 +20,7 @@ class RocketThruster extends Component {
   }
 
   render() {
-    let { changeColor, strokeColor } = this.props
+    let { changeColor, strokeColor, thrusterShape } = this.props
     return (
       <Fragment>
         <div className='container__input'>
@@ -54,10 +54,15 @@ class RocketThruster extends Component {
         </div>
 
         <div className='container__text--code'>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster1' && ReactDOMServer.renderToString(<Thruster1 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster2' && ReactDOMServer.renderToString(<Thruster2 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster3' && ReactDOMServer.renderToString(<Thruster3 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
-          <p className='margin__left'>{this.state.thrusterShape == 'Thruster4' && ReactDOMServer.renderToString(<Thruster4 changeColor={changeColor} strokeColor={strokeColor} />)}</p>
+        <p className="margin__left">
+            {ReactDOMServer.renderToString(
+              <Thruster
+                thrusterShape={thrusterShape}
+                changeColor={changeColor}
+                strokeColor={strokeColor}
+              />
+            )}
+          </p>
         </div>
       </Fragment>
     )
@@ -67,7 +72,8 @@ class RocketThruster extends Component {
 function mapStateToProps(state){
   return{
       changeColor: state.rocket.changeColor,
-      strokeColor: state.rocket.strokeColor
+      strokeColor: state.rocket.strokeColor,
+      thrusterShape: state.rocket.thrusterShape
   }
 }
 
