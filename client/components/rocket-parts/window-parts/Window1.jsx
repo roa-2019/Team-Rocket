@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import { connect } from 'react-redux'
-
 class Window1 extends Component {
     render() {
         return (
@@ -19,17 +17,8 @@ class Window1 extends Component {
                 <polygon points='300 400 300 420 280 420 280 400' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' />
                 <polygon points='300 420 300 440 280 440 280 420' fill='aqua' stroke= {this.props.strokeColor} strokeWidth='1' />
             </Fragment>
-
         )
     }
 }
 
-function mapStateToProps(state){
-    return{
-       strokeColor: state.rocket.strokeColor
-    }
-    
-}
-
-
-export default connect(mapStateToProps)(Window1)
+export default Window1

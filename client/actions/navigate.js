@@ -1,13 +1,7 @@
-// export const newuser = target => {
-//     return {
-//       type: 'NewUser',
-//       target 
-//     }
-//   }
-  
-  export const GoToBuildRocket = () => {
+export const NAVIGATE = 'NAVIGATE'
+
+  export function GoToBuildRocket () {
     return {
-      type: 'GoToBuildRocket',
-      
+      type: 'NAVIGATE'
     }
   }

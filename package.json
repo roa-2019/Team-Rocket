@@ -25,10 +25,15 @@
     "setupFiles": [
       "./tests/client/config/jsdom.js",
       "./tests/client/config/enzyme.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(scss|css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "dependencies": {
+    "@babel/polyfill": "^7.6.0",
     "express": "^4.17.1",
+    "jest-transform-css": "^2.0.0",
     "nock": "^11.3.5",
     "react-accessible-accordion": "^3.0.0"
   },
@@ -45,6 +50,7 @@
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "nock": "^10.0.6",
     "jest": "^24.9.0",
     "jsdom": "^14.1.0",
     "mini-css-extract-plugin": "^0.8.0",
