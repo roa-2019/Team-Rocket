@@ -118,6 +118,12 @@
   -moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55);
   box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.55); }
 
+.checkmark__shape:hover {
+  background-color: #f89553; }
+
+.checkmark__shape:hover .checkmark__shape--text {
+  color: #101010; }
+
 .checkmark__label {
   text-align: center;
   width: 5.3em;

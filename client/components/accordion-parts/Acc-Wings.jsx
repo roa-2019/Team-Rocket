@@ -35,7 +35,7 @@ class RocketWings extends Component {
             <span
               id="radio__wings--1"
               className="checkmark checkmark__shape"
-            ><p>Paralelogram</p>
+            ><p className="checkmark__shape--text">Paralelogram</p>
             </span>
           </label>
 
@@ -50,7 +50,7 @@ class RocketWings extends Component {
             <span
               id="radio__wings--3"
               className="checkmark checkmark__shape"
-            ><p>Paralelogram</p>
+            ><p className="checkmark__shape--text">Paralelogram</p>
             </span>
           </label>
 
@@ -65,7 +65,7 @@ class RocketWings extends Component {
             <span
               id="radio__wings--4"
               className="checkmark checkmark__shape"
-            ><p>Triangular</p>
+            ><p className="checkmark__shape--text">Triangular</p>
             </span>
           </label>
 
@@ -80,7 +80,7 @@ class RocketWings extends Component {
             <span
               id="radio__wings--5"
               className="checkmark checkmark__shape"
-            ><p>Polygon</p>
+            ><p className="checkmark__shape--text">Polygon</p>
             </span>
           </label>
         </div>
