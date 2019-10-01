@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+<body>
+        <svg width="10000" height="10000" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5" />
+                </pattern>
+                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <rect width="100" height="100" fill="url(#smallGrid)" />
+                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <!-- Take 60 off all y coords -->
+            <!-- take 80 off all x coords -->
+
+            <!-- outer head -->
+            <rect x='0' y='40' width='160' height='120' fill='blue' ry='20' />
+            <!-- Inner head -->
+            <rect x='10' y='50' width='140' height='100' fill='lightblue' ry='20' />
+            <!-- Antena -->
+            <polygon points='80 10 90 40 70 40' fill='lightblue' />
+            <circle cx='80' cy='10' r='10' fill='red' />
+            <!-- outer head dots -->
+            <circle cx='10' cy='52' r='3' fill='lightblue' />
+            <circle cx='150' cy='52' r='3' fill='lightblue' />
+            <circle cx='10' cy='148' r='3' fill='lightblue' />
+            <circle cx='150' cy='148' r='3' fill='lightblue' />
+            <!-- eyes -->
+            <circle cx='47' cy='90' r='30' fill='blue' />
+            <circle cx='113' cy='90' r='30' fill='blue' />
+            <circle cx='47' cy='90' r='25' fill='white' />
+            <circle cx='113' cy='90' r='25' fill='white' />
+            <circle cx='47' cy='90' r='10' fill='black' class='left-eye' />
+            <circle cx='113' cy='90' r='10' fill='black' class='right-eye' />
+            <!-- Mouth -->
+            <circle cx='62' cy='135' r='10' fill='orange' />
+            <circle cx='98' cy='135' r='10' fill='orange' />
+            <rect x='61.5' y='125' width='4' height='20' fill='red' />
+            <rect x='65.5' y='125' width='7' height='20' fill='orange' />
+            <rect x='72.5' y='125' width='4' height='20' fill='red' />
+            <rect x='76.5' y='125' width='7' height='20' fill='orange' />
+            <rect x='83.5' y='125' width='4' height='20' fill='red' />
+            <rect x='87.5' y='125' width='7' height='20' fill='orange' />
+            <rect x='94.5' y='125' width='4' height='20' fill='red' />
+            <!-- Neck -->
+            <rect x='65' y='160' width='30' height='10' fill='lightblue' />
+            <!-- main body -->
+            <!-- outer -->
+            <rect x='15' y='170' width='130' height='90' fill='blue' ry='20' />
+            <!-- middle -->
+            <rect x='25' y='180' width='110' height='70' fill='lightblue' ry='20' />
+            <!-- inner -->
+            <!-- <g>
+                <rect x='27.5' y='182.5' width='105' height='65' fill='orange' ry='20' />
+                <text x="40" y="235" font-size="60" fill="red">J V</text>
+            </g> -->
+            <!-- body dots -->
+            <circle cx='25' cy='250' r='3' fill='lightblue' />
+            <circle cx='25' cy='180' r='3' fill='lightblue' />
+            <circle cx='135' cy='180' r='3' fill='lightblue' />
+            <circle cx='135' cy='250' r='3' fill='lightblue' />
+            <!-- bottom connector -->
+            <rect x='40' y='260' width='80' height='5' fill='lightblue' ry='' />
+            <polygon points='30 265 130 265 120 290 40 290' fill='blue' />
+            <!-- Legs -->
+            <!-- Top -->
+            <rect x='30' y='295' width='100' height='10' fill='orange'  />
+            <circle cx='30' cy='300' r='5' fill='orange' />
+            <circle cx='130' cy='300' r='5' fill='orange' />
+            <!-- Middle -->
+            <rect x='50' y='310' width='60' height='10' fill='orange'  />
+            <circle cx='50' cy='315' r='5' fill='orange' />
+            <circle cx='110' cy='315' r='5' fill='orange' />
+            <!-- Bottom -->
+            <rect x='65' y='325' width='30' height='10' fill='orange'  />
+            <circle cx='65' cy='330' r='5' fill='orange' />
+            <circle cx='95' cy='330' r='5' fill='orange' />
+        </svg>    
+</body>
+</html>
