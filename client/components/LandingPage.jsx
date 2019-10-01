@@ -23,7 +23,7 @@ class LandingPage extends Component {
                             <p>habitat for Galactic Migrants. His Rocket </p>
                             <p>Ship was entangled in a meteor shower and </p>
                             <p>has sustained significant damage. JV Bot </p>
-                            <p>2000 landed safely on Mars dispite the  </p>
+                            <p>2000 landed safely on Mars despite the  </p>
                             <p>severe damage to the exterior pannelling of </p>
                             <p>his Rocket. The Rocket is in-operable and </p>
                             <p>needs your help to be rebuilt. Your mission </p>

@@ -27,30 +27,31 @@ class RocketWindows extends Component {
 
           <label className='container__radio' htmlFor='r17'>
             <input type='radio' name='window-shape' id='r17' value='longWindowSet' onChange={this.onWindowShapeChanged} />
-            <span id='radio__window--1' className='checkmark checkmark__shape'></span>
+            <span id='radio__window--1' className='checkmark checkmark__shape'>
+            <p className="checkmark__shape--text">Long</p>
+            </span>
           </label>
 
           <label className='container__radio' htmlFor='r18'>
             <input type='radio' name='window-shape' id='r18' value='threeLargeCircularWindows' onChange={this.onWindowShapeChanged} />
-            <span id='radio__window--2' className='checkmark checkmark__shape'></span>
+            <span id='radio__window--2' className='checkmark checkmark__shape'>
+            <p className="checkmark__shape--text">Circular</p>
+            </span>
           </label>
 
           <label className='container__radio' htmlFor='r19'>
             <input type='radio' name='window-shape' id='r19' value='threeMediumRectangularWindows' onChange={this.onWindowShapeChanged} />
-            <span id='radio__window--3' className='checkmark checkmark__shape'></span>
+            <span id='radio__window--3' className='checkmark checkmark__shape'>
+            <p className="checkmark__shape--text">Rectangular</p>
+            </span>
           </label>
 
           <label className='container__radio' htmlFor='r20'>
             <input type='radio' name='window-shape' id='r20' value='twoLargePanels' onChange={this.onWindowShapeChanged} />
-            <span id='radio__window--4' className='checkmark checkmark__shape'></span>
+            <span id='radio__window--4' className='checkmark checkmark__shape'>
+            <p className="checkmark__shape--text">Large</p>
+            </span>
           </label>
-        </div>
-
-        <div className='container__input--text'>
-          <p>Long Window</p>
-          <p>Circular</p>
-          <p>Rectangular</p>
-          <p>Large Window</p>
         </div>
 
         <div className='container__text--code'>

@@ -34,7 +34,8 @@ class RocketBody extends Component {
             <span
               id="radio__body--1"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p className="checkmark__shape--text">Rectangular</p>
+            </span>
           </label>
 
           <label className="container__radio" htmlFor="r2">
@@ -48,7 +49,8 @@ class RocketBody extends Component {
             <span
               id="radio__body--2"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p className="checkmark__shape--text">Trapezoid</p>
+            </span>
           </label>
 
           <label className="container__radio" htmlFor="r3">
@@ -62,7 +64,8 @@ class RocketBody extends Component {
             <span
               id="radio__body--3"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p className="checkmark__shape--text">Hexagon</p>
+            </span>
           </label>
 
           <label className="container__radio" htmlFor="r4">
@@ -76,15 +79,9 @@ class RocketBody extends Component {
             <span
               id="radio__body--4"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p className="checkmark__shape--text">Tower</p>
+            </span>
           </label>
-        </div>
-
-        <div className="container__input--text">
-          <p>Rectangular</p>
-          <p>Trapezoid</p>
-          <p>Hexagon</p>
-          <p>Tower</p>
         </div>
 
         <div className="container__text--code">
