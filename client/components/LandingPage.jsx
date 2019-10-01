@@ -31,7 +31,7 @@ class LandingPage extends Component {
                             <p>return safely to Earth! </p>
                             <p>Do you accept this mission? </p>
 
-                            <p> <button onclick="StartButton"   onClick={() => {
+                            <p> <button onClick="StartButton"   onClick={() => {
                             this.props.dispatch(GoToBuildRocket())
                         }} >Begin Mission </button></p>
 
