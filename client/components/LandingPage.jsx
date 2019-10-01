@@ -12,9 +12,7 @@ class LandingPage extends Component {
                     </div>
                     <div className='Landingimg'>
 
-                        <div className="landingImg" onClick={() => {
-                            this.props.dispatch(GoToBuildRocket())
-                        }}></div>
+                        <div className="landingImg" ></div>
 
                             <div className="css-typing">
                             <p>JV Bot 2000 is on a mission to Mars to </p>
@@ -29,7 +27,12 @@ class LandingPage extends Component {
                             <p>is to rebuild JV-Bot's Rocket so that he can </p>
                             <p>return safely to Earth! </p>
                             <p>Do you accept this mission? </p>
+
+                            <p> <button onclick="StartButton"   onClick={() => {
+                            this.props.dispatch(GoToBuildRocket())
+                        }} >Begin Mission </button></p>
                             </div>
+                            
                     </div>
                 </div>
 
