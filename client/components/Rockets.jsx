@@ -55,7 +55,8 @@ class Rockets extends Component {
           <div className="robot__container b">
             
             <div className='robot__container--JvBot b'>
-              <img className="robot-img" src="/images/atlas_w_spot-min-450.png" alt="placeholder" />
+              {/* <img className="robot-img" src="/images/atlas_w_spot-min-450.png" alt="placeholder" /> */}
+              <JvBot />
             </div>
 
             <div className='robot__error'>
