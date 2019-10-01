@@ -44,8 +44,10 @@ class Rockets extends Component {
               <JvBot />
             </div>
 
+
             <div className='robot__error'>
             </div>
+
           </div>
 
         </div>

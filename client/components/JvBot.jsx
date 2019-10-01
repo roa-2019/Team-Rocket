@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import Messages from './Messages.jsx'
 
 class JvBot extends Component {
   render() {
     return (
       <Fragment>
+        <Messages />
         <svg className='robot' width="160" height="335" xmlns="http://www.w3.org/2000/svg">
           {/* <!-- outer head --> */}
           <rect x='0' y='40' width='160' height='120' fill='blue' ry='20' />
