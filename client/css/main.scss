@@ -30,23 +30,6 @@
   // overflow: hidden;
 }
 
-h3 {
-  background: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3.5s linear infinite;
-  animation-iteration-count: 1;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
 
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
-}
 
 
