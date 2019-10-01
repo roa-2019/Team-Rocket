@@ -17,7 +17,8 @@
 .container__text--code {
   border: 1px solid #464646;
   height: auto;
-  padding: 1em 0em 1em 0em; }
+  padding: 1em 0em 1em 0em;
+  margin-top: 1.5rem; }
 
 .details-panel {
   width: 80%; }
@@ -125,6 +126,11 @@
 
 .container__radio input:checked ~ .checkmark {
   border: 2.2px solid #ff6600; }
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 #radio__colour--blue {
   background-color: lightskyblue; }
@@ -438,6 +444,10 @@ p, label {
 p {
   font-family: 'Play', sans-serif;
   color: whitesmoke; }
+
+span p {
+  font-size: .8rem;
+  text-align: center; }
 
 .robot__error p {
   font-family: 'Courier'; }

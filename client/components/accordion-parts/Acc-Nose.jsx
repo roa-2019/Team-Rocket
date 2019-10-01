@@ -34,7 +34,8 @@ class RocketNose extends Component {
             <span
               id="radio__nose--square"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p>Ellipse</p>
+            </span>
           </label>
 
           <label className="container__radio" htmlFor="r6">
@@ -48,7 +49,8 @@ class RocketNose extends Component {
             <span
               id="radio__nose--triangle"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p>Pyramid</p>
+            </span>
           </label>
 
           <label className="container__radio" htmlFor="r7">
@@ -62,7 +64,8 @@ class RocketNose extends Component {
             <span
               id="radio__nose--"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p>Triangular</p>
+            </span>
           </label>
 
           <label className="container__radio" htmlFor="r8">
@@ -76,15 +79,9 @@ class RocketNose extends Component {
             <span
               id="radio__nose--circle"
               className="checkmark checkmark__shape"
-            ></span>
+            ><p>Top Window</p>
+            </span>
           </label>
-        </div>
-
-        <div className="container__input--text">
-          <p>Ellipse</p>
-          <p>Pyramid</p>
-          <p>Triangular</p>
-          <p>Top Window</p>
         </div>
 
         <div className="container__text--code">

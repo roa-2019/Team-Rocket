@@ -57,6 +57,15 @@
 }
 
 
+// Positioning for Button Text
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 // Colours for Radio Buttons
 
 #radio__colour--blue {
