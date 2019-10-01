@@ -1,4 +1,4 @@
-import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, STROKE_COLOR, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE, IS_ROCKET_COMPLETE } from '../actions'
+import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, STROKE_COLOR, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE, IS_ROCKET_COMPLETE, ROBOT_FILL_OPACITY } from '../actions'
 
 const initialRocketState = {
   noseShape: '',
@@ -9,6 +9,7 @@ const initialRocketState = {
   windowShape: '',
   thrusterShape: '',
   isRocketComplete: '',
+  robotFillOpacity: '0.0'
 }
 
 const rocketReducer = (state = initialRocketState, action) => {
@@ -37,6 +38,8 @@ const rocketReducer = (state = initialRocketState, action) => {
     case IS_ROCKET_COMPLETE:
       return { ...state, isRocketComplete: action.boolean}
 
+    case ROBOT_FILL_OPACITY:
+      return { ...state, robotFillOpacity: action.fill}
     default:
       return state
   }

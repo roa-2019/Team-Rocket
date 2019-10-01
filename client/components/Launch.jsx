@@ -19,6 +19,10 @@ class Launch extends Component {
         else if (wing == "") { return alert("add a wing") }
         else if (window == "") { return alert("add a window") }
         else if (thruster == "") { return alert("add a thruster") }
+        else if (body == "Rectangle") {return alert("You cannot use this part silly") }
+        else if (wing == "SmallTriangle") {return alert("You cannot use this part silly") }
+        else if (thruster == "Thruster1") {return alert("You cannot use this part silly") }
+        else if (window == "twoLargePanels") {return alert("You cannot use this part silly")}
         else this.props.dispatch(isRocketComplete(true));
     }
     render() {
