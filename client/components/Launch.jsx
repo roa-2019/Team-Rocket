@@ -24,7 +24,7 @@ class Launch extends Component {
     render() {
         return (
             <Fragment>
-                <div id='launch-button'>
+                <div ClassName='launch-button'>
                     <button onClick={() => this.checkProps()} >Launch</button>
                     {/* {this.state.launchRocket && <Animations />} */}
                 </div>
