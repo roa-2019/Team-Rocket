@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 
 import { Body, Nose, Wing, Thruster, Window } from './rocket-parts/indexParts'
@@ -6,11 +6,17 @@ import Launch from './Launch'
 import  JvBot from './JvBot'
 
 class Rockets extends Component {
+  RocketAnimation() {
+    var rocketStatus = this.props.isRocketComplete;
+    if (rocketStatus == true) {
+       return  
+      }
+  }
   render() {
     let { changeColor, strokeColor, wingShape, noseShape, bodyShape, thrusterShape, windowShape } = this.props
     return (
       <Fragment>
-        <div className="rocket rocket-panel col">
+        <div className={"rocket rocket-panel col"+ (this.props.isRocketComplete && ' rocket-launch')} >
 
           <div className="rocket-wrapper b">
             <svg height="800" width="800" id="rocket-1">
@@ -55,6 +61,7 @@ function mapStateToProps(state) {
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,
     thrusterShape: state.rocket.thrusterShape,
+    isRocketComplete: state.rocket.isRocketComplete,
     changeColor: state.rocket.changeColor,
     strokeColor: state.rocket.strokeColor
   };
