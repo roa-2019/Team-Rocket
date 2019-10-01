@@ -1,4 +1,4 @@
-{
+export default {
     "messages": {
         "landingPage": {
             "openingMessage": "Hello traveller, you were on a mission to Mars to gather data and explore the planet as a habitat for Galactic Migrants. Your Rocket Ship was caught in a meteor shower and has sustained significant damage. JV Bot 2000 has landed safely on Mars despite the severe damage to the exterior of your ship. Your ship is in-operable and needs your help to be rebuilt. Your mission is to rebuild the Rocket ship so you can both return safely to Earth! Will you accept this mission?"

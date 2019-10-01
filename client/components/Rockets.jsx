@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 
+import SpeechBubble from './SpeechBubble'
 import { Body, Nose, Wing, Thruster, Window } from './rocket-parts/indexParts'
 import Launch from './Launch'
 import JvBot from './JvBot'
@@ -44,8 +45,8 @@ class Rockets extends Component {
               <JvBot />
             </div>
 
-
             <div className='robot__error'>
+            <SpeechBubble />
             </div>
 
           </div>
@@ -65,7 +66,9 @@ function mapStateToProps(state) {
     thrusterShape: state.rocket.thrusterShape,
     isRocketComplete: state.rocket.isRocketComplete,
     changeColor: state.rocket.changeColor,
-    strokeColor: state.rocket.strokeColor
+    strokeColor: state.rocket.strokeColor,
+    robot: state.rocket.robotMessage
+
   };
 }
 
