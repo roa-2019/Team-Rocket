@@ -23,12 +23,12 @@ class RocketColor extends Component {
         <div className='container__input'>
 
           <label className='container__radio' htmlFor='r21'>
-            <input className='custom purple' type='radio' name='change-colour' id='r21' value='Green' onChange={this.onColorChanged} />
+            <input className='custom purple' type='radio' name='change-colour' id='r21' value='#90ee90' onChange={this.onColorChanged} />
             <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
           </label>
 
           <label className='container__radio' htmlFor='r22'>
-            <input type='radio' name='change-colour' id='r22' value='Blue' onChange={this.onColorChanged} />
+            <input type='radio' name='change-colour' id='r22' value='#87cefa' onChange={this.onColorChanged} />
             <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
           </label>
 
@@ -39,7 +39,7 @@ class RocketColor extends Component {
           </label>
 
           <label className='container__radio' htmlFor='r24'>
-            <input type='radio' name='change-colour' id='r24' value='Yellow' onChange={this.onColorChanged} />
+            <input type='radio' name='change-colour' id='r24' value='#ffff00' onChange={this.onColorChanged} />
             <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
           </label>
         </div>
