@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Play&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400&display=swap);
 .container__top {
@@ -167,6 +166,9 @@ span {
 
 .margin__left {
   margin-left: 1em; }
+
+.padding__xs--left {
+  padding-left: 15px; }
 
 .landingLogo {
   background-image: url("/images/backgroundlandingimg.png");
@@ -476,9 +478,6 @@ span p {
   color: whitesmoke;
   font-family: 'Lato', sans-serif;
   font-weight: 300; }
-
-.padding__xs--left {
-  padding-left: 15px; }
 
 * {
   margin: 0;
