@@ -26,9 +26,7 @@ describe('LandingPage tests', () => {
     const missionButton = wrapper.find('button')
     missionButton.simulate('click')
     const action = dispatch.mock.calls[0][0]
-    
     expect(action.type).toBe("NAVIGATE")
-
   })
 })
 
