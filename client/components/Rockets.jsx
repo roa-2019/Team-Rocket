@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { Body, Nose, Wing, Thruster, Window } from './rocket-parts/indexParts'
 import Launch from './Launch'
-import  JvBot from './JvBot'
+import JvBot from './JvBot'
 
 class Rockets extends Component {
   RocketAnimation() {
@@ -18,8 +18,8 @@ class Rockets extends Component {
       <Fragment>
         <div className={"rocket rocket-panel col"+ (this.props.isRocketComplete && ' rocket-launch')} >
 
-          <div className="rocket__container b">
-            <svg height="800" width="800" id="rocket-1">
+          <div className="rocket__container">
+            <svg height="590" width="500" id="rocket-1">
               {/* Wings */}
               <Wing wingShape ={wingShape} changeColor={changeColor} strokeColor={strokeColor} />
 
@@ -40,12 +40,14 @@ class Rockets extends Component {
 
           <div className="robot__container b">
             
-            <div className='robot__container--JvBot b'>
-              {/* <img className="robot-img" src="/images/atlas_w_spot-min-450.png" alt="placeholder" /> */}
+            <div className='robot__wrapper--JvBot b'>
               <JvBot />
             </div>
 
-            
+
+            <div className='robot__error'>
+            </div>
+
           </div>
 
         </div>
