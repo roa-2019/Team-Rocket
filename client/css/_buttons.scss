@@ -44,6 +44,15 @@
   background: grey;
   @include button__shadow;
 }
+
+.checkmark__shape:hover {
+  background-color: $primaryOrange;
+}
+
+.checkmark__shape:hover .checkmark__shape--text {
+  color: #101010;
+}
+
 .checkmark__label{
   text-align: center;
   width: 5.3em;
@@ -54,6 +63,15 @@
 // 3. Styled effect for when the radio is selected/checked
 .container__radio input:checked ~ .checkmark {
   border: 2.2px solid $accentOrange;
+}
+
+
+// Positioning for Button Text
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -74,20 +92,3 @@
 #radio__colour--yellow {
   background-color:yellow;
 }
-
-// Shapes for Radio Buttons
-
-// #circle {
-//   width: 100px;
-//   height: 100px;
-//   background: red;
-//   border-radius: 50%
-// }
-
-// #triangle-up {
-//   width: 0;
-//   height: 0;
-//   border-left: 50px solid transparent;
-//   border-right: 50px solid transparent;
-//   border-bottom: 100px solid red;
-// }

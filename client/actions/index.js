@@ -5,6 +5,7 @@ export const STROKE_COLOR = 'STROKE_COLOR'
 export const WING_SHAPE = 'WING_SHAPE'
 export const WINDOW_SHAPE = 'WINDOW_SHAPE'
 export const THRUSTER_SHAPE = 'THRUSTER_SHAPE'
+export const IS_ROCKET_COMPLETE = 'IS_ROCKET_COMPLETE'
 
 
 export function noseShape (shape) {
@@ -54,5 +55,11 @@ export function thrusterShape (shape) {
   return {
     type: THRUSTER_SHAPE,
     shape
+  }
+}
+export function isRocketComplete (boolean) {
+  return {
+    type: IS_ROCKET_COMPLETE,
+    boolean
   }
 }

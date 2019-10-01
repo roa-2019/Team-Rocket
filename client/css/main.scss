@@ -8,6 +8,7 @@
 @import 'rocket';
 @import 'typography';
 @import 'variables';
+@import 'robot';
 
 
 * {
@@ -19,31 +20,16 @@
 #app {
   min-width: 100vw;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   background-image: url('/images/rocket-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  // overflow: hidden;
 }
 
-h3 {
-  background: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3.5s linear infinite;
-  animation-iteration-count: 1;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
 
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
-}
 
 
