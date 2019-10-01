@@ -89,7 +89,6 @@ class RocketBody extends Component {
 
         <div className="container__text--code">
           <p className="margin__left">
-            {" "}
             {ReactDOMServer.renderToString(
               <Body
                 bodyShape={bodyShape}

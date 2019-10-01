@@ -54,7 +54,6 @@ class RocketWindows extends Component {
 
         <div className='container__text--code'>
         <p className="margin__left">
-            {" "}
             {ReactDOMServer.renderToString(
               <Window
                 windowShape={windowShape}

@@ -89,7 +89,6 @@ class RocketWings extends Component {
 
         <div className="container__text--code">
           <p className="margin__left">
-            {" "}
             {ReactDOMServer.renderToString(
               <Wing
                 wingShape={wingShape}
