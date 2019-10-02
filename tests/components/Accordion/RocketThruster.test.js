@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount } from 'enzyme';
 
 
-import { RocketThruster } from '../../client/components/accordion-parts/indexAccordion';
+import RocketThruster from '../../../client/components/accordion-parts/RocketThruster';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -27,24 +27,15 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test('Acc-Thurster test suite runs', () => {
-    expect(2==2).toBe(true)
-})
 
 describe('changing Thurster shape', () => {
-    test('selecting thruster shape calls dispatch', () => {
+    test('RocketThruster component renders the right content', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<RocketThruster dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="Thruster3"]')
 
-        const currentTarget = { name: "thruster-shape", value: "Thruster3" }
+        expect(wrapper.find("AccButtons").length).toBe(1)
+        expect(wrapper.html()).toContain("Thruster2")
+        expect(wrapper.html()).not.toContain("Elllipse")
 
-        choice.simulate('change', { currentTarget })
-        let action = dispatch.mock.calls[0][0]
-        let thing = wrapper.find('.container__text--code')
-
-        expect(dispatch.mock.calls.length).toBe(1)
-        expect(action.type).toBe('THRUSTER_SHAPE')
-        expect(action.shape).toBe('Thruster3')
     })
 })

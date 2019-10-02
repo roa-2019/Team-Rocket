@@ -14,8 +14,8 @@ class Nose extends Component {
                 rx="50"
                 ry="100"
                 stroke={this.props.strokeColor}
-                strokeWidth="1"
                 fill={this.props.changeColor}
+                strokeWidth="1"
               />
             </>
           ))

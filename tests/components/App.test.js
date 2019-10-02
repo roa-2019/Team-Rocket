@@ -1,5 +1,5 @@
 import React from 'react'
-import {shallow} from 'enzyme'
+import { shallow } from 'enzyme'
 
 
 import LandingPage from '../../client/components/LandingPage'
@@ -16,25 +16,27 @@ jest.mock('react-redux', () => {
   }
 })
 
-test('App.test runner is working', () => {
-  expect(true).toBeTruthy()
-})
-describe('App component renders the right pages', ()  => {
-test('when true shows LandingPage component', () => {
+
+describe('App component renders the right pages', () => {
   const wrapper = shallow(<App />)
-  wrapper.setProps({showLanding: true})
-  expect(wrapper.find(LandingPage).length).toBe(1)
-})
-  test('when state true does not show rocket components', () => {
-    const wrapper = shallow(<App />)
-    wrapper.setProps({showLanding: true})
-    expect(wrapper.find(Rockets ).length).toBe(0)
-    expect(wrapper.html()).toContain("Landingimg.jpg")
+  wrapper.setProps({ showLanding: true })
+
+  test('when true shows LandingPage component', () => {
+    expect(wrapper.find(LandingPage).length).toBe(1)
   })
+  test('when state true does not show rocket components', () => {
+    expect(wrapper.find(Rockets).length).toBe(0)
+    expect(wrapper.html()).not.toContain("Landingimg.jpg")
+  })
+})
+
+describe('show landing false', () => {
+  const wrapper = shallow(<App />)
+  wrapper.setProps({ showLanding: false })
+  
   test('when state false shows rocket and design components', () => {
-    const wrapper = shallow(<App />)
-    wrapper.setProps({showLanding: false})
     expect(wrapper.find(Rockets).length).toBe(1)
     expect(wrapper.find(Design).length).toBe(1)
   })
+
 })

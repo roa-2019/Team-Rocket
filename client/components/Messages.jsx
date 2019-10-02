@@ -3,31 +3,24 @@ import { connect } from 'react-redux'
 import {robotMessage} from '../actions'
 
 class Messages extends Component {
-    componentWillUpdate() {
-        this.addParts()
-    }
-
     addParts() {
         const {noseShape, bodyShape, wingShape, windowShape, thrusterShape, dispatch, changeColor, strokeColor} = this.props
-
-    
         const steps = messages.rocketBuilding
-        const badParts = messages.brokenParts
     
-        if (bodyShape == "Rectangle") { return dispatch(robotMessage(badParts.rectangle)) }
-        else if (bodyShape != "" ) { return dispatch(robotMessage(steps.noseMessage)) }
-        else if (noseShape != "") { return dispatch(robotMessage(steps.wingMessage)) }
-        else if (noseShape == "Pyramid") { return dispatch(robotMessage(badParts.pyramid)) }
-        else if (wingShape != "") { return dispatch(robotMessage(steps.thrusterMessage)) }
-        else if (wingShape == "SmallTriangle") { return dispatch(robotMessage(badParts.smallTriangle)) }
-        else if (thrusterShape != "") { return dispatch(robotMessage(steps.windowsMessage)) }
-        else if (thrusterShape == "Thruster1") { return dispatch(robotMessage(badParts.thruster1)) }
-        else if (windowShape != "") { return dispatch(robotMessage(steps.colorMessage)) }
-        else if (changeColor != "") { return dispatch(robotMessage(steps.borderColorMessage)) }
-        else if (strokeColor != "") { return dispatch(robotMessage(steps.lastMessage)) }
+        let message = ''
+        if (bodyShape == "") return
+        if (noseShape == "") { message = steps.noseMessage }
+        else if (wingShape == "") { message = steps.wingMessage }
+        else if (thrusterShape == "") { message = steps.thrusterMessage }
+        else if (windowShape == "") { message = steps.windowsMessage }
+        else if (changeColor == "") { message = steps.colorMessage }
+        else if (strokeColor == "") { message = steps.borderColorMessage }
+        else if (strokeColor != "") { message = steps.lastMessage }
+        
+        return dispatch(robotMessage(message))
     }
     render() {
-
+        this.addParts() 
         return (
             <Fragment>
                 <p className='robot-messages'>{this.props.robot}</p>
@@ -35,9 +28,6 @@ class Messages extends Component {
         )
     }
 }
-
-
-
 
 var messages = {
     brokenParts: {

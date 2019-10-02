@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow} from 'enzyme';
 
 
-import {  RocketColor, RocketStrokeColor } from '../../client/components/accordion-parts/indexAccordion';
+import {  RocketColor, RocketStrokeColor } from '../../../client/components/accordion-parts/indexAccordion';
 
 
 jest.mock('react-redux', () => {
@@ -13,9 +13,6 @@ jest.mock('react-redux', () => {
     }
 })
 
-test('color test suite runs', () => {
-    expect(10*2).toEqual(20)
-})
 
 describe('Colors change when selected', () => {
 
