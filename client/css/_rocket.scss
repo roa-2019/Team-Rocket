@@ -34,4 +34,14 @@
 .speechBubble {
   position: absolute;
   bottom: 0;
+  margin-left: .5rem;
+  margin-bottom: 2rem;
+}
+
+.speechBubble__text {
+  width: 275px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
 }
