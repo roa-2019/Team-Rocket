@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 
 
 import RocketNose  from '../../../client/components/accordion-parts/RocketNose'
-import { exportAllDeclaration } from '@babel/types';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 

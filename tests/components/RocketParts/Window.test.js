@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme';
+import { shallow, render} from 'enzyme';
 
 
 import Window from '../../../client/components/rocket-parts/Window'
@@ -26,17 +26,19 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test('Window test suite is working', () => {
-    expect(true).toBeTruthy
-})
+
 
 describe('<Window />', () => {
     const wrapper = shallow(<Window />)
-    wrapper.setProps({ windowShape: "twoLargePanels", strokeColor: "pink"})
-    let twoLargePanels = "polygon points=\"270 410 310 410 310 340 270 340\" fill=\"grey\" stroke=\"pink\" stroke-width=\"1\" fill-opacity=\".0\"></polygon><polygon points=\"270 420 310 420 310 490 270 490\" fill=\"grey\" stroke=\"pink\" stroke-width=\"1\" fill-opacity=\".0\""
-    let circularWindows = "circle cx=\"290\" cy=\"440\" r=\"20\" fill=\"aqua\"    stroke=\"orange\""
 
+    wrapper.setProps({ windowShape: "twoLargePanels", strokeColor: "pink"})
+
+    let twoLargePanels = "polygon points=\"270 410 310 410 310 340 270 340\" fill=\"grey\" stroke=\"pink\" stroke-width=\"1\" fill-opacity=\".0\"></polygon><polygon points=\"270 420 310 420 310 490 270 490\" fill=\"grey\" stroke=\"pink\" stroke-width=\"1\" fill-opacity=\".0\""
+
+    let circularWindows = "circle cx=\"290\" cy=\"440\" r=\"20\" fill=\"aqua\"    stroke=\"orange\""
+    
     test('Window component props change return correct shape', () => {
+  
         expect(wrapper.html()).toContain(twoLargePanels)
         expect(wrapper.html()).not.toContain(circularWindows)
     })

@@ -26,9 +26,6 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test('Wing test suite is working', () => {
-    expect(true).toBeTruthy
-})
 
 describe('<Wing />', () => {
     const wrapper = shallow(<Wing />)
