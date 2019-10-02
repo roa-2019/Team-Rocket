@@ -1,7 +1,7 @@
-export {default as RocketColor} from './Acc-Color';
-export {default as RocketBody} from './AccBody';
-export {default as RocketNose} from './AccNose';
-export {default as RocketStrokeColor} from './Acc-Stroke'
-export {default as RocketThruster} from './AccThruster';
-export {default as RocketWindows} from './AccWindows';
-export {default as RocketWings} from './AccWings';
+export {default as RocketColor} from './RocketColor';
+export {default as RocketBody} from './RocketBody';
+export {default as RocketNose} from './RocketNose';
+export {default as RocketStrokeColor} from './RocketStrokeColor'
+export {default as RocketThruster} from './RocketThruster';
+export {default as RocketWindows} from './RocketWindows';
+export {default as RocketWings} from './RocketWings';
