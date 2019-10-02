@@ -1,49 +1,86 @@
 import React, { Component, Fragment } from "react";
-
 import { connect } from "react-redux";
-import { Body1, Body2, Body3, Body4 } from "./rocket-parts/indexParts";
-import { Nose1, Nose2, Nose3, Nose4 } from "./rocket-parts/indexParts";
-import { Thruster1, Thruster2, Thruster3, Thruster4 } from "./rocket-parts/indexParts";
-import { Wing1, Wing3, Wing4, Wing5 } from "./rocket-parts/indexParts";
-import { Window1, Window2, Window3, Window4 } from "./rocket-parts/indexParts";
+
+import SpeechBubble from "./SpeechBubble";
+import Messages from "./Messages.jsx";
+import { Body, Nose, Wing, Thruster, Window } from "./rocket-parts/indexParts";
+import Launch from "./Launch";
+import JvBot from "./JvBot";
+import ResetPopUp from "./ResetPopUp";
 
 class Rockets extends Component {
+
   render() {
+    let {
+      changeColor,
+      strokeColor,
+      wingShape,
+      noseShape,
+      bodyShape,
+      thrusterShape,
+      windowShape,
+      isRocketComplete
+    } = this.props;
     return (
       <Fragment>
         <div className="rocket rocket-panel col">
-          <div className="rocket-wrapper b">
-            <svg height="800" width="800" id="rocket-1">
-              {/* Wings */}
-              {this.props.wingShape == "Paralelogram" && <Wing1 />}
-              {this.props.wingShape == "SmallParalelogram" && <Wing3 />}
-              {this.props.wingShape == "SmallTriangle" && <Wing4 />}
-              {this.props.wingShape == "Large" && <Wing5 />}
+          <div className="rocket__container">
+            <div className={"test" + (isRocketComplete && " rocket-launch")}>
+              <svg className='' height="590" width="500" id="rocket-1">
+                {/* Wings */}
+                <Wing
+                  wingShape={wingShape}
+                  changeColor={changeColor}
+                  strokeColor={strokeColor}
+                />
 
-              {/* Rocket nose  */}
-              {this.props.noseShape == "Ellipse" && <Nose1 />}
-              {this.props.noseShape == "Pyramid" && <Nose2 />}
-              {this.props.noseShape == "Triangular" && <Nose3 />}
-              {this.props.noseShape == "Top Window" && <Nose4 />}
+                {/* Rocket nose  */}
+                <Nose
+                  noseShape={noseShape}
+                  changeColor={changeColor}
+                  strokeColor={strokeColor}
+                />
 
-              {/* Rocket body  */}
-              {this.props.bodyShape == "Rectangle" && <Body1 />}
-              {this.props.bodyShape == "Trapezoid" && <Body2 />}
-              {this.props.bodyShape == "Hexagon" && <Body3 />}
-              {this.props.bodyShape == "Tower" && <Body4 />}
+                {/* Rocket body  */}
+                <Body
+                  bodyShape={bodyShape}
+                  changeColor={changeColor}
+                  strokeColor={strokeColor}
+                />
 
-              {/*Rocket thruster */}
-              {this.props.thrusterShape == "Thruster1" && <Thruster1 />}
-              {this.props.thrusterShape == "Thruster2" && <Thruster2 />}
-              {this.props.thrusterShape == "Thruster3" && <Thruster3 />}
-              {this.props.thrusterShape == "Thruster4" && <Thruster4 />}
+                {/*Rocket thruster */}
+                <Thruster
+                  thrusterShape={thrusterShape}
+                  changeColor={changeColor}
+                  strokeColor={strokeColor}
+                />
 
-              {/*Rocket Window changes */}
-              {this.props.windowShape == "longWindowSet" && <Window1 />}
-              {this.props.windowShape == "threeLargeCircularWindows" && <Window2 />}
-              {this.props.windowShape == "threeMediumRectangularWindows" && <Window3 />}
-              {this.props.windowShape == "twoLargePanels" && <Window4 />}
-            </svg>
+                {/*Rocket Window changes */}
+                <Window
+                  windowShape={windowShape}
+                  changeColor={changeColor}
+                  strokeColor={strokeColor}
+                />
+              </svg>
+            </div>
+            
+              <Launch />
+          
+          </div>
+
+          <div>{isRocketComplete && <ResetPopUp />}</div>
+
+          <div className="robot__container">
+            <div className="robot__wrapper--JvBot">
+              {this.props.isRocketComplete == false && <JvBot />}
+            </div>
+
+            <div className="robot__error">
+              {this.props.isRocketComplete == false && <SpeechBubble />}
+              <div className="speechBubble__text">
+                {this.props.isRocketComplete == false && <Messages />}
+              </div>
+            </div>
           </div>
         </div>
       </Fragment>
@@ -57,7 +94,11 @@ function mapStateToProps(state) {
     bodyShape: state.rocket.bodyShape,
     wingShape: state.rocket.wingShape,
     windowShape: state.rocket.windowShape,
-    thrusterShape: state.rocket.thrusterShape
+    thrusterShape: state.rocket.thrusterShape,
+    isRocketComplete: state.rocket.isRocketComplete,
+    changeColor: state.rocket.changeColor,
+    strokeColor: state.rocket.strokeColor,
+    robot: state.rocket.robotMessage
   };
 }
 

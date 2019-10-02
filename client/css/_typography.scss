@@ -1,10 +1,9 @@
 // Headings
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
-
-// Body
 @import url('https://fonts.googleapis.com/css?family=Play&display=swap');
 
+// Body
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
 
 
 h3 {
@@ -12,12 +11,30 @@ h3 {
   margin: 2rem;
   text-align: center;
   font-size: 1.75rem;
-  color: $primaryOrange;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Play', sans-serif;
   letter-spacing: 1px;
   -webkit-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
   -moz-box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
   box-shadow: 0px 5px 5px -1px rgba(0,0,0,0.58);
+}
+
+h3 {
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3.5s linear infinite;
+  animation-iteration-count: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 a,
@@ -30,17 +47,19 @@ p {
   color: whitesmoke;
 }
 
+// button text
+span p {
+  font-size: .8rem;
+  text-align: center;
+}
+
+.robot__error p {
+  font-family: 'Courier';
+}
+
 .container__text--code p {
   color: whitesmoke;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 
-.padding__xs--left {
-  padding-left: 15px;
-}
-
-// .padding__s--left 
-
-
-//media query container input text display none

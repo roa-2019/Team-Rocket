@@ -5,6 +5,10 @@ export const STROKE_COLOR = 'STROKE_COLOR'
 export const WING_SHAPE = 'WING_SHAPE'
 export const WINDOW_SHAPE = 'WINDOW_SHAPE'
 export const THRUSTER_SHAPE = 'THRUSTER_SHAPE'
+export const IS_ROCKET_COMPLETE = 'IS_ROCKET_COMPLETE'
+export const ROBOT_MESSAGE = 'ROBOT_MESSAGE'
+export const RESET_APP = 'RESET_APP'
+export const HIDE_LAUNCH = 'HIDE_LAUNCH'
 
 
 export function noseShape (shape) {
@@ -54,5 +58,23 @@ export function thrusterShape (shape) {
   return {
     type: THRUSTER_SHAPE,
     shape
+  }
+}
+export function isRocketComplete (boolean) {
+  return {
+    type: IS_ROCKET_COMPLETE,
+    boolean
+  }
+}
+export function robotMessage (message) {
+  return {
+    type: ROBOT_MESSAGE,
+    message
+  }
+}
+
+export function hideLaunch () {
+  return {
+    type: HIDE_LAUNCH,
   }
 }

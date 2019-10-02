@@ -13,9 +13,6 @@ jest.mock('react-redux', () => {
 })
 
 
-test('Design.test suite is working', () => {
-    expect(2 + 4).toEqual(6)
-})
 
 describe('Design component', () => {
    
@@ -23,17 +20,4 @@ describe('Design component', () => {
         const wrapper = shallow(<Design />)
         expect(wrapper.find('AccordionItem').length).toBe(7)
     })
-   
-    // test.skip('nose change event handler calls dispatch', () => {
-        
-    // })
-    // test.skip('wing shape event handler calls dispatch', () => {
-    //     //test on  shape event
-    // })
-    // test.skip('window change event handler calls dispatch', () => {
-    //     //test on shape event
-    // })
-    // test.skip('thruster change event handler calls dispatch', () => {
-    //     //test on shape event
-    // })
 })

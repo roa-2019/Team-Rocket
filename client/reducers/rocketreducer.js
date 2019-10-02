@@ -1,4 +1,5 @@
-import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, STROKE_COLOR, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE } from '../actions'
+import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, STROKE_COLOR, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE, IS_ROCKET_COMPLETE, ROBOT_MESSAGE } from '../actions'
+import { RESET } from '../actions/navigate';
 
 const initialRocketState = {
   noseShape: '',
@@ -7,7 +8,9 @@ const initialRocketState = {
   strokeColor: '',
   wingShape: '',
   windowShape: '',
-  thrusterShape: ''
+  thrusterShape: '',
+  isRocketComplete: '',
+  robotMessage: 'Hello there!, my name is JV Bot 2000, just like the real one I was built with code. Lets begin with adding some parts, start by adding a body',
 }
 
 const rocketReducer = (state = initialRocketState, action) => {
@@ -33,6 +36,15 @@ const rocketReducer = (state = initialRocketState, action) => {
     case THRUSTER_SHAPE:
       return { ...state, thrusterShape: action.shape }
 
+    case IS_ROCKET_COMPLETE:
+      return { ...state, isRocketComplete: action.boolean}
+    
+    case ROBOT_MESSAGE:
+      return { ...state, robotMessage: action.message}  
+
+    case RESET:
+      return initialRocketState
+      
     default:
       return state
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, render, mount } from 'enzyme'
+import { shallow, render } from 'enzyme'
 
 
 import Rockets from '../../client/components/Rockets'
@@ -12,15 +12,12 @@ jest.mock('react-redux', () => {
     }
 })
 
-test('Rocket.test suite is working', () => {
-    expect(false).toBeFalsy()
-})
 
 describe('Rockets component renders correctly', () => {
-    test('renders one svg tag', () => {
+    test('renders two svg tags', () => {
         const wrapper = render(<Rockets />)
         expect(wrapper.find('svg').length).toBe(1)
-
+        
     })
 
     test('test tenery operators for thruster parts', () => {
@@ -38,5 +35,7 @@ describe('Rockets component renders correctly', () => {
 
         expect(wrapper.instance().props.noseShape).toBe("Ellipse")
     })
+
+
 
 })
