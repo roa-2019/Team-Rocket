@@ -429,6 +429,10 @@ span {
   width: 15rem;
   height: 15rem; }
 
+.speechBubble {
+  position: absolute;
+  bottom: 0; }
+
 h3 {
   padding: 1.3rem;
   margin: 2rem;
