@@ -1,4 +1,5 @@
 import { NOSE_SHAPE, CHANGE_COLOR, BODY_SHAPE, STROKE_COLOR, WING_SHAPE, WINDOW_SHAPE, THRUSTER_SHAPE, IS_ROCKET_COMPLETE, ROBOT_MESSAGE } from '../actions'
+import { RESET } from '../actions/navigate';
 
 const initialRocketState = {
   noseShape: '',
@@ -41,6 +42,9 @@ const rocketReducer = (state = initialRocketState, action) => {
     case ROBOT_MESSAGE:
       return { ...state, robotMessage: action.message}  
 
+    case RESET:
+      return initialRocketState
+      
     default:
       return state
   }

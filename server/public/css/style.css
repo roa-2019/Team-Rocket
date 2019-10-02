@@ -387,15 +387,50 @@ span {
   100% {
     opacity: 1; } }
 
-.button {
-  background-color: white;
+.StartButton {
+  background-color: rgba(0, 255, 255, 0.849);
   border: none;
-  color: white;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 60px;
+  transform: rotate(-9deg);
+  box-shadow: 10px 10px;
+  margin-top: 60px;
+  width: 280px;
+  font-family: courier;
+  position: absolute;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px; }
+
+.StartButton:hover {
+  color: #d01e10; }
+
+.LaunchButton {
+  background-color: rgba(0, 255, 255, 0.849);
+  border: none;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 60px;
+  transform: rotate(-9deg);
+  box-shadow: 10px 10px;
+  margin-top: 60px;
+  width: 280px;
+  font-family: courier;
+  position: absolute;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  top: 550px;
+  right: 50px; }
+
+.LaunchButton:hover {
+  color: #d01e10; }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
