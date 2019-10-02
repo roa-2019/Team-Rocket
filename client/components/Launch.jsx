@@ -3,11 +3,8 @@ import { connect } from 'react-redux'
 import { isRocketComplete, robotMessage } from '../actions/index'
 
 class Launch extends Component {
-    constructor(props) {
-        super(props);
-        this.checkProps = this.checkProps.bind(this)
-    }
-    checkProps() {
+
+    checkProps = () => {
         const nose = this.props.noseShape
         const body = this.props.bodyShape
         const wing = this.props.wingShape
@@ -29,7 +26,7 @@ class Launch extends Component {
     render() {
         return (
             <Fragment>
-                <div id='launch-button'>
+                <div className='launch-button'>
                     <button onClick={() => this.checkProps()} >Launch</button>
                     {this.props.launchRocket}
                 </div>
