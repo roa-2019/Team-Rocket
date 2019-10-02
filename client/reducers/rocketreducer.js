@@ -9,7 +9,7 @@ const initialRocketState = {
   windowShape: '',
   thrusterShape: '',
   isRocketComplete: '',
-  robotMessage: '',
+  robotMessage: 'Hello there!, my names JV, just like the real one I was built with code. Lets begin with adding some parts, start by adding a body',
 }
 
 const rocketReducer = (state = initialRocketState, action) => {
