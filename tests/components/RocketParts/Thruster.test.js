@@ -26,11 +26,8 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-test("Thruster test suite is working", () => {
-    expect(true).toBeTruthy
-})
 
-describe('<Nose />', () => {
+describe('<Thruster />', () => {
     const wrapper = shallow(<Thruster />)
     wrapper.setProps({ thrusterShape: "Thruster3", changeColor: "pink", strokeColor: "grey" })
     let thrusterThree = "polygon points=\"320 500 300 540 280 540 260 500\" fill=\"pink\" stroke=\"grey\" stroke-width=\"1\""

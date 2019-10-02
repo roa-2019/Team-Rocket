@@ -1,8 +1,8 @@
 import React from 'react'
-import { shallow, render} from 'enzyme';
+import { shallow } from 'enzyme';
 
 
-import Window from '../../../client/components/rocket-parts/Window'
+import Window  from '../../../client/components/rocket-parts/Window'
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -30,8 +30,7 @@ jest.mock('react-dom/server', () => {
 
 describe('<Window />', () => {
     const wrapper = shallow(<Window />)
-
-    wrapper.setProps({ windowShape: "twoLargePanels", strokeColor: "pink"})
+    wrapper.setProps({ windowShape: "Large", strokeColor: "pink"})
 
     let twoLargePanels = "polygon points=\"270 410 310 410 310 340 270 340\" fill=\"grey\" stroke=\"pink\" stroke-width=\"1\" fill-opacity=\".0\"></polygon><polygon points=\"270 420 310 420 310 490 270 490\" fill=\"grey\" stroke=\"pink\" stroke-width=\"1\" fill-opacity=\".0\""
 
