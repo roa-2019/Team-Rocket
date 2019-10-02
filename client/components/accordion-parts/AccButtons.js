@@ -1,6 +1,9 @@
 import React from "react";
 
+import addParts from '../Messages'
+
 export default function AccButtons({ values, offset, onChange, type }) {
+
   let labels = values.map((value, key) => {
     let id = key + offset;
     return (
@@ -11,6 +14,7 @@ export default function AccButtons({ values, offset, onChange, type }) {
           id={"r" + id}
           value={value}
           onChange={onChange}
+          // onClick={() => this.addParts() }
         />
         <span
           id={"radio__" + { type } + "--" + id}
