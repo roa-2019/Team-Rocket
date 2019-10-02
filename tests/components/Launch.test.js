@@ -13,16 +13,15 @@ jest.mock('react-redux', () => {
     }
 })
 
-
-
 describe('Launch', () => {
-    let wrapper, dispatch, launchButton, checkProps, robotMessage
+    let wrapper, dispatch, launchButton, checkProps, robotMessage, hideLaunch
 
     beforeEach(() => {
+        hideLaunch = jest.fn()
         checkProps = jest.fn()
         dispatch = jest.fn()
         robotMessage = jest.fn()
-        wrapper = mount(<Launch dispatch={dispatch} checkProps={checkProps} />)
+        wrapper = mount(<Launch dispatch={dispatch} checkProps={checkProps} hideLaunch={hideLaunch}/>)
         launchButton = wrapper.find('button')
     })
 
