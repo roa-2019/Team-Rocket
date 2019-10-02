@@ -15,22 +15,22 @@ class Launch extends Component {
         const thruster = this.props.thrusterShape
         const dispatch = this.props.dispatch
 
-        if (nose == "") { return dispatch(robotMessage("This rocket won't take off without a nose, add one now!")) }
-        else if (body == "") { return dispatch(robotMessage("!This rocket won't take off without a body, add one now!")) }
-        else if (wing == "") { return dispatch(robotMessage("This rocket won't take off without a  wing, add one now!"))}
-        else if (window == "") { return dispatch(robotMessage( "This rocket won't take off without a  window, add one now!")) }
-        else if (thruster == "") { return dispatch(robotMessage("This rocket won't take off without a  thruster, add one now!")) }
+        if (body == "") { return dispatch(robotMessage("The rocket won't take off without a body, add one now!")) }
+        else if (nose == "") { return dispatch(robotMessage("The rocket won't take off without a nose, add one now!")) }
         else if (nose == "Pyramid") {return dispatch(robotMessage())}
+        else if (wing == "") { return dispatch(robotMessage("The rocket won't take off without a wing, add one now!"))}
         else if (wing == "SmallTriangle") {return dispatch(robotMessage())}
+        else if (thruster == "") { return dispatch(robotMessage("The rocket won't take off without a  thruster, add one now!")) }
         else if (thruster == "Thruster1") {return dispatch(robotMessage())}
+        else if (window == "") {return dispatch(robotMessage("Add a window"))}
         else this.props.dispatch(isRocketComplete(true));
     }
     render() {
         return (
             <Fragment>
                 <div id='launch-button'>
-                    <button onClick={() => this.checkProps()} className="LaunchButton">Launch</button>
-                    {/* {this.state.launchRocket && <Animations />} */}
+                    <button className='StartButton' onClick={() => this.checkProps()} >Launch</button>
+                    {this.props.launchRocket}
                 </div>
             </Fragment>
         )

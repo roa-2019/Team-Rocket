@@ -6,19 +6,20 @@ import Messages from './Messages.jsx'
 import { Body, Nose, Wing, Thruster, Window } from './rocket-parts/indexParts'
 import Launch from './Launch'
 import JvBot from './JvBot'
+import ResetPopUp from './ResetPopUp';
 
 class Rockets extends Component {
-  RocketAnimation() {
-    var rocketStatus = this.props.isRocketComplete;
-    if (rocketStatus == true) {
-      return
-    }
-  }
+  // RocketAnimation() {
+  //   var rocketStatus = this.props.isRocketComplete;
+  //   if (rocketStatus == true) {
+  //     return
+  //   }
+  // }
   render() {
-    let { changeColor, strokeColor, wingShape, noseShape, bodyShape, thrusterShape, windowShape } = this.props
+    let { changeColor, strokeColor, wingShape, noseShape, bodyShape, thrusterShape, windowShape, isRocketComplete } = this.props
     return (
       <Fragment>
-        <div className={"rocket rocket-panel col" + (this.props.isRocketComplete && ' rocket-launch')} >
+        <div className={"rocket rocket-panel col" + (isRocketComplete && ' rocket-launch')} >
 
           <div className="rocket__container">
             <svg height="590" width="500" id="rocket-1">
@@ -38,6 +39,10 @@ class Rockets extends Component {
               <Window windowShape={windowShape} changeColor={changeColor} strokeColor={strokeColor} />
             </svg>
             <Launch />
+          </div>
+
+          <div>
+            {isRocketComplete && <ResetPopUp/>}
           </div>
 
           <div className="robot__container">

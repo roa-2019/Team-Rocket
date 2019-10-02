@@ -44,4 +44,10 @@ class LandingPage extends Component {
     }
 }
 
-export default connect()(LandingPage);
+function mapStateToProps (state)  {
+  return {
+    showLanding: state.navigator
+  }
+}
+
+export default connect (mapStateToProps)(LandingPage)

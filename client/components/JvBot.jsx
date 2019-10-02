@@ -24,8 +24,10 @@ class JvBot extends Component {
           <circle cx='113' cy='90' r='30' fill='blue' />
           <circle cx='47' cy='90' r='25' fill='white' />
           <circle cx='113' cy='90' r='25' fill='white' />
-          <circle cx='47' cy='90' r='10' fill='black' />
-          <circle cx='113' cy='90' r='10' fill='black' />
+          <circle cx='47' cy='90' r='10' fill='black' id='left-eye' />
+          <circle cx='113' cy='90' r='10' fill='black' id='right-eye' />
+          <animate href="#left-eye" attributeName="cx" from="47" to="55" dur="1s" />
+          <aniamte href="#right-eye" attributeName="cx" from="113" to="121" dur="1s"   />
           {/* <!-- Mouth --> */}
           <circle cx='62' cy='135' r='10' fill='orange' />
           <circle cx='98' cy='135' r='10' fill='orange' />
@@ -38,8 +40,8 @@ class JvBot extends Component {
           <rect x='94.5' y='125' width='4' height='20' fill='red' />
           {/* <!-- Neck --> */}
           <rect x='65' y='160' width='30' height='10' fill='lightblue' />
-          {/* <!-- main body -->
-    <!-- outer --> */}
+          {/* <!-- main body --> */}
+          {/* outer  */}
           <rect x='15' y='170' width='130' height='90' fill='blue' ry='20' />
           {/* <!-- middle --> */}
           <rect x='25' y='180' width='110' height='70' fill='lightblue' ry='20' />

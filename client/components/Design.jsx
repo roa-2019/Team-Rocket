@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import addParts from '../messages'
+import addParts from './Messages.jsx'
 
 import {
   Accordion,
@@ -39,7 +39,7 @@ class Design extends Component {
     return (
       <Fragment>
         <div className='design col'>
-          <div className='details-panel' onClick={addParts} >
+          <div className='details-panel' >
             <h3> ~ Build Your Rocket ~ </h3>
             <Accordion>
 
