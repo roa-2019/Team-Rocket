@@ -139,16 +139,16 @@ span {
   justify-content: center; }
 
 #radio__colour--blue {
-  background-color: lightskyblue; }
+  background-color: #244646; }
 
 #radio__colour--green {
-  background-color: lightgreen; }
+  background-color: #1f425e; }
 
 #radio__colour--chuckNorris {
-  background-color: #C00000; }
+  background-color: #ae2720; }
 
 #radio__colour--yellow {
-  background-color: yellow; }
+  background-color: #c79d2a; }
 
 .StartButton {
   background-color: rgba(0, 255, 255, 0.849);
@@ -533,11 +533,12 @@ span {
   width: 275px;
   position: absolute;
   bottom: 0;
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
   margin-left: 5rem; }
 
 .robot-messages {
-  color: #0e1111; }
+  color: #0e1111;
+  color: #1f425e; }
 
 h3 {
   padding: 1.3rem;
