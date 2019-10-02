@@ -25,13 +25,13 @@ class ResetPopUp extends Component {
 		return (
 			<Fragment>
 				<div>
-					{this.state.popupShowing && <div className="modal-content">
-						<p>Some text in the Modal..</p>
-
-						<p>Your rocket has successfully launched !</p>
-						<p> <button onClick="ResetButton" className="ResetButton" onClick={() => {
-							this.props.dispatch(resetApp())
-						}} >Reset </button></p>
+					{this.state.popupShowing && <div className='modal'>
+						<div className="modal-content">
+							<p>Your Rocket Has Successfully Launched!</p>
+						<button onClick="ResetButton" className="ResetButton" onClick={() => {
+								this.props.dispatch(resetApp())
+							}} >Reset </button>
+						</div>
 					</div>}
 
 				</div>

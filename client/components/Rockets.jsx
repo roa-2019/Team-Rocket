@@ -26,7 +26,7 @@ class Rockets extends Component {
         <div className="rocket rocket-panel col">
           <div className="rocket__container">
             <div className={"test" + (isRocketComplete && " rocket-launch")}>
-              <svg height="590" width="500" id="rocket-1">
+              <svg className='' height="590" width="500" id="rocket-1">
                 {/* Wings */}
                 <Wing
                   wingShape={wingShape}

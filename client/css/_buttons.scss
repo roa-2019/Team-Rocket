@@ -147,7 +147,7 @@ span {
   transform: rotate(-9deg);
   box-shadow: 10px 10px;
   margin-top: 60px;
-  width: 280px;
+  width: 11rem;
   font-family: courier;
   position: absolute;
   padding: 15px 32px;
@@ -155,9 +155,9 @@ span {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  position: absolute;
-  top: 550px;
-  right: 50px;
+  position: relative;
+  top: 95px;
+  right: 127px;
 }
 
 .ResetButton:hover {
