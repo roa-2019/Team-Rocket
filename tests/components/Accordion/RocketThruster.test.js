@@ -29,19 +29,13 @@ jest.mock('react-dom/server', () => {
 
 
 describe('changing Thurster shape', () => {
-    test('selecting thruster shape calls dispatch', () => {
+    test('RocketThruster component renders the right content', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<RocketThruster dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="Thruster3"]')
 
-        const currentTarget = { name: "thruster-shape", value: "Thruster3" }
+        expect(wrapper.find("AccButtons").length).toBe(1)
+        expect(wrapper.html()).toContain("Thruster2")
+        expect(wrapper.html()).not.toContain("Elllipse")
 
-        choice.simulate('change', { currentTarget })
-        let action = dispatch.mock.calls[0][0]
-        let thing = wrapper.find('.container__text--code')
-
-        expect(dispatch.mock.calls.length).toBe(1)
-        expect(action.type).toBe('THRUSTER_SHAPE')
-        expect(action.shape).toBe('Thruster3')
     })
 })
