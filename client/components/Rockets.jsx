@@ -63,7 +63,9 @@ class Rockets extends Component {
                 />
               </svg>
             </div>
-            <Launch />
+            
+              <Launch />
+          
           </div>
 
           <div>{isRocketComplete && <ResetPopUp />}</div>

@@ -5,27 +5,27 @@ import { hideLaunch } from '../actions'
 
 
 class ResetPopUp extends Component {
-	 constructor(props) {
-		 super(props)
-		 this.state = {
-			 popupShowing: false
-			}
-	 }
-	 
-componentDidMount() {
-	setTimeout(this.displayModal, 2500)
- }
+	constructor(props) {
+		super(props)
+		this.state = {
+			popupShowing: false
+		}
+	}
 
- displayModal = () => {
-	this.props.dispatch(hideLaunch())
-	this.setState({popupShowing: true});
- }
+	componentDidMount() {
+		setTimeout(this.displayModal, 2500)
+	}
+
+	displayModal = () => {
+		this.props.dispatch(hideLaunch())
+		this.setState({ popupShowing: true });
+	}
 
 	render() {
 		return (
 			<Fragment>
 				<div>
-						{this.state.popupShowing && <div className="modal-content">
+					{this.state.popupShowing && <div className="modal-content">
 						<p>Some text in the Modal..</p>
 
 						<p>Your rocket has successfully launched !</p>
