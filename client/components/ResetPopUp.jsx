@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { resetApp } from "../actions"
+import { resetApp } from '../actions/navigate'
 
 
 
