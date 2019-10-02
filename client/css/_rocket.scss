@@ -20,6 +20,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  margin-left: -30px;
 }
 
 .robot__error {
@@ -45,3 +46,7 @@
   margin-bottom: 5rem;
   margin-left: 5rem;
 }
+
+.robot-messages {
+  color: $primaryBlack;
+} 

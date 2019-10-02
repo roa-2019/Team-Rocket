@@ -12,8 +12,6 @@
   padding-bottom: 2rem;
 }
 
-
-
 // 1. Hide the browsers default radio button
 .container__radio input {
   position: absolute;
@@ -32,7 +30,6 @@
   height: 25px;
   border-radius: 5px;
   @include button__shadow;
-
 }
 
 .checkmark__shape {
@@ -65,7 +62,6 @@
   border: 2.2px solid $accentOrange;
 }
 
-
 // Positioning for Button Text
 
 span {
@@ -73,7 +69,6 @@ span {
   align-items: center;
   justify-content: center;
 }
-
 
 // Colours for Radio Buttons
 
@@ -125,7 +120,7 @@ span {
   transform: rotate(-9deg);
   box-shadow: 10px 10px;
   margin-top: 60px;
-  width: 280px;
+  width: 12rem;
   font-family: courier;
   position: absolute;
   padding: 15px 32px;
@@ -134,7 +129,7 @@ span {
   display: inline-block;
   font-size: 16px;
   position: absolute;
-  top: 550px;
+  top: 495px;
   right: 50px;
 }
 
@@ -152,7 +147,7 @@ span {
   transform: rotate(-9deg);
   box-shadow: 10px 10px;
   margin-top: 60px;
-  width: 280px;
+  width: 11rem;
   font-family: courier;
   position: absolute;
   padding: 15px 32px;
@@ -160,9 +155,9 @@ span {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  position: absolute;
-  top: 550px;
-  right: 50px;
+  position: relative;
+  top: 95px;
+  right: 127px;
 }
 
 .ResetButton:hover {

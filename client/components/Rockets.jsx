@@ -9,12 +9,7 @@ import JvBot from "./JvBot";
 import ResetPopUp from "./ResetPopUp";
 
 class Rockets extends Component {
-  // RocketAnimation() {
-  //   var rocketStatus = this.props.isRocketComplete;
-  //   if (rocketStatus == true) {
-  //     return
-  //   }
-  // }
+
   render() {
     let {
       changeColor,
@@ -31,7 +26,7 @@ class Rockets extends Component {
         <div className="rocket rocket-panel col">
           <div className="rocket__container">
             <div className={"test" + (isRocketComplete && " rocket-launch")}>
-              <svg height="590" width="500" id="rocket-1">
+              <svg className='' height="590" width="500" id="rocket-1">
                 {/* Wings */}
                 <Wing
                   wingShape={wingShape}
@@ -68,7 +63,9 @@ class Rockets extends Component {
                 />
               </svg>
             </div>
-            <Launch />
+            
+              <Launch />
+          
           </div>
 
           <div>{isRocketComplete && <ResetPopUp />}</div>

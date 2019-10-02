@@ -1,30 +1,37 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { resetApp } from '../actions/navigate'
-
+import { hideLaunch } from '../actions'
 
 
 class ResetPopUp extends Component {
-	 display = false;
-componentDidMount() {
-	setTimeout(this.displayModal(), 3000)
- }
+	constructor(props) {
+		super(props)
+		this.state = {
+			popupShowing: false
+		}
+	}
 
- displayModal = () => {
-	this.display = true;
- }
+	componentDidMount() {
+		setTimeout(this.displayModal, 2500)
+	}
+
+	displayModal = () => {
+		this.props.dispatch(hideLaunch())
+		this.setState({ popupShowing: true });
+	}
+
 	render() {
-
 		return (
 			<Fragment>
 				<div>
-						{this.display && <div class="modal-content">
-						<p>Some text in the Modal..</p>
-
-						<p>Your rocket has successfully launched !</p>
-						<p> <button onClick="ResetButton" className="ResetButton" onClick={() => {
-							this.props.dispatch(resetApp())
-						}} >Reset </button></p>
+					{this.state.popupShowing && <div className='modal'>
+						<div className="modal-content">
+							<p>Your Rocket Has Successfully Launched!</p>
+						<button onClick="ResetButton" className="ResetButton" onClick={() => {
+								this.props.dispatch(resetApp())
+							}} >Reset </button>
+						</div>
 					</div>}
 
 				</div>

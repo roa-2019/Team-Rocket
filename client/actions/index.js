@@ -8,6 +8,7 @@ export const THRUSTER_SHAPE = 'THRUSTER_SHAPE'
 export const IS_ROCKET_COMPLETE = 'IS_ROCKET_COMPLETE'
 export const ROBOT_MESSAGE = 'ROBOT_MESSAGE'
 export const RESET_APP = 'RESET_APP'
+export const HIDE_LAUNCH = 'HIDE_LAUNCH'
 
 
 export function noseShape (shape) {
@@ -69,5 +70,11 @@ export function robotMessage (message) {
   return {
     type: ROBOT_MESSAGE,
     message
+  }
+}
+
+export function hideLaunch () {
+  return {
+    type: HIDE_LAUNCH,
   }
 }
