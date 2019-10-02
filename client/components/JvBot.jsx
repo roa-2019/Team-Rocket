@@ -6,7 +6,7 @@ class JvBot extends Component {
   render() {
     return (
       <Fragment>
-        <svg className='robot' width="160" height="335" xmlns="http://www.w3.org/2000/svg">
+        <svg className='robot' width="160" height="335" xmlns="http://www.w3.org/2000/svg" id='tag'>
           {/* <!-- outer head --> */}
           <rect x='0' y='40' width='160' height='120' fill='blue' ry='20' />
           {/* <!-- Inner head --> */}
@@ -26,8 +26,8 @@ class JvBot extends Component {
           <circle cx='113' cy='90' r='25' fill='white' />
           <circle cx='47' cy='90' r='10' fill='black' id='left-eye' />
           <circle cx='113' cy='90' r='10' fill='black' id='right-eye' />
-          <animate attributeName="cx" href="#left-eye" from="47" to="55" dur="10s" values="47; 55; 47; 39; 47;" repeatCount="10000" />
-          <animate attributeName="cx" href="#right-eye" from="113" to="121" dur="10s" values="113; 121; 113; 105; 113;" repeatCount="10000" />
+          <animate attributeName="cx" href="#left-eye" from="47" to="55" dur="10s" values="47; 55; 47; 39; 47;" repeatCount="1000000" />
+          <animate attributeName="cx" href="#right-eye" from="113" to="121" dur="10s" values="113; 121; 113; 105; 113;" repeatCount="1000000" />
           {/* <!-- Mouth --> */}
           <circle cx='62' cy='135' r='10' fill='orange' />
           <circle cx='98' cy='135' r='10' fill='orange' />
