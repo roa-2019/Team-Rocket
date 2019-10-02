@@ -24,7 +24,7 @@ class Wing extends Component {
           ))
         }
         {
-          (this.props.wingShape == "SmallParalelogram" && (
+          (this.props.wingShape == "Small\r\nParalelogram" && (
             <>
               <polygon
                 points="340 440 400 500 400 560 340 500"
@@ -43,7 +43,7 @@ class Wing extends Component {
           ))
         }
         {
-          (this.props.wingShape == "SmallTriangle" && (
+          (this.props.wingShape == "Small\r\nTriangle" && (
             <>
               <polygon
                 points="340 460 380 500 340 500"

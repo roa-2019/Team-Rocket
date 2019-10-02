@@ -19,9 +19,10 @@ class Rockets extends Component {
     let { changeColor, strokeColor, wingShape, noseShape, bodyShape, thrusterShape, windowShape, isRocketComplete } = this.props
     return (
       <Fragment>
-        <div className={"rocket rocket-panel col" + (isRocketComplete && ' rocket-launch')} >
+        <div className="rocket rocket-panel col"  >
 
           <div className="rocket__container">
+          <div className={"test" + (isRocketComplete && ' rocket-launch')}>
             <svg height="590" width="500" id="rocket-1">
               {/* Wings */}
               <Wing wingShape={wingShape} changeColor={changeColor} strokeColor={strokeColor} />
@@ -38,6 +39,7 @@ class Rockets extends Component {
               {/*Rocket Window changes */}
               <Window windowShape={windowShape} changeColor={changeColor} strokeColor={strokeColor} />
             </svg>
+            </div>
             <Launch />
           </div>
 
