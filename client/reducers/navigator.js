@@ -6,6 +6,8 @@ const navigator = (state = initialState, action) => {
     switch(action.type) {
         case NAVIGATE:
             return false
+        case RESET:
+            return true
         default: 
             return state 
     }
