@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 
 
 import Launch from '../../client/components/Launch'
@@ -16,35 +16,39 @@ jest.mock('react-redux', () => {
 
 
 describe('Launch', () => {
-    let wrapper, dispatch, launchButton
+    let wrapper, dispatch, launchButton, checkProps, robotMessage
 
     beforeEach(() => {
-        window.alert = jest.fn()
-        wrapper = mount(<Launch dispatch={dispatch}  />)
-        launchButton = wrapper.find('button')
+        checkProps = jest.fn()
         dispatch = jest.fn()
+        robotMessage = jest.fn()
+        wrapper = mount(<Launch dispatch={dispatch} checkProps={checkProps} />)
+        launchButton = wrapper.find('button')
     })
 
     test('launch button calls checksProps', () => {
-        let checkProps = jest.fn()
         wrapper.instance().checkProps = checkProps
         wrapper.instance().forceUpdate()
 
         launchButton.simulate('click')
-        
         expect(checkProps).toHaveBeenCalled()  
     })
-    test('alert if missing rocket body part', () => {
+    test('calls dipatch on missing body part', () => {
         wrapper.setProps({ noseShape: ""})
         launchButton.simulate('click')
-        
-        expect(window.alert).toHaveBeenCalled('add a nose')
+
+        expect(dispatch).toHaveBeenCalled(robotMessage())
     })
-    test('alert if broken parts', () => {
+    test('when called dispatch calls robotMessage action', () => {
+        wrapper.setProps({ noseShape: ""})
+        launchButton.simulate('click')
+
+        expect(dispatch).toHaveBeenCalled(robotMessage())
+    })
+    test('correct alert sent if broken thruster', () => {
         wrapper.setProps({thrusterShape: "Thruster1"})
         launchButton.simulate('click')
-        
-        expect(window.alert).toHaveBeenCalled('')
-        
+
+        expect(dispatch).toHaveBeenCalled(robotMessage("Oh no, that's way too small - your're going to have to choose another one"))
     })
 })
