@@ -12,14 +12,15 @@ class Launch extends Component {
         const thruster = this.props.thrusterShape
         const dispatch = this.props.dispatch
 
-        if (nose == "") { return dispatch(robotMessage("This rocket won't take off without a nose, add one now!")) }
-        else if (body == "") { return dispatch(robotMessage("!This rocket won't take off without a body, add one now!")) }
-        else if (wing == "") { return dispatch(robotMessage("This rocket won't take off without a  wing, add one now!"))}
-        else if (window == "") { return dispatch(robotMessage( "This rocket won't take off without a  window, add one now!")) }
-        else if (thruster == "") { return dispatch(robotMessage("This rocket won't take off without a  thruster, add one now!")) }
-        else if (nose == "Pyramid") {return dispatch(robotMessage())}
-        else if (wing == "SmallTriangle") {return dispatch(robotMessage())}
-        else if (thruster == "Thruster1") {return dispatch(robotMessage())}
+        if (body == "") { return dispatch(robotMessage("The rocket won't take off without a body, add one now!")) }
+        else if (body == "Rectangle") { return dispatch(robotMessage("Do you see me? How am I supposed to fit into such a thin Rocket?!"))}
+        else if (nose == "") { return dispatch(robotMessage("The rocket won't take off without a nose, add one now!")) }
+        else if (nose == "Pyramid") {return dispatch(robotMessage("Oops you'll have to choose a nose that isn't wonky"))}
+        else if (wing == "") { return dispatch(robotMessage("The rocket won't take off without a wing, add one now!"))}
+        else if (wing == "SmallTriangle") {return dispatch(robotMessage("The Rocket will not take off with wings that small"))}
+        else if (thruster == "") { return dispatch(robotMessage("The rocket won't take off without a  thruster, add one now!")) }
+        else if (thruster == "Thruster1") {return dispatch(robotMessage("Oh no, that's way too small - your're going to have to choose another one")) }
+        else if (window == "") {return dispatch(robotMessage("Add a window")) }
         else this.props.dispatch(isRocketComplete(true));
     }
     render() {
@@ -27,7 +28,7 @@ class Launch extends Component {
             <Fragment>
                 <div className='launch-button'>
                     <button onClick={() => this.checkProps()} >Launch</button>
-                    {/* {this.state.launchRocket && <Animations />} */}
+                    {this.props.launchRocket}
                 </div>
             </Fragment>
         )

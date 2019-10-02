@@ -22,7 +22,6 @@
     overflow: hidden;
     -webkit-animation: type 2s steps(40, end);
     animation: type 2s steps(40, end);
-    // border-right: .15em solid orange;
   }
   
   .css-typing p:nth-child(2) {
@@ -249,13 +248,3 @@
     }
   }
 
-  .button {
-    background-color: white; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
