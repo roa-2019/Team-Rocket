@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 
 import SpeechBubble from './SpeechBubble'
+import Messages from './Messages.jsx'
 import { Body, Nose, Wing, Thruster, Window } from './rocket-parts/indexParts'
 import Launch from './Launch'
 import JvBot from './JvBot'
@@ -39,16 +40,16 @@ class Rockets extends Component {
             <Launch />
           </div>
 
-          <div className="robot__container b">
+          <div className="robot__container">
 
-            <div className='robot__wrapper--JvBot b'>
+            <div className='robot__wrapper--JvBot'>
               <JvBot />
             </div>
 
-            <div className='robot__error b'>
+            <div className='robot__error'>
               <SpeechBubble />
               <div className='speechBubble__text'>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+              <Messages />
             </div>
             </div>
 

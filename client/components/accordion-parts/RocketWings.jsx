@@ -21,7 +21,7 @@ class RocketWings extends Component {
 
   render() {
     let { wingShape, changeColor, strokeColor } = this.props;
-    let values = ["Paralelogram", "SmallParalelogram", "SmallTriangle", "Large"];
+    let values = ["Paralelogram", "Small\r\nParalelogram", "Small\r\nTriangle", "Large"];
     let type = "wing";
 
     return (
