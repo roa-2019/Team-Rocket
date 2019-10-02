@@ -39,7 +39,7 @@ class RocketColor extends Component {
           </label>
 
           <label className='container__radio' htmlFor='r24'>
-            <input type='radio' name='change-colour' id='r24' value='#d9b964' onChange={this.onColorChanged} />
+            <input type='radio' name='change-colour' id='r24' value='#c79d2a' onChange={this.onColorChanged} />
             <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
           </label>
         </div>
