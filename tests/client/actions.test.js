@@ -44,6 +44,11 @@ test('thrusterShape returns a shape', () => {
     expect(action.shape).toBe('Thruster4')
 })
 
+test('hideLaunch returns correct type', () => {
+    let action = actions.hideLaunch()
+    expect(action.type).toBe('HIDE_LAUNCH')
+})
+
 test('GoToBuildRocket to have type NAVIGATE', () => {
     let action = GoToBuildRocket()
     expect(action.type).toBe("NAVIGATE")
