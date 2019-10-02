@@ -1,14 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import data from '../messages.js'
-const message = data.messages
 
 class Messages extends Component {
     render() {
-        console.log(message.parts)
+        
         return (
             <Fragment>
-                
+                <p className='robot-messages'>{this.props.robot}</p>
             </Fragment>
         )
     }
