@@ -1,4 +1,4 @@
-import { NAVIGATE } from '../actions/navigate'
+import { NAVIGATE, RESET} from '../actions/navigate'
 
 const initialState = true
 
