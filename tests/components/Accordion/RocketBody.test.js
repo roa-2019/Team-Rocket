@@ -30,17 +30,10 @@ describe('Acc-Body test', () => {
     test('selecting body shape selection calls dispatch', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<RocketBody dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="Hexagon"]')
-
-        const currentTarget = { name: "body-shape", value: "Hexagon" }
-
-        choice.simulate('change', { currentTarget })
-        let action = dispatch.mock.calls[0][0]
-
-        expect(dispatch).toHaveBeenCalled()
-        expect(action.type).toBe('BODY_SHAPE')
-        expect(action.shape).toBe('Hexagon')
-       
+        
+        expect(wrapper.find("AccButtons").length).toBe(1)
+        expect(wrapper.html()).toContain("name=\"body-shape\"")
+        expect(wrapper.html()).not.toContain("wing-shape")
     })
 
 })
