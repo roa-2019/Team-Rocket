@@ -16,7 +16,8 @@ jest.mock('react-redux', () => {
 describe('Rockets component renders correctly', () => {
     test('renders two svg tags', () => {
         const wrapper = render(<Rockets />)
-        expect(wrapper.find('svg').length).toBe(2)
+        expect(wrapper.find('svg').length).toBe(3)
+        
     })
 
     test('test tenery operators for thruster parts', () => {
