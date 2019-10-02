@@ -26,8 +26,8 @@ class JvBot extends Component {
           <circle cx='113' cy='90' r='25' fill='white' />
           <circle cx='47' cy='90' r='10' fill='black' id='left-eye' />
           <circle cx='113' cy='90' r='10' fill='black' id='right-eye' />
-          <animate href="#left-eye" attributeName="cx" from="47" to="55" dur="1s" />
-          <aniamte href="#right-eye" attributeName="cx" from="113" to="121" dur="1s"   />
+          <animate attributeName="cx" href="#left-eye" from="47" to="55" dur="10s" values="47; 55; 47; 39; 47;" repeatCount="10000" />
+          <animate attributeName="cx" href="#right-eye" from="113" to="121" dur="10s" values="113; 121; 113; 105; 113;" repeatCount="10000" />
           {/* <!-- Mouth --> */}
           <circle cx='62' cy='135' r='10' fill='orange' />
           <circle cx='98' cy='135' r='10' fill='orange' />
@@ -48,7 +48,7 @@ class JvBot extends Component {
           {/* <!-- inner --> */}
           {/* <!-- <g> */}
           <rect x='27.5' y='182.5' width='105' height='65' fill='orange' ry='20' />
-          {/* <text x="40" y="235" fontSize="60" fill="red">J V</text> */}
+          <text x="40" y="235" fontSize="60" fill="red">J V</text>
           {/* </g> --> */}
           {/* <!-- body dots --> */}
           <circle cx='25' cy='250' r='3' fill='lightblue' />
@@ -59,7 +59,7 @@ class JvBot extends Component {
           <rect x='40' y='260' width='80' height='5' fill='lightblue' />
           <polygon points='30 265 130 265 120 290 40 290' fill='blue' />
           {/* <!-- Legs -->
-    <!-- Top --> */}
+          <!-- Top --> */}
           <rect x='30' y='295' width='100' height='10' fill='orange' />
           <circle cx='30' cy='300' r='5' fill='orange' />
           <circle cx='130' cy='300' r='5' fill='orange' />

@@ -13,7 +13,7 @@ class Window extends Component {
               fill="aqua"
               stroke={this.props.strokeColor}
               strokeWidth="1"
-              fill="grey"
+              fill="aqua"
             />
             <circle
               cx="290"
@@ -22,7 +22,7 @@ class Window extends Component {
               fill="aqua"
               stroke={this.props.strokeColor}
               strokeWidth="1"
-              fill="grey"
+              fill="aqua"
             />
             <polygon
               points="300 260 300 280 280 280 280 260"
