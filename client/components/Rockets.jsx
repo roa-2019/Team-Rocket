@@ -68,7 +68,6 @@ function mapStateToProps(state) {
     changeColor: state.rocket.changeColor,
     strokeColor: state.rocket.strokeColor,
     robot: state.rocket.robotMessage
-
   };
 }
 
