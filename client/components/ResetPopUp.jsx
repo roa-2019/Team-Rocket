@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { resetApp } from '../actions/navigate'
-
+import { hideLaunch } from '../actions'
 
 
 class ResetPopUp extends Component {
@@ -17,9 +17,10 @@ componentDidMount() {
  }
 
  displayModal = () => {
+	this.props.dispatch(hideLaunch())
 	this.setState({popupShowing: true});
  }
- 
+
 	render() {
 		return (
 			<Fragment>

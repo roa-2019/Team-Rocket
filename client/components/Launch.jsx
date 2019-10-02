@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { isRocketComplete, robotMessage } from '../actions/index'
+import { isRocketComplete, robotMessage, hideLaunch } from '../actions/index'
 
 class Launch extends Component {
 
@@ -26,10 +26,10 @@ class Launch extends Component {
     render() {
         return (
             <Fragment>
-                <div id='launch-button'>
+                {this.props.hideLaunch && <div id='launch-button'>
                     <button className='StartButton' onClick={() => this.checkProps()} >Launch</button>
                     {this.props.launchRocket}
-                </div>
+                </div>}
             </Fragment>
         )
     }
@@ -46,7 +46,8 @@ function mapStateToProps(state) {
         isRocketComplete: state.rocket.isRocketComplete,
         changeColor: state.rocket.changeColor,
         strokeColor: state.rocket.strokeColor,
-        robot: state.rocket.robotMessage
+        robot: state.rocket.robotMessage,
+        hideLaunch: state.hideLaunch
     }
 }
 
