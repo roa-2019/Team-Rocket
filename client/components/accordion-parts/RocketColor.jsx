@@ -23,23 +23,23 @@ class RocketColor extends Component {
         <div className='container__input'>
 
           <label className='container__radio' htmlFor='r21'>
-            <input className='custom purple' type='radio' name='change-colour' id='r21' value='#90ee90' onChange={this.onColorChanged} />
+            <input className='custom purple' type='radio' name='change-colour' id='r21' value='#244646' onChange={this.onColorChanged} />
             <span id='radio__colour--green' className='checkmark checkmark__colours'></span>
           </label>
 
           <label className='container__radio' htmlFor='r22'>
-            <input type='radio' name='change-colour' id='r22' value='#87cefa' onChange={this.onColorChanged} />
+            <input type='radio' name='change-colour' id='r22' value='#1f425e' onChange={this.onColorChanged} />
             <span id='radio__colour--blue' className='checkmark checkmark__colours'></span>
           </label>
 
 
           <label className='container__radio' htmlFor='r23'>
-            <input type='radio' name='change-colour' id='r23' value='#C00000' onChange={this.onColorChanged} />
+            <input type='radio' name='change-colour' id='r23' value='#ae2720' onChange={this.onColorChanged} />
             <span id='radio__colour--chuckNorris' className='checkmark checkmark__colours'></span>
           </label>
 
           <label className='container__radio' htmlFor='r24'>
-            <input type='radio' name='change-colour' id='r24' value='#ffff00' onChange={this.onColorChanged} />
+            <input type='radio' name='change-colour' id='r24' value='#d9b964' onChange={this.onColorChanged} />
             <span id='radio__colour--yellow' className='checkmark checkmark__colours'></span>
           </label>
         </div>
