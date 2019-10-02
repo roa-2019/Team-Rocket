@@ -12,7 +12,6 @@ describe('rocket reducer works as expected', () => {
         let intShape = { bodyShape: "rect" }
         let state = rocketReducer(intShape, bodyShape("circle"))
         expect(state.bodyShape).toBe("circle")
-
     })
 
     test('body shape changes do not change nose shape', () => {
