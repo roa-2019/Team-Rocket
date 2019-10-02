@@ -1,0 +1,19 @@
+.container__column {
+  @include column;
+}
+
+.col {
+  width: 50%;
+}
+
+.b {
+  border: 1px dashed lightcoral;
+}
+
+.margin__left {
+  margin-left: 1em;
+}
+
+.padding__xs--left {
+  padding-left: 15px;
+}

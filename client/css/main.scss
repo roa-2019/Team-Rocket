@@ -1,0 +1,40 @@
+@import 'accordion';
+@import 'buttons';
+@import 'design';
+@import 'global';
+@import 'landingpage';
+@import 'media-queries';
+@import 'mixins';
+@import 'popup';
+@import 'rocket';
+@import 'typography';
+@import 'variables';
+@import 'robot';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  min-width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url('/images/rocket-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+
+
+
+

@@ -1,0 +1,165 @@
+// Radio Button Wrappers
+
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.container__input {
+  @include space-around;
+}
+
+.container__radio {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+// 1. Hide the browsers default radio button
+.container__radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+// 2. Create the custom radio button styling the span in the container
+.checkmark {
+  position: absolute;
+}
+
+.checkmark__colours {
+  width: 25px;
+  left: -10px;
+  height: 25px;
+  border-radius: 5px;
+  @include button__shadow;
+}
+
+.checkmark__shape {
+  left: -40px;
+  width: 5.3em;
+  height: 2.5em;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background: grey;
+  @include button__shadow;
+}
+
+.checkmark__shape:hover {
+  background-color: $primaryOrange;
+}
+
+.checkmark__shape:hover .checkmark__shape--text {
+  color: #101010;
+}
+
+.checkmark__label{
+  text-align: center;
+  width: 5.3em;
+  height : 2.5em;
+  color: white;
+}
+
+// 3. Styled effect for when the radio is selected/checked
+.container__radio input:checked ~ .checkmark {
+  border: 2.2px solid $accentOrange;
+}
+
+// Positioning for Button Text
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Colours for Radio Buttons
+
+#radio__colour--blue {
+  background-color: lightskyblue;
+}
+
+#radio__colour--green {
+  background-color: lightgreen;
+}
+
+#radio__colour--chuckNorris {
+  background-color: $chuckNorris;
+}
+
+#radio__colour--yellow {
+  background-color:yellow;
+}
+
+
+.StartButton {
+  background-color: rgba(0, 255, 255, 0.849); 
+  border: none;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 60px;
+  transform: rotate(-9deg);
+  box-shadow: 10px 10px;
+  margin-top: 60px;
+  width: 280px;
+  font-family: courier;
+  position: absolute;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.StartButton:hover {
+  color:rgb(208, 30, 16);
+}
+
+.LaunchButton {
+  background-color: rgba(0, 255, 255, 0.849); 
+  border: none;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 60px;
+  transform: rotate(-9deg);
+  box-shadow: 10px 10px;
+  margin-top: 60px;
+  width: 12rem;
+  font-family: courier;
+  position: absolute;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  top: 495px;
+  right: 50px;
+}
+
+.LaunchButton:hover {
+  color:rgb(208, 30, 16);
+}
+
+
+.ResetButton {
+  background-color: rgba(0, 255, 255, 0.849); 
+  border: none;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 60px;
+  transform: rotate(-9deg);
+  box-shadow: 10px 10px;
+  margin-top: 60px;
+  width: 11rem;
+  font-family: courier;
+  position: absolute;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  top: 95px;
+  right: 127px;
+}
+
+.ResetButton:hover {
+  color:rgb(208, 30, 16);
+}

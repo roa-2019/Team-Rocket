@@ -1,0 +1,45 @@
+.right-eye {
+    animation: pulse 3s ease infinite alternate, nudge 4s linear infinite alternate;
+}
+.left-eye {
+    transform: translate(2px, 5px);
+    transition: all ease-in-out 1.0s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(0px, 0px)
+    }
+    10%{
+        transform: translate( 2px, 0px)
+    }
+    20% {
+        transform: translate(2px, 2px)
+    }
+    30% {
+        transform: translate(0px,2px )
+    }
+    40% {
+        transform: translate(-2px,2px )
+    }
+    50% {
+        transform: translate(-2,0 )
+    }
+    60% {
+        transform: translate(-2,-2 )
+    }
+    70% {
+        transform: translate(0,-2 )
+    }
+    80% {
+        transform: translate(2,-2 )
+    }
+    90% {
+        transform: translate(2,0 )
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+

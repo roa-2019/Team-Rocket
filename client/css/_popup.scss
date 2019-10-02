@@ -1,0 +1,33 @@
+.modal {
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    @include button__shadow;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;  
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    @include button__shadow;
+  }
+
+  .modal-content p {
+    color: $primaryBlack;
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+  

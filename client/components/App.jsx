@@ -1,20 +1,28 @@
 import React, { Component, Fragment } from 'react'
 
 import LandingPage from './LandingPage'
+import Rockets from './Rockets'
 import Design from './Design'
-import Rocket from './Rocket'
+import { connect } from 'react-redux'
 
-class App extends React.Component {
-  
+
+
+class App extends Component {
+
   render () {
+
     return (
      <Fragment>
-       <LandingPage />
-       <Design />
-       <Rocket />
+       { this.props.showLanding ? <LandingPage /> : <><Design /> <Rockets /> </> }
      </Fragment>
     )
   }
 }
 
-export default App
+function mapStateToProps (state)  {
+  return {
+    showLanding: state.navigator
+  }
+}
+
+export default connect (mapStateToProps)(App)

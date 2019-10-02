@@ -1,0 +1,252 @@
+
+.landingLogo {
+    background-image: url("/images/backgroundlandingimg.png");
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+}
+
+.css-typing {
+    position: absolute;
+    top: 40vh;
+    width: 500px;
+    left: 130px;
+}
+
+.css-typing p {
+    color:white;
+    font-family: "Courier";
+    font-size: 16px;
+    width: 40em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+  }
+  
+  .css-typing p:nth-child(2) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  .css-typing p:nth-child(3) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(4) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(5) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 6.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(6) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 8.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(7) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  .css-typing p:nth-child(8) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 11.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  .css-typing p:nth-child(9) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 13s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(10) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 14.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(11) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 16s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(12) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 17.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .css-typing p:nth-child(13) {
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 19s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes type {
+    from {
+      width: 0;
+    }
+  }
+  
+  @-webkit-keyframes type {
+    from {
+      width: 0;
+    }
+  }
+  
+  span {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    from {
+      opacity: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    from {
+      opacity: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    from {
+      opacity: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    from {
+      opacity: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+

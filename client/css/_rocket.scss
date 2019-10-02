@@ -1,0 +1,52 @@
+@import 'variables.scss';
+
+
+.rocket-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.rocket__container {
+  min-width: 300px;
+  display: flex;
+} 
+
+.robot__container {
+  height: auto;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: -30px;
+}
+
+.robot__error {
+  width: 60%;
+}
+
+.robot-img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.speechBubble {
+  position: absolute;
+  bottom: 0;
+  margin-left: .7rem;
+  margin-bottom: 2rem;
+}
+
+.speechBubble__text {
+  width: 275px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+}
+
+.robot-messages {
+  color: $primaryBlack;
+} 

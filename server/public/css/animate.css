@@ -1,0 +1,9 @@
+.rocket {
+    transform: translateY(0);
+}
+
+.rocket-launch {
+    transform: translateY(-200%);
+    transition: all ease 4.0s;
+}
+
