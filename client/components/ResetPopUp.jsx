@@ -5,20 +5,26 @@ import { resetApp } from '../actions/navigate'
 
 
 class ResetPopUp extends Component {
-	 display = false;
+	 constructor(props) {
+		 super(props)
+		 this.state = {
+			 popupShowing: false
+			}
+	 }
+	 
 componentDidMount() {
-	setTimeout(this.displayModal(), 3000)
+	setTimeout(this.displayModal, 2500)
  }
 
  displayModal = () => {
-	this.display = true;
+	this.setState({popupShowing: true});
  }
+ 
 	render() {
-
 		return (
 			<Fragment>
 				<div>
-						{this.display && <div class="modal-content">
+						{this.state.popupShowing && <div className="modal-content">
 						<p>Some text in the Modal..</p>
 
 						<p>Your rocket has successfully launched !</p>

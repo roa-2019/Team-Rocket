@@ -9,12 +9,7 @@ import JvBot from "./JvBot";
 import ResetPopUp from "./ResetPopUp";
 
 class Rockets extends Component {
-  // RocketAnimation() {
-  //   var rocketStatus = this.props.isRocketComplete;
-  //   if (rocketStatus == true) {
-  //     return
-  //   }
-  // }
+
   render() {
     let {
       changeColor,
