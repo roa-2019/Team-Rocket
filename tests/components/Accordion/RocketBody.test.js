@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme';
 
 
-import { RocketBody } from '../../../client/components/accordion-parts/indexAccordion';
+import { RocketBody } from '../../../client/components/accordion-parts/RocketBody';
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -26,8 +26,8 @@ jest.mock('react-dom/server', () => {
     }
 })
 
-describe('Acc-Body test', () => {
-    test('selecting body shape selection calls dispatch', () => {
+describe('<RocketBody />', () => {
+    test('rocket body component renders the correct values', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<RocketBody dispatch={dispatch} />)
         

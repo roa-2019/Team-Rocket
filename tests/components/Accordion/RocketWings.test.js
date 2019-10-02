@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme';
 
 
-import { RocketWings } from '../../../client/components/accordion-parts/Acc-Wings'
+import RocketWings  from '../../../client/components/accordion-parts/RocketWings'
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -29,23 +29,13 @@ jest.mock('react-dom/server', () => {
 
 
 
-describe('Acc-wings test', () => {
-    test('selecting body shape selection calls dispatch', () => {
+describe('<RocketWings />', () => {
+    test('Rocket wings component renders the correct values', () => {
         const dispatch = jest.fn()
-        const wrapper = shallow(<AccWings dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="Paralelogram"]')
-        const currentTarget = { name: "wing-shape", value: "Paralelogram" }
-        console.log(wrapper.html())
-        choice.simulate('change', { currentTarget })
-        let action = dispatch.mock.calls[0][0]
-        let thing = wrapper.find('.container__text--code')
-        
+        const wrapper = shallow(<RocketWings dispatch={dispatch} />)
 
-        expect(dispatch).toHaveBeenCalled()
-        expect(dispatch.mock.calls.length).toBe(1)
-        expect(action.type).toBe('WING_SHAPE')
-        expect(action.shape).toBe('Paralelogram')
-       
+        expect(wrapper.find("AccButtons").length).toBe(1)
+        expect(wrapper.html()).toContain("name=\"wing-shape\"")
+        expect(wrapper.html()).not.toContain("window-shape")
     })
-
 })
