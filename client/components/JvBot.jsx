@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import Messages from './Messages.jsx'
 
 class JvBot extends Component {
   render() {
@@ -69,6 +70,7 @@ class JvBot extends Component {
           <circle cx='65' cy='330' r='5' fill='orange' />
           <circle cx='95' cy='330' r='5' fill='orange' />
         </svg>
+        <Messages />
       </ Fragment>
     )
   }
