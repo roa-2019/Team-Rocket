@@ -4,7 +4,7 @@ class Window extends Component {
   render() {
     return (
       <Fragment>
-        {this.props.windowShape == "longWindowSet" && (
+        {this.props.windowShape == "Long" && (
           <>
             <circle
               cx="290"
@@ -80,7 +80,7 @@ class Window extends Component {
             />
           </>
         )}
-        {this.props.windowShape == "threeLargeCircularWindows" && (
+        {this.props.windowShape == "Circular" && (
           <>
             <circle
               cx="290"
@@ -112,7 +112,7 @@ class Window extends Component {
             />
           </>
         )}
-        {this.props.windowShape == "threeMediumRectangularWindows" && (
+        {this.props.windowShape == "Rectangular" && (
           <>
             <polygon
               points="270 290 310 290 310 310 270 310"
@@ -137,7 +137,7 @@ class Window extends Component {
             />
           </>
         )}
-        {this.props.windowShape == "twoLargePanels" && (
+        {this.props.windowShape == "Large" && (
           <>
             <polygon
               points="270 410 310 410 310 340 270 340"
