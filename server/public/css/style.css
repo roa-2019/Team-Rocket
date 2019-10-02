@@ -15,9 +15,10 @@
 
 .container__text--code {
   border: 1px solid #464646;
-  height: auto;
+  max-height: 10rem;
   padding: 1em 0em 1em 0em;
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem;
+  overflow-y: scroll; }
 
 .details-panel {
   width: 80%; }
@@ -220,6 +221,7 @@ span {
 
 .design {
   background-color: rgba(59, 59, 60, 0.71);
+  min-height: 100vh;
   display: flex;
   justify-content: center; }
 
@@ -516,6 +518,19 @@ span {
   width: 15rem;
   height: 15rem; }
 
+.speechBubble {
+  position: absolute;
+  bottom: 0;
+  margin-left: .5rem;
+  margin-bottom: 2rem; }
+
+.speechBubble__text {
+  width: 275px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5rem;
+  margin-left: 5rem; }
+
 h3 {
   padding: 1.3rem;
   margin: 2rem;
@@ -577,6 +592,9 @@ span p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 
 /*# sourceMappingURL=style.css.map*/

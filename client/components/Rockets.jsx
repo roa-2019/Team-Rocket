@@ -10,43 +10,46 @@ class Rockets extends Component {
   RocketAnimation() {
     var rocketStatus = this.props.isRocketComplete;
     if (rocketStatus == true) {
-       return  
-      }
+      return
+    }
   }
   render() {
     let { changeColor, strokeColor, wingShape, noseShape, bodyShape, thrusterShape, windowShape } = this.props
     return (
       <Fragment>
-        <div className={"rocket rocket-panel col"+ (this.props.isRocketComplete && ' rocket-launch')} >
+        <div className={"rocket rocket-panel col" + (this.props.isRocketComplete && ' rocket-launch')} >
 
           <div className="rocket__container">
             <svg height="590" width="500" id="rocket-1">
               {/* Wings */}
-              <Wing wingShape ={wingShape} changeColor={changeColor} strokeColor={strokeColor} />
+              <Wing wingShape={wingShape} changeColor={changeColor} strokeColor={strokeColor} />
 
               {/* Rocket nose  */}
-              <Nose noseShape ={noseShape} changeColor={changeColor} strokeColor={strokeColor} />
+              <Nose noseShape={noseShape} changeColor={changeColor} strokeColor={strokeColor} />
 
               {/* Rocket body  */}
-              <Body bodyShape ={bodyShape} changeColor={changeColor} strokeColor={strokeColor} />
+              <Body bodyShape={bodyShape} changeColor={changeColor} strokeColor={strokeColor} />
 
               {/*Rocket thruster */}
-              <Thruster thrusterShape ={thrusterShape} changeColor={changeColor} strokeColor={strokeColor} />
+              <Thruster thrusterShape={thrusterShape} changeColor={changeColor} strokeColor={strokeColor} />
 
               {/*Rocket Window changes */}
-              <Window windowShape ={windowShape} changeColor={changeColor} strokeColor={strokeColor} />
+              <Window windowShape={windowShape} changeColor={changeColor} strokeColor={strokeColor} />
             </svg>
             <Launch />
           </div>
 
           <div className="robot__container b">
-            
+
             <div className='robot__wrapper--JvBot b'>
               <JvBot />
             </div>
 
-            <div className='robot__error'>
-            <SpeechBubble />
+            <div className='robot__error b'>
+              <SpeechBubble />
+              <div className='speechBubble__text'>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </div>
             </div>
 
           </div>
