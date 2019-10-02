@@ -1,6 +1,6 @@
 import navigator from '../../../client/reducers/navigator'
 
-import { GoToBuildRocket } from '../../../client/actions/navigate'
+import { GoToBuildRocket, resetApp } from '../../../client/actions/navigate'
 
 describe('navigator reducer for LandingPage state', () => {
     test('intitial state of navigator is true', () => {
@@ -12,5 +12,9 @@ describe('navigator reducer for LandingPage state', () => {
         let state = navigator(initState, GoToBuildRocket("GoToBuildRocket"))
         expect(state).toBe(false)
     })
-
+    test('action resetApp changes state to true', () => {
+        let initState = false
+        let state = navigator(initState, resetApp("resetApp"))
+        expect(state).toBe(true)
+    })
 })
