@@ -1,5 +1,6 @@
 import nock from 'nock'
 import * as actions from '../../client/actions'
+import { GoToBuildRocket, resetApp } from '../../client/actions/navigate'
 
 test('noseShape returns a shape', () => {
     let action = actions.noseShape('Ellipse')
@@ -41,4 +42,14 @@ test('thrusterShape returns a shape', () => {
     let action = actions.thrusterShape('Thruster4')
     expect(typeof (action.shape)).toBe("string")
     expect(action.shape).toBe('Thruster4')
+})
+
+test('GoToBuildRocket to have type NAVIGATE', () => {
+    let action = GoToBuildRocket()
+    expect(action.type).toBe("NAVIGATE")
+})
+
+test('resetApp to have type RESET', () => {
+    let action = resetApp()
+    expect(action.type).toBe("RESET")
 })
