@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme';
 
 
-import { RocketWings } from '../../../client/components/accordion-parts/indexAccordion';
+import { RocketWings } from '../../../client/components/accordion-parts/Acc-Wings'
 
 const MockrenderToStringActual = jest.requireActual('react-dom/server').renderToString
 
@@ -29,13 +29,13 @@ jest.mock('react-dom/server', () => {
 
 
 
-describe('Acc-Body test', () => {
+describe('Acc-wings test', () => {
     test('selecting body shape selection calls dispatch', () => {
         const dispatch = jest.fn()
-        const wrapper = shallow(<RocketWings dispatch={dispatch} />)
+        const wrapper = shallow(<AccWings dispatch={dispatch} />)
         const choice = wrapper.find('input[value="Paralelogram"]')
         const currentTarget = { name: "wing-shape", value: "Paralelogram" }
-
+        console.log(wrapper.html())
         choice.simulate('change', { currentTarget })
         let action = dispatch.mock.calls[0][0]
         let thing = wrapper.find('.container__text--code')
