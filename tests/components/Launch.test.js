@@ -40,5 +40,11 @@ describe('Launch', () => {
         
         expect(window.alert).toHaveBeenCalled('add a nose')
     })
-   
+    test('alert if broken parts', () => {
+        wrapper.setProps({thrusterShape: "Thruster1"})
+        launchButton.simulate('click')
+        
+        expect(window.alert).toHaveBeenCalled('')
+        
+    })
 })

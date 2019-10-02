@@ -34,13 +34,15 @@ describe('Rockets component renders correctly', () => {
 
         expect(wrapper.instance().props.noseShape).toBe("Ellipse")
     })
-    test('alert if broken parts', () => {
+    test('Robot alert if broken parts', () => {
+        const wrapper = shallow(<Rockets />)
         wrapper.setProps({thrusterShape: "Thruster1"})
-        launchButton.simulate('click')
-        let robotSpeech = wrapper.find('.robot__error')
         
-        expect(robotSpeech.html()).toContain('Oh no, that\'s way too small - your\'re going to have to choose another one')
-        expect(robotSpeech.html()).not.toContain('Do you see me? How am I supposed to fit into such a thin Rocket?!')
+        let robotSpeech = wrapper.find('.robot__error')
+        let robotMsg = "Oh no, that&#x27;s way too small - your&#x27;re going to have to choose another"
+
+        expect(robotSpeech.html()).toContain(robotMsg)
+        expect(robotSpeech.html()).not.toContain('Do you see me?')
     })
 
 })
