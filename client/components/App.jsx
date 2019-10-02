@@ -13,9 +13,7 @@ class App extends Component {
 
     return (
      <Fragment>
-
        { this.props.showLanding ? <LandingPage /> : <><Design /> <Rockets /> </> }
-
      </Fragment>
     )
   }
