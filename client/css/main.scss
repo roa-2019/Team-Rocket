@@ -5,6 +5,7 @@
 @import 'landingpage';
 @import 'media-queries';
 @import 'mixins';
+@import 'popup';
 @import 'rocket';
 @import 'typography';
 @import 'variables';
@@ -27,8 +28,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // overflow: hidden;
 }
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 
 
 
