@@ -35,5 +35,4 @@ describe('Acc-Body test', () => {
         expect(wrapper.html()).toContain("name=\"body-shape\"")
         expect(wrapper.html()).not.toContain("wing-shape")
     })
-
 })

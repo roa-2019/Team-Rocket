@@ -29,21 +29,13 @@ jest.mock('react-dom/server', () => {
 
 
 
-describe('ACC-Nose shape', () => {
-    test('selecting shape calls dispatch', () => {
+describe('<RocketWindows />', () => {
+    test('Rocket window renders correct values', () => {
         const dispatch = jest.fn()
         const wrapper = shallow(<RocketWindows dispatch={dispatch} />)
-        const choice = wrapper.find('input[value="threeLargeCircularWindows"]')
-
-        const currentTarget = { name: "window-shape", value: "Round" }
-
-        choice.simulate('change', { currentTarget })
-        let action = dispatch.mock.calls[0][0]
-
-        expect(dispatch).toHaveBeenCalled()
-        expect(dispatch.mock.calls.length).toBe(1)
-        expect(action.type).toBe('WINDOW_SHAPE')
-        expect(action.shape).toBe('Round')
-         
+       
+        expect(wrapper.find("AccButtons").length).toBe(1)
+        expect(wrapper.html()).toContain("name=\"window-shape\"")
+        expect(wrapper.html()).not.toContain("wing-shape")
     })
 })
